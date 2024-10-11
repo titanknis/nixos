@@ -25,6 +25,9 @@
 
             # Optionally, use home-manager.extraSpecialArgs to pass
             # arguments to home.nix
+
+            # Maintain compatibility with original NixOS version
+            system.stateVersion = "24.05";  # Keep original NixOS state version
           }
         ];
       };
