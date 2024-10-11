@@ -4,7 +4,7 @@
   # GPG Configuration
   programs.gnupg.agent = {
     enable = true;               # Enable the GPG agent
-    #enableSSHSupport = true;     # Enable GPG for SSH key management
+    enableSSHSupport = true;     # Enable GPG for SSH key management
   };
 
   # Installed System Packages
