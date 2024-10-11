@@ -71,7 +71,7 @@
     obsidian                       # Note-taking and knowledge management tool
     # unrar                       # Tool for extracting RAR archives
     # Unfree Software
-    #spotify                        # Music streaming service
+    spotify                        # Music streaming service
     discord                        # Communication platform
     obsidian                       # Note-taking and knowledge management tool
     #unrar                          # Tool for extracting RAR archives
@@ -80,7 +80,7 @@
   # Allow specific unfree packages
   nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
     "discord"                      # Allow Discord
-    #"spotify"                      # Allow Spotify
+    "spotify"                      # Allow Spotify
     "obsidian"                     # Allow Obsidian
   ];
 }
