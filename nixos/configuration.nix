@@ -12,7 +12,7 @@
       ./packages.nix
       ./users.nix
       ./shell.nix
-      ./settings.nix
+      ./system.nix
       ./services.nix
       ./vm.nix                      # Virtual machine-specific config
       #./disko.nix
