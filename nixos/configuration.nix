@@ -1,20 +1,41 @@
 { config, lib, pkgs, ... }:
 
 {
-  # Import hardware and custom configurations
+  # Import custom configurations and modules
   imports =
     [
-      ./hardware-configuration.nix  # Hardware-specific configuration
-      ./git.nix                     # Git-specific configuration
-      ./firewall.nix                # Firewall configuration
-      ./boot.nix                    # Luks, grub and kernel configuration
-      ./desktop.nix
-      ./packages.nix
-      ./users.nix
-      ./shell.nix
-      ./system.nix
-      ./services.nix
-      ./vm.nix                      # Virtual machine-specific config
-      #./disko.nix
+      # --- Disk and Boot Configuration ---
+      # ./disko.nix                   # Disko partitioning setup
+      ./hardware-configuration.nix    # Hardware-specific configuration
+      ./boot.nix                      # LUKS, GRUB, and kernel settings
+
+      # --- System Configuration ---
+      ./system.nix                    # General system settings
+      ./services.nix                  # Services settings (e.g., networking, printing)
+      ./packages.nix                  # System packages and their configurations
+      ./firewall.nix                  # Firewall configuration
+      ./shell.nix                     # Shell configurations
+      ./users.nix                     # User account definitions
+      ./git.nix                       # Git-specific configuration
+
+      # --- Networking and Locale ---
+      ./network.nix                   # Networking configuration (e.g., hostname, NetworkManager)
+      ./locale.nix                    # Timezone and locale settings
+
+      # --- Peripheral and Audio Services ---
+      ./printing.nix                  # CUPS printing service settings
+      ./bluetooth.nix                 # Bluetooth support configuration
+      ./audio.nix                     # Audio system configuration (e.g., PipeWire)
+
+      # --- Input and Display Configuration ---
+      ./input.nix                     # Input device support (e.g., touchpad)
+      ./xserver.nix                   # X11 windowing system settings
+
+      # --- Desktop Environment ---
+      ./plasma.nix                    # KDE Plasma desktop configuration
+      ./hyprland.nix                  # Hyprland window manager configuration
+
+      # --- Virtual Machine Configuration ---
+      ./vm.nix                        # Virtual machine-specific settings
   ];
 }
