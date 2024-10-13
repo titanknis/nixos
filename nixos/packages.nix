@@ -16,7 +16,7 @@
     neovim                          # Text editor
     vscodium                        # Visual Studio Code alternative
 
-    # Media
+    # Media 
     vlc                             # Video player
 
     #Markdown and Office
