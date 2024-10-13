@@ -16,6 +16,10 @@
     neovim                          # Text editor
     vscodium                        # Visual Studio Code alternative
 
+    # File manipulation
+    dolphin                         # File Manager
+    ark                             # Archiving tool
+
     # Media 
     vlc                             # Video player
 

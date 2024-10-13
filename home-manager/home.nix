@@ -7,6 +7,7 @@ let
     aliasesConfig = import ./home/aliases.nix { inherit pkgs; };
     kittyConfig= import ./home/kitty.nix { inherit pkgs; };
     nvimConfig= import ./home/nvim.nix { inherit pkgs; };
+    hyprlandConfig= import ./home/hyprland.nix { inherit pkgs; };
 in
 {
 
@@ -17,7 +18,9 @@ in
   
   # Managing dotfiles
   # Combine the configurations
-  home.file = bashConfig.home.file // zshConfig.home.file  // aliasesConfig.home.file  // kittyConfig.home.file // nvimConfig.home.file ;
+  home.file = bashConfig.home.file // zshConfig.home.file  // aliasesConfig.home.file  // kittyConfig.home.file // nvimConfig.home.file
+  #// hyprlandConfig.home.file 
+  ;
 
 
   # Add stuff for your user as you see fit:

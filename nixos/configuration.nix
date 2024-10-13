@@ -30,9 +30,10 @@
       # --- Input and Display Configuration ---
       ./input.nix                       # Input device support (e.g., touchpad)
       ./keymap.nix                      # Set the console keymap
-      #./xserver.nix                     # X11 windowing system settings
+      ./xserver.nix                     # X11 windowing system settings
 
       # --- Desktop Environment ---
+      ./display-manager.nix             # Display manager configuration
       ./plasma.nix                      # KDE Plasma desktop configuration
       ./hyprland.nix                    # Hyprland window manager configuration
 
