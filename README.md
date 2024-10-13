@@ -1,6 +1,6 @@
 # NixOS Configuration
 
-This repository contains my NixOS configuration files organized for a custom setup, leveraging Nix and its flakes feature. The structure is designed for easy management and deployment of system settings, packages, and services.
+This repository contains my personal NixOS configuration, built with Nix flakes. Each part is neatly organized to make managing and deploying system settings, packages, and services simple and flexible. The setup is designed to be modular, so you can easily tweak or extend it to fit your needs.
 
 ## Directory Structure
 
@@ -8,36 +8,37 @@ This repository contains my NixOS configuration files organized for a custom set
 ├── flake.lock
 ├── flake.nix
 ├── home-manager
-│   ├── home
-│   │   ├── aliases.nix
-│   │   ├── bash.nix
-│   │   ├── kitty.nix
-│   │   ├── nvim.nix
-│   │   ├── symlinks.nix
-│   │   └── zsh.nix
-│   └── home.nix
+│   ├── home
+│   │   ├── aliases.nix
+│   │   ├── bash.nix
+│   │   ├── kitty.nix
+│   │   ├── nvim.nix
+│   │   ├── symlinks.nix
+│   │   └── zsh.nix
+│   └── home.nix
+├── LICENSE
 ├── nixos
-│   ├── audio.nix
-│   ├── bluetooth.nix
-│   ├── boot.nix
-│   ├── configuration.nix
-│   ├── disko.nix
-│   ├── firewall.nix
-│   ├── git.nix
-│   ├── hardware-configuration.nix
-│   ├── hyprland.nix
-│   ├── input.nix
-│   ├── locale.nix
-│   ├── network.nix
-│   ├── packages.nix
-│   ├── plasma.nix
-│   ├── printing.nix
-│   ├── services.nix
-│   ├── shell.nix
-│   ├── system.nix
-│   ├── users.nix
-│   ├── vm.nix
-│   └── xserver.nix
+│   ├── audio.nix
+│   ├── bluetooth.nix
+│   ├── boot.nix
+│   ├── configuration.nix
+│   ├── disko.nix
+│   ├── firewall.nix
+│   ├── git.nix
+│   ├── hardware-configuration.nix
+│   ├── hyprland.nix
+│   ├── input.nix
+│   ├── locale.nix
+│   ├── network.nix
+│   ├── packages.nix
+│   ├── plasma.nix
+│   ├── printing.nix
+│   ├── services.nix
+│   ├── shell.nix
+│   ├── system.nix
+│   ├── users.nix
+│   ├── vm.nix
+│   └── xserver.nix
 └── README.md
 ```
 
@@ -71,7 +72,7 @@ This repository contains my NixOS configuration files organized for a custom set
   - **network.nix**: Network settings, including DHCP and NetworkManager.
   - **packages.nix**: List of system packages and their configurations.
   - **plasma.nix**: Configuration for KDE Plasma desktop environment.
-  - **services.nix**: Various system service configurations (e.g., audio, printing, Bluetooth).
+  - **services.nix**: Various system service configurations that do not have a dedicated file.
   - **users.nix**: User account definitions and settings.
   - **vm.nix**: Virtual machine configuration.
   - **xserver.nix**: X11 windowing system settings.
@@ -91,7 +92,7 @@ This repository contains my NixOS configuration files organized for a custom set
 
 ## Usage
 
-This configuration is tailored for a system utilizing LUKS encryption and LVM for disk management, with support for multiple desktop environments and user-specific configurations. You can modify the configuration files according to your requirements and rebuild the system.
+This configuration is set up for a system using LUKS encryption and LVM for disk management. It supports both the Plasma and Hyprland desktop environments, along with user-specific configurations. The entire setup is modular, so feel free to take whatever parts you need and customize the configuration to fit your system. Rebuilding is straightforward once you make changes.
 
 ## License
 
