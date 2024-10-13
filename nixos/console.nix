@@ -3,7 +3,7 @@
 {
   # conso
   console = {
-    font = "Fira Code";                 # Set console font to Fira Code
+    font = "Lat2-Terminus16";
     #useXkbConfig = true;                # Use XKB configuration for keyboard layout in tty
   };
 }
