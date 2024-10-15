@@ -44,6 +44,7 @@
     bat                             # Enhanced 'cat' with syntax highlighting
     ranger                          # Terminal file manager with keyboard shortcuts
     htop
+    btop
 
     # Terminal
     kitty                           # Terminal emulator with advanced features
