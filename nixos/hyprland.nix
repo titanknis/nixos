@@ -5,14 +5,22 @@
   programs.hyprland.enable = true;
   # Optional, hint electron apps to use wayland:
   # environment.sessionVariables.NIXOS_OZONE_WL = "1";
-  
+
+  # Enable waybar
+  programs.waybar.enable = true;
+
   environment.systemPackages = with pkgs; [
-    # Add any additional packages you want to include
-    waybar
-    wofi
-    kitty
-    # ... other packages ...
-  ];
+    #waybar                  # Recommended for status bar
+    wofi                    # Application launcher for Wayland
+    mako                    # Notification daemon
+    libsForQt5.polkit-kde-agent        # Authentication Agent
+    brightnessctl
+    playerctl
+    networkmanagerapplet
+    hyprpaper
+    kitty                   # A terminal emulator
+    firefox                 # Browser
+  ]; 
 
 
   environment.etc."hypr/hyprland.conf".text = ''

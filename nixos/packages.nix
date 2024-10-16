@@ -40,11 +40,13 @@
     wget                            # Download tool (better for resuming downloads)
     curl                            # Download tool (supports more protocols)
     zoxide                          # Z directory jumper for easier navigation
+    eza
     fzf                             # Fuzzy finder for terminal
     bat                             # Enhanced 'cat' with syntax highlighting
     ranger                          # Terminal file manager with keyboard shortcuts
     htop
     btop
+    parted
 
     # Terminal
     kitty                           # Terminal emulator with advanced features

@@ -19,11 +19,16 @@
     alias .4='cd ../../../..'
     alias .5='cd ../../../../..'
 
-    # Directory listing
-    alias ls='ls --color=auto'
-    alias ll='ls -l'
-    alias la='ls -la'
-    alias l='ls -CF'
+    # Directory listing aliases using 'eza'
+    alias rls='/run/current-system/sw/bin/ls --color'  # Real ls
+    alias ls='eza -1 --icons=auto'             # Default: single column
+    alias l='eza -lh --icons=auto'             # Long, human-readable
+    alias la='eza -lha --icons=auto --sort=name --group-directories-first'  # All files
+    alias ll='eza -lha --icons=auto'           # All files, unsorted
+    alias ld='eza -lhD --icons=auto'           # Directories only
+    alias lf='eza -lhf --icons=auto'           # Files only
+    alias lh='eza -ldh .* --icons=auto --sort=name --group-directories-first'  # Hidden only
+    alias lt='eza --icons=auto --tree'         # Tree view
 
     # Git shortcuts
     alias gs='git status'

@@ -5,40 +5,45 @@ This repository contains my personal NixOS configuration, built with Nix flakes.
 ## Directory Structure
 
 ```
+.
 ├── flake.lock
 ├── flake.nix
 ├── home-manager
-│   ├── home
-│   │   ├── aliases.nix
-│   │   ├── bash.nix
-│   │   ├── kitty.nix
-│   │   ├── nvim.nix
-│   │   ├── symlinks.nix
-│   │   └── zsh.nix
-│   └── home.nix
+│  ├── home
+│  │  ├── aliases.nix
+│  │  ├── bash.nix
+│  │  ├── hyprland.nix
+│  │  ├── kitty.nix
+│  │  ├── nvim.nix
+│  │  ├── symlinks.nix
+│  │  └── zsh.nix
+│  └── home.nix
 ├── LICENSE
 ├── nixos
-│   ├── audio.nix
-│   ├── bluetooth.nix
-│   ├── boot.nix
-│   ├── configuration.nix
-│   ├── disko.nix
-│   ├── firewall.nix
-│   ├── git.nix
-│   ├── hardware-configuration.nix
-│   ├── hyprland.nix
-│   ├── input.nix
-│   ├── locale.nix
-│   ├── network.nix
-│   ├── packages.nix
-│   ├── plasma.nix
-│   ├── printing.nix
-│   ├── services.nix
-│   ├── shell.nix
-│   ├── system.nix
-│   ├── users.nix
-│   ├── vm.nix
-│   └── xserver.nix
+│  ├── audio.nix
+│  ├── bluetooth.nix
+│  ├── boot.nix
+│  ├── configuration.nix
+│  ├── console.nix
+│  ├── disko.nix
+│  ├── display-manager.nix
+│  ├── firewall.nix
+│  ├── git.nix
+│  ├── hardware-configuration.nix
+│  ├── hyprland.nix
+│  ├── input.nix
+│  ├── keymap.nix
+│  ├── locale.nix
+│  ├── network.nix
+│  ├── packages.nix
+│  ├── plasma.nix
+│  ├── printing.nix
+│  ├── services.nix
+│  ├── shell.nix
+│  ├── system.nix
+│  ├── users.nix
+│  ├── vm.nix
+│  └── xserver.nix
 └── README.md
 ```
 

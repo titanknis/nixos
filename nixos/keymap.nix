@@ -1,6 +1,6 @@
 { config, lib, pkgs, ... }:
 
 {
-    console.keyMap = "mod-dh-ansi-us";
+   console.keyMap = "mod-dh-ansi-us";
 }
 
