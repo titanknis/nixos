@@ -32,25 +32,11 @@
         "editor.defaultFormatter": "redhat.java"
     },
 
-    // Console log settings
-    "turboConsoleLog.delimiterInsideMessage": "->",
-    "turboConsoleLog.insertEmptyLineAfterLogMessage": true,
-    "turboConsoleLog.insertEmptyLineBeforeLogMessage": true,
-    "turboConsoleLog.logFunction": "print",
-    "turboConsoleLog.includeFileNameAndLineNum": true,
-
     // Disable multi-line paste warning in terminal
     "terminal.integrated.enableMultiLinePasteWarning": "never",
 
     // Disable automatic Git repository detection
-    "git.autoRepositoryDetection": false,
-
-    // PHP settings
-    "php.validate.executablePath": "/opt/lampp/bin/php",
-    "php.debug.executablePath": "/opt/lampp/bin/php",
-    "[php]": {
-        "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
-    },
+    //"git.autoRepositoryDetection": false,
 
     // Live Server settings
     "liveServer.settings.donotShowInfoMsg": true,
@@ -72,33 +58,14 @@
     "editor.minimap.enabled": false,
 
     // Set Python interpreter path
-    "python.pythonPath": "~/myenv/bin/python",
+    //"python.pythonPath": "~/xtreme/bin/python",
 
     // Set color theme
-    "workbench.colorTheme": "Gitpod Dark",
+    //"workbench.colorTheme": "Gitpod Dark",
 
     // Set editor font family
-    "editor.fontFamily": "'MesloLGS NF', 'Fira Code', 'Droid Sans Mono', 'monospace'"
-
-
-
+    "editor.fontFamily": "'Fira Code' ,'MesloLGS NF', 'Droid Sans Mono', 'monospace'"
     
-    // Set to false to show extension recommendations
-    "extensions.ignoreRecommendations": false,
-
-    // List of recommended extensions
-    "extensions.recommendations": [
-        // Python extension for VSCode
-        "ms-python.python",
-        
-        // Prettier for code formatting
-        "esbenp.prettier-vscode",
-        
-        // ESLint for JavaScript linting
-        "dbaeumer.vscode-eslint"
-    ]
-}
-
 }
 
 '';

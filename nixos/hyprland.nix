@@ -15,14 +15,15 @@
   };
 
   # Wayland-related programs
-  programs = {
-    waybar.enable = true;
-  };
+  #programs = {
+  #  waybar.enable = true;
+  #};
 
   # System packages
   environment.systemPackages = with pkgs; [
     # Core utilities
     wofi            # Application launcher for Wayland
+    waybar
     mako            # Notification daemon
     libsForQt5.polkit-kde-agent  # Authentication agent
     brightnessctl   # Backlight control
@@ -48,21 +49,6 @@
   fonts.packages = with pkgs; [
     (nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" ]; })
   ];
-
-  # Disable Xwayland
-  services.xserver.enable = false;
-
-  # Display Manager
-  services.displayManager.sddm.enable = true;                   # Enable SDDM display manager
-  services.displayManager.sddm.wayland.enable = true;           # Enable SDDM display manager on wayland session
-  services.displayManager.defaultSession = "hyprland";            # Set hyprland as the default session (Wayland)
-
-  # Enable pipewire for audio
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    pulse.enable = true;
-  };
 
   # Enable Bluetooth support (optional)
   hardware.bluetooth.enable = true;

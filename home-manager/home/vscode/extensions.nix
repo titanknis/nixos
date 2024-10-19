@@ -13,7 +13,8 @@
       redhat.java
       esbenp.prettier-vscode
       pkief.material-icon-theme
-      ms-vscode.cpptools   # this is fucking unfree :(
+      vscodevim.vim
+      #ms-vscode.cpptools   # this is fucking unfree :(
 
       # Add more extensions here
     ];
