@@ -1,10 +1,10 @@
-
-{ pkgs, ... }:
-
-{
-  home.file.".config/Code/User/keybindings.json".text = ''
   // Place your key bindings in this file to override the defaults
 [
+    // toggle vim mode
+    {
+      "key": "ctrl+alt+v",
+      "command": "toggleVim"
+    },
     // Clear the terminal
     {
         "key": "ctrl+l",
@@ -104,6 +104,4 @@
         "key": "ctrl+k ctrl+n",
         "command": "explorer.newFile"
     }
-]  '';
-}
-
+]  

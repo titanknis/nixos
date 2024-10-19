@@ -1,7 +1,3 @@
-{ pkgs, ... }:
-
-{
-  home.file.".config/kxkbrc".text = ''
 [Layout]
 DisplayNames=,
 LayoutList=us,us
@@ -14,7 +10,3 @@ ShowLayoutIndicator=true
 ShowSingle=true
 Use=true
 VariantList=colemak_dh,
-''; 
-}
-
-

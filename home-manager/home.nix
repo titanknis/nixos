@@ -1,15 +1,7 @@
 { config, pkgs, ... }:
 {
   imports = [
-    ./home/bash.nix 
-    ./home/zsh.nix
-    ./home/aliases.nix
-    ./home/kitty.nix 
-    ./home/nvim.nix 
-    ./home/plasma
-    ./home/vscode
-    ./home/vscodium
-    #./home/hyprland
+    ./home
   ];
 
   # Home Manager needs a bit of information about you and the

@@ -1,9 +1,7 @@
 { pkgs, ... }:
 
 {
-  imports = [
-    ./layout.nix
-  ];
+  home.file.".config/kxkbrc".source = ./kxkbrc;
 }
 
 
