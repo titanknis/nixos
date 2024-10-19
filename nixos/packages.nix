@@ -9,15 +9,16 @@
 
   # Installed System Packages
   environment.systemPackages = with pkgs; [
+    plasma5Packages.plasma-browser-integration
     # Browsers
     firefox                         # Web browser
 
     # Editors
     neovim                          # Text editor
-    vscodium                        # Visual Studio Code alternative
+    #vscodium                        # Visual Studio Code alternative
 
     # File manipulation
-    dolphin                         # File Manager
+    #dolphin                         # File Manager
     ark                             # Archiving tool
 
     # Media 
@@ -30,6 +31,7 @@
     #zettlr                         # Markdown editor with additional features
 
     # Development Tools
+    python3
     gcc                             # C/C++ compiler
     gdb                             # GNU Debugger
     codeblocks                      # Code::Blocks IDE
@@ -47,6 +49,9 @@
     htop
     btop
     parted
+    tldr
+    man
+    man-pages
 
     # Terminal
     kitty                           # Terminal emulator with advanced features
@@ -75,6 +80,7 @@
     fira-code                       # Monospaced programming font for coding
 
     # Unfree Software
+    vscode
     spotify                         # Music streaming service
     discord                         # Communication platform
     obsidian                        # Note-taking and knowledge management tool
@@ -83,6 +89,8 @@
 
   # Allow specific unfree packages
   nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
+    "vscode"                       # Allow Vscode
+    "vscode-extension-ms-vscode-cpptools"                       # Allow Vscode
     "discord"                      # Allow Discord
     "spotify"                      # Allow Spotify
     "obsidian"                     # Allow Obsidian

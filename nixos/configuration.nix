@@ -14,6 +14,7 @@
       ./services.nix                    # Services settings (e.g., networking, printing)
       ./packages.nix                    # System packages and their configurations
       ./firewall.nix                    # Firewall configuration
+      ./console.nix                     # Console configuration
       ./shell.nix                       # Shell configurations
       ./users.nix                       # User account definitions
       ./git.nix                         # Git-specific configuration
@@ -29,8 +30,8 @@
 
       # --- Input and Display Configuration ---
       ./input.nix                       # Input device support (e.g., touchpad)
-      ./keymap.nix                      # Set the console keymap
-      ./xserver.nix                     # X11 windowing system settings
+      #./keymap.nix                      # Set the console keymap
+      ./layout.nix                      # xkb keyboard layout
 
       # --- Desktop Environment ---
       ./display-manager.nix             # Display manager configuration
