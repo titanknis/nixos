@@ -5,7 +5,8 @@ alias t='tmux'
 alias v='nvim'
 alias vs='vscodium'
 alias cd='z'
-alias neo='neofetch'
+alias fast='fastfetch'
+alias cmatrix='cmatrix -a -C cyan'
 alias c='clear'
 
 # Navigation

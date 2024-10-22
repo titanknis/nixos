@@ -28,7 +28,7 @@
         swtpm.enable = true;                    # Enable software TPM emulation
         ovmf.enable = true;                     # Enable OVMF (UEFI) support
         ovmf.packages = [ pkgs.OVMFFull.fd ];   # Use the full OVMF package
-        runAsRoot = false;                      # Don't run QEMU as root for improved security
+        #runAsRoot = false;                      # Don't run QEMU as root for improved security
       };
     };
     spiceUSBRedirection.enable = true;          # Enable USB redirection for SPICE
@@ -37,4 +37,5 @@
   # Enable the SPICE guest agent service
   # This improves integration between the host and guest VMs when using SPICE
   services.spice-vdagentd.enable = true;
+
 }

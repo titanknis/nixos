@@ -9,7 +9,6 @@
 
   # Installed System Packages
   environment.systemPackages = with pkgs; [
-    plasma5Packages.plasma-browser-integration
     # Browsers
     firefox                         # Web browser
 
@@ -23,6 +22,7 @@
 
     # Media 
     vlc                             # Video player
+    mpv
 
     #Markdown and Office
     #onlyoffice-bin                 # Office suite for document editing
@@ -52,6 +52,8 @@
     tldr
     man
     man-pages
+    age
+    killall
 
     # Terminal
     kitty                           # Terminal emulator with advanced features
@@ -62,7 +64,7 @@
     # winetricks                    # Script to help manage Wine
 
     # Fun and Miscellaneous
-    neofetch                        # Display system info in a visually appealing way
+    fastfetch                       # Display system info in a visually appealing way
     sl                              # Steam locomotive animation in terminal
     cmatrix                         # Matrix effect in terminal
     asciiquarium                    # Watch an aquarium in terminal
@@ -71,13 +73,14 @@
     fortune                         # Display random quotes
     pipes                           # Animated pipes in terminal
     figlet                          # Generate ASCII art text
+    cava
 
     # Clipboard Tools
     wl-clipboard                    # Clipboard manager for Wayland
 
     # Prompt and Fonts
-    starship                        # Cross-shell prompt for better CLI experience
-    fira-code                       # Monospaced programming font for coding
+    #starship                        # Cross-shell prompt for better CLI experience
+    #fira-code                       # Monospaced programming font for coding
 
     # Unfree Software
     vscode

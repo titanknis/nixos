@@ -16,6 +16,7 @@
       ./firewall.nix                    # Firewall configuration
       ./console.nix                     # Console configuration
       ./shell.nix                       # Shell configurations
+      ./fonts.nix                       # fonts configurations
       ./users.nix                       # User account definitions
       ./git.nix                         # Git-specific configuration
 

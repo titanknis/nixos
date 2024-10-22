@@ -32,6 +32,8 @@
     
     # Hyprland-specific
     hyprpaper       # Wallpaper utility for Hyprland
+    hyprpicker
+    xdg-desktop-portal-hyprland
 
     # Terminal and applications
     kitty           # Terminal emulator
@@ -41,17 +43,9 @@
     wl-clipboard    # Wayland clipboard utilities
     grim            # Screenshot utility
     slurp           # Area selection tool
+    wf-recorder
     swaylock        # Screen locker
     swayidle        # Idle management daemon
   ];
 
-  # Fonts
-  fonts.packages = with pkgs; [
-    (nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" ]; })
-  ];
-
-  # Enable bluetooth.
-  hardware.bluetooth.enable = true;		    # Enable Bluetooth 
-  hardware.bluetooth.powerOnBoot = true;	# Power on Bluetooth by default
-  services.blueman.enable = true;
 }
