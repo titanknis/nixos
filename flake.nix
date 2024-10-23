@@ -13,17 +13,12 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    hyprland-config = {
-      url = "github:titanknis/hyprland";
-      flake = false;
-    };
-
     # Uncomment if you plan to use disko for disk management
     # inputs.disko.url = "github:nix-community/disko";
     # inputs.disko.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = inputs@{ nixpkgs, home-manager, kmonad, hyprland-config, ... }: {
+  outputs = inputs@{ nixpkgs, home-manager, kmonad, ... }: {
     nixosConfigurations.mysystem = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
 
@@ -37,9 +32,6 @@
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.users.titanknis = import ./home-manager/home.nix;
-            home-manager.extraSpecialArgs = {
-              inherit hyprland-config;
-            };
 
             # Optionally pass arguments to home.nix
             # home-manager.extraSpecialArgs = {

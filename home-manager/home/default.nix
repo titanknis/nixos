@@ -10,7 +10,7 @@
     #./hyprland
     #./dolphin
 
-    ./plasma
+    #./plasma
     ./kitty
     ./nvim
     ./vscode

@@ -2,10 +2,10 @@
 
 {
   # Hyprland configuration
-  home.file.".config/hypr" = {
-    source = hyprland-config;
-    recursive = true;
-  };
+  #home.file.".config/hypr" = {
+  #  source = hyprland-config;
+  #  recursive = true;
+  #};
  #home.file.".config/hypr/appearance.conf".source = ./hypr/appearance.conf;
  #home.file.".config/hypr/autostart.conf".source = ./hypr/autostart.conf;
  #home.file.".config/hypr/environment.conf".source = ./hypr/environment.conf;

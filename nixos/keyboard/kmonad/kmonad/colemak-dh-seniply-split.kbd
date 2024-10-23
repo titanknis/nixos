@@ -1,0 +1,147 @@
+(defcfg
+  ;; ** For Linux **
+  ;;input  (device-file "/dev/input/by-id/usb-Dell_Dell_USB_Keyboard-event-kbd")
+  input  (device-file "/dev/input/by-path/platform-i8042-serio-0-event-kbd")
+  output (uinput-sink "KMonad seniply-iso-split")
+  cmp-seq cmp
+
+  ;; ** For Windows **
+  ;; input  (low-level-hook)
+  ;; output (send-event-sink)
+
+  ;; ** For MacOS **
+  ;; input  (iokit-name "my-keyboard-product-string")
+  ;; output (kext)
+
+  fallthrough true
+)
+
+(defsrc
+  esc      f1    f2    f3    f4    f5    f6    f7    f8    f9    f10   f11   f12
+  grv      1     2     3     4     5     6     7     8     9     0     -     =     bspc
+  tab      q     w     e     r     t     y     u     i     o     p     [     ]
+  caps     a     s     d     f     g     h     j     k     l     ;     '     \     ret
+  lsft  nubs  z     x     c     v     b     n     m     ,     .     /     rsft
+  lctl        lmet  lalt              spc               ralt  rmet  cmp   rctl
+)
+
+(defalias 
+  l_qw (layer-switch qwerty-sp)
+  l_dh (layer-switch colemak-dh-sp)
+)
+
+(defalias
+  ext  (layer-toggle extend) ;; Bind 'ext' to the Extend Layer
+  fun  (layer-toggle function) ;; Bind 'fun' to the Function Layer
+  sym (layer-toggle symbols) ;; Bind 'sym' to Symbols Layer
+  num (layer-toggle numbers) ;; Bind 'num' to Numbers Layer
+)
+
+(defalias 
+  ls_s (sticky-key 1500 lsft)
+  lc_s (sticky-key 1500 lctl)
+  la_s (sticky-key 1500 lalt)
+  ra_s (sticky-key 1500 ralt)
+  lm_s (sticky-key 1500 lmet)
+  lsc_s (around @lc_s @ls_s)
+  lac_s (around @lc_s @la_s)
+)
+
+(defalias
+  cpy C-c
+  pst C-v
+  cut C-x
+  scpy C-S-c
+  spst C-S-v
+  scut C-S-x
+  udo C-z
+  all C-a
+  fnd C-f
+  bk A-left
+  fw A-right
+  v+ VolumeUp
+  v- VolumeDown 
+  v0 Mute
+  mpl play
+  mps previoussong
+  mns nextsong
+  mrw rewind
+  mpp pause
+  mst stop
+  b+ BrightnessUp
+  b- BrightnessDown
+  ra1 (around ralt 1)
+  ra2 (around ralt 2)
+  ra3 (around ralt 3)
+  ra4 (around ralt 4)
+  ra5 (around ralt 5)
+  ra6 (around ralt 6)
+  ra7 (around ralt 7)
+  ra8 (around ralt 8)
+  ra9 (around ralt 9)
+  ra0 (around ralt 0)
+)
+
+(deflayer colemak-dh-sp
+  esc      f1    f2    f3    f4    f5    f6    f7    f8    f9    f10   f11   f12
+  grv      1     2     3     4     5     6     7     8     9     0     -     =     spc
+  tab      q     w     f     p     b     j     l     u     y     '     [     ]
+  @num     a     r     s     t     g     m     n     e     i     o     ;     _     ret
+  lsft  z     x     c     d     v     z     k     h     ,     .     /     rsft
+  lctl        lalt  @ext              lsft              @sym  ralt  _     _
+)
+
+(deflayer qwerty-sp
+  _        _     _     _     _     _     _     _     _     _     _     _     _
+  _        _     _     _     _     _     _     _     _     _     _     _     _     spc
+  _        _     _     _     _     _     _     _     _     _     _     _     _
+  @num     _     _     _     _     _     _     _     _     _     _     _     _     _ 
+  _    _      _     _     _     _     _     _     _     _     _     _     _
+  _           lalt  @ext              lsft              @sym  ralt  _     _
+)
+
+
+(deflayer extend
+  _        @mpl  @mrw  @mps  @mns ejectcd refresh brdn brup www mail   prog1 prog2
+  _        f1    f2    f3    f4    f5    f6    f7    f8    f9   f10    f11   f12   ret
+  _        esc   @bk   @fnd  @fw   ins   pgup  home  up    end   caps  ssrq  slck
+  _        @la_s @lm_s @ls_s @lc_s @ra_s pgdn  lft   down  rght  del   menu  _     _
+  _     @udo  @cut  @cpy  lmet  @pst  @udo  ret   bks   tab    cmp  ssrq  _
+  _            _    _                 @num              @fun  _     _     _
+)
+
+(deflayer function
+  _        _     _     _     _     _     _     _     _     _     _     _     _
+  _        _     _     _     _     _     _     _     _     _     _     _     _     _
+  _        @mst  @mps  @mpp  @mns  @b-   f12   f7    f8    f9    slck  _     _
+  _        @la_s @lm_s @ls_s @lc_s @b+   f11   f4    f5    f6    @l_dh _     _     _
+  _     @v0   @v-   @scpy @v+   @spst _     f10   f1    f2    f3    @l_qw _  
+  _           _     _                 _                 _     _     _     _
+)
+
+(deflayer symbols
+  _        _     _     _     _     _     _     _     _     _     _     _     _
+  _        _     _     _     _     _     _     _     _     _     _     _     _     _
+  _        S-1   S-2   S-3   S-4   S-5   =     `     :     ;     +     «     »
+  _        @la_s @lm_s @ls_s @lc_s S-6   *     \(    {     [     -     _     _     _
+  _     nubs  S-nubs \\   S-\\  S-7   nubs  ¬     \)    }     ]     \_    _
+  _           _     @fun              @num              _     _     _     _
+)
+
+(deflayer numbers
+  _        _     _     _     _     _     _     _     _     _     _     _     _
+  _        _     _     _     _     _     _     _     _     _     _     _     _     _
+  _        _     _     _     _     nlck  =     7     8     9     +     _     _
+  _        @la_s @lm_s @ls_s @lc_s @ra_s *     4     5     6     -     _     _     _
+  _     _     cmp   tab   bks   ret   _     0     1     2     3     /     _
+  _           _     _                 _                 _     _     _     _
+)
+
+(deflayer empty
+  _        _     _     _     _     _     _     _     _     _     _     _     _
+  _        _     _     _     _     _     _     _     _     _     _     _     _     _
+  _        _     _     _     _     _     _     _     _     _     _     _     _
+  _        _     _     _     _     _     _     _     _     _     _     _     _     _ 
+  _    _      _     _     _     _     _     _     _     _     _     _     _
+  _          _    _                   _                 _     _     _     _
+)

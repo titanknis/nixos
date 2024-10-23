@@ -31,8 +31,7 @@
 
       # --- Input and Display Configuration ---
       ./input.nix                       # Input device support (e.g., touchpad)
-      #./keymap.nix                      # Set the console keymap
-      ./layout.nix                      # xkb keyboard layout
+      ./keyboard
 
       # --- Desktop Environment ---
       ./display-manager.nix             # Display manager configuration
