@@ -9,8 +9,8 @@
   imports = [
     #./hyprland
     #./dolphin
-
     #./plasma
+
     ./kitty
     ./nvim
     ./vscode
