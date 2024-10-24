@@ -29,16 +29,16 @@
       ./bluetooth.nix                   # Bluetooth support configuration
       ./audio.nix                       # Audio system configuration (e.g., PipeWire)
 
-      # --- Input and Display Configuration ---
+      # --- Input ---
       ./input.nix                       # Input device support (e.g., touchpad)
       ./keyboard
 
       # --- Desktop Environment ---
-      ./display-manager.nix             # Display manager configuration
-      ./plasma.nix                      # KDE Plasma desktop configuration
       ./hyprland.nix                    # Hyprland window manager configuration
+      #./plasma.nix                      # KDE Plasma desktop configuration
+      #./display-manager.nix             # Display manager configuration
 
       # --- Virtual Machine Configuration ---
-      ./vm.nix                          # Virtual machine-specific settings
+      #./vm.nix                          # Virtual machine-specific settings
   ];
 }

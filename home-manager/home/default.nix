@@ -7,7 +7,7 @@
   home.file.".symlinks".source = ./.symlinks;
 
   imports = [
-    #./hyprland
+    ./hyprland
     #./dolphin
     #./plasma
 
@@ -15,7 +15,6 @@
     ./nvim
     ./vscode
     ./ranger
-    ./kmonad
   ];
 }
 

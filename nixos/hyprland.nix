@@ -38,6 +38,7 @@
     # Terminal and applications
     kitty           # Terminal emulator
     firefox         # Web browser
+    mpv             # Video player
 
     # Wayland-specific tools
     wl-clipboard    # Wayland clipboard utilities
