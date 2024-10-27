@@ -35,8 +35,8 @@
 
       # --- Desktop Environment ---
       ./hyprland.nix                    # Hyprland window manager configuration
-      #./plasma.nix                      # KDE Plasma desktop configuration
-      #./display-manager.nix             # Display manager configuration
+      ./plasma.nix                      # KDE Plasma desktop configuration
+      ./display-manager.nix             # Display manager configuration
 
       # --- Virtual Machine Configuration ---
       #./vm.nix                          # Virtual machine-specific settings

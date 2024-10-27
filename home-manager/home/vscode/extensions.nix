@@ -15,6 +15,8 @@
       esbenp.prettier-vscode
       pkief.material-icon-theme
       vscodevim.vim
+      catppuccin.catppuccin-vsc
+
       #ms-vscode.cpptools   # this is fucking unfree :(
 
       # Add more extensions here
