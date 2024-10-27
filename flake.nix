@@ -4,8 +4,10 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    home-manager.url = "github:nix-community/home-manager";
-    home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     #agenix.url = "github:ryantm/agenix";
 
    kmonad = {
@@ -14,8 +16,8 @@
    };
 
     # Uncomment if you plan to use disko for disk management
-    # inputs.disko.url = "github:nix-community/disko";
-    # inputs.disko.inputs.nixpkgs.follows = "nixpkgs";
+    # disko.url = "github:nix-community/disko";
+    # disko.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs = inputs@{ nixpkgs, home-manager, kmonad, ... }: {
