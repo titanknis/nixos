@@ -73,6 +73,7 @@
     fortune                         # Display random quotes
     pipes                           # Animated pipes in terminal
     figlet                          # Generate ASCII art text
+    ninvaders
     cava
 
     # Clipboard Tools
@@ -83,7 +84,6 @@
     #fira-code                       # Monospaced programming font for coding
 
     # Unfree Software
-    vscode
     spotify                         # Music streaming service
     discord                         # Communication platform
     obsidian                        # Note-taking and knowledge management tool

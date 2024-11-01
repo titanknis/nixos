@@ -1,8 +1,6 @@
 { pkgs, ... }:
 
 {
-  # Allow unfree packages
-  #nixpkgs.config.allowUnfree = true;
 
   programs.vscode = {
     enable = true;
@@ -18,6 +16,8 @@
       catppuccin.catppuccin-vsc
 
       #ms-vscode.cpptools   # this is fucking unfree :(
+      ms-vscode.cpptools-extension-pack
+      formulahendry.code-runner
 
       # Add more extensions here
     ];
