@@ -32,6 +32,8 @@
 
     # Development Tools
     python3
+    python3Packages.pip
+
     gcc                             # C/C++ compiler
     gdb                             # GNU Debugger
     codeblocks                      # Code::Blocks IDE
@@ -48,6 +50,7 @@
     ranger                          # Terminal file manager with keyboard shortcuts
     htop
     btop
+    gtop
     parted
     tldr
     man
