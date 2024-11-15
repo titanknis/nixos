@@ -57,6 +57,7 @@
     man-pages
     age
     killall
+    ripgrep
 
     # Terminal
     kitty                           # Terminal emulator with advanced features

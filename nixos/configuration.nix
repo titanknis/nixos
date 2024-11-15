@@ -19,6 +19,7 @@
       ./fonts.nix                       # fonts configurations
       ./users.nix                       # User account definitions
       ./git.nix                         # Git-specific configuration
+      ./nvim.nix                        # Text editor configuration
 
       # --- Networking and Locale ---
       ./network.nix                     # Networking configuration (e.g., hostname, NetworkManager)
