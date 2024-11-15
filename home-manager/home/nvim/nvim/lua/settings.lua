@@ -18,6 +18,7 @@ vim.opt.smartcase = true            -- Don't ignore case with capitals
 vim.o.mouse = 'a'                   -- Enable mouse support
 vim.opt.termguicolors = true        -- True color support (24-bit color)
 vim.opt.cursorline = true           -- Highlight current line
+vim.g.have_nerd_font = true
 
 -- Neovim folding settings
 vim.o.foldmethod = 'expr'

@@ -36,7 +36,9 @@
 
     gcc                             # C/C++ compiler
     gdb                             # GNU Debugger
-    codeblocks                      # Code::Blocks IDE
+    clang
+    clang-tools
+
     git                             # Version control system
 
     # CLI Utilities
@@ -55,7 +57,6 @@
     tldr
     man
     man-pages
-    age
     killall
     ripgrep
 

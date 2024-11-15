@@ -23,8 +23,11 @@ map('n', '<leader>p', '"+p', opts)  -- Paste from system clipboard
 map('n', '<leader>t', ':NvimTreeFocus<CR>', opts)
 map('n', '<leader>u', ':UndotreeToggle<CR>',  opts)
 
-map('n', '<leader>gs', ':Git<CR>', opts)
-map('n', '<leader>ga', ':Git add %<CR>', opts)
+-- Format document
+map('n', '<leader>fd', ':lua vim.lsp.buf.formatting()<CR>', opts)
+
+--map('n', '<leader>gs', ':Git<CR>', opts)
+--map('n', '<leader>ga', ':Git add %<CR>', opts)
 
 -- Telescope Keybindings
 local builtin = require("telescope.builtin")
@@ -33,18 +36,34 @@ vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Telescope live gr
 vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Telescope buffers' })
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
 
--- C/C++
-vim.api.nvim_create_autocmd("FileType", {
-  pattern = { "c", "cpp" },
-  callback = function()
-  vim.keymap.set("n", "<C-CR>", ":update | below split | term clang -g % -o %:r && ./%:r<CR>:startinsert<CR>", { buffer = true })
-  end,
-})
 
--- Python
+
+-- Python run
 vim.api.nvim_create_autocmd("FileType", {
   pattern = { "python" },
   callback = function()
-    vim.keymap.set("n", "<C-CR>", ":update | below split | term python %<CR>:startinsert<CR>", { buffer = true })
+    vim.keymap.set("n", "<C-CR>", function()
+      vim.cmd("update | below split | term python %")
+      vim.cmd("startinsert")
+    end, { buffer = true })
   end,
-}) 
+})-- C/C++ compile and run
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = { "c", "cpp" },
+  callback = function()
+    vim.keymap.set("n", "<C-CR>", function()
+      vim.cmd("update | below split | term clang -g % -o %:r && ./%:r")
+      vim.cmd("startinsert")
+    end, { buffer = true })
+  end,
+})
+-- Java compile and run
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = { "java" },
+  callback = function()
+    vim.keymap.set("n", "<C-CR>", function()
+      vim.cmd("update | below split | term javac % && java %:r")
+      vim.cmd("startinsert")
+    end, { buffer = true })
+  end,
+})
