@@ -1,20 +1,24 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
     neovim
-    ripgrep
 
+    ripgrep
+    nodejs
     python3
     clang
     jdk
+    glow
+
     # LSP servers
     pyright
-    clang-tools # for clangd
+    clang-tools # for clangd and clang-format
+
     jdt-language-server
     # Formatters
     black
     google-java-format
+    alejandra
     stylua
     nodePackages.prettier
-    alejandra
   ];
 }

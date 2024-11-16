@@ -1,6 +1,9 @@
 # NixOS Configuration
 
-This repository contains my personal NixOS configuration, built with Nix flakes. Each part is neatly organized to make managing and deploying system settings, packages, and services simple and flexible. The setup is designed to be modular, so you can easily tweak or extend it to fit your needs.
+This repositoryry contains my personal NixOS configuration,
+built with Nix flakes. Each part is neatly organized to make managing
+and deploying system settings, packages, and services simple and flexible.
+The setup is designed to be modular, so you can easily tweak or extend it to fit your needs.
 
 ## Directory Structure
 
@@ -50,10 +53,12 @@ This repository contains my personal NixOS configuration, built with Nix flakes.
 ## Overview of Components
 
 ### Flake Files
+
 - **flake.nix**: The main entry point for the flake, defining dependencies and inputs.
 - **flake.lock**: Automatically generated file that locks the versions of the inputs defined in `flake.nix`.
 
 ### Home Manager
+
 - **home-manager/**: Contains configurations for user-specific settings.
   - **home/**: Directory for organizing user-specific configuration files for various applications.
     - **aliases.nix**: User-defined command aliases.
@@ -65,6 +70,7 @@ This repository contains my personal NixOS configuration, built with Nix flakes.
   - **home.nix**: Main file to manage home configurations.
 
 ### NixOS Configurations
+
 - **nixos/**: Directory for system-wide configurations.
   - **configuration.nix**: Primary configuration file for NixOS settings.
   - **boot.nix**: Bootloader and encryption settings.
@@ -85,6 +91,7 @@ This repository contains my personal NixOS configuration, built with Nix flakes.
 ## Installation
 
 1. Clone the repository:
+
    ```bash
    git clone https://github.com/titanknis/nixos.git
    cd nixos
@@ -92,7 +99,7 @@ This repository contains my personal NixOS configuration, built with Nix flakes.
 
 2. Build and activate the configuration:
    ```bash
-   sudo nixos-rebuild switch --flake ./#mysystem 
+   sudo nixos-rebuild switch --flake ./#mysystem
    ```
 
 ## Usage

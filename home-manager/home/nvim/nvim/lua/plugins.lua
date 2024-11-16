@@ -31,13 +31,10 @@ local plugins = {
 		"windwp/nvim-autopairs",
 		event = "InsertEnter",
 		config = true,
-		-- use opts = {} for passing setup options
-		-- this is equivalent to setup({}) function
 	},
 	{
 		"lukas-reineke/indent-blankline.nvim",
 		main = "ibl",
-
 		opts = {},
 	},
 	{ "mbbill/undotree" },
@@ -63,8 +60,6 @@ local plugins = {
 	{ "L3MON4D3/LuaSnip" },
 	{ "rafamadriz/friendly-snippets" },
 
-	-- LSP
-	{ "neovim/nvim-lspconfig" },
 	{
 		"stevearc/conform.nvim",
 		opts = {},
@@ -75,6 +70,25 @@ local plugins = {
 			require("Comment").setup()
 		end,
 	},
+	{
+		"folke/todo-comments.nvim",
+		dependencies = { "nvim-lua/plenary.nvim" },
+		opts = {
+			-- your configuration comes here
+			-- or leave it empty to use the default settings
+			-- refer to the configuration section below
+		},
+	},
+	{
+		"iamcco/markdown-preview.nvim",
+		cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+		build = "cd app && npm install",
+		init = function()
+			vim.g.mkdp_filetypes = { "markdown" }
+		end,
+		ft = { "markdown" },
+	},
+	{ "ellisonleao/glow.nvim", config = true, cmd = "Glow" },
 }
 
 -- Set up lazy.nvim with your plugin specifications
@@ -88,5 +102,6 @@ require("conform").setup({
 		c = { "clang-format" },
 		nix = { "alejandra" },
 		lua = { "stylua" },
+		markdown = { "prettier" },
 	},
 })

@@ -4,24 +4,22 @@
 vim.g.mapleader = " "
 
 -- Define key mappings
-local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
 
-map("n", "<leader>n", ":set relativenumber!<CR>", opts)
-map("n", "<leader>q", ":q!<CR>", opts)
-map("n", "<leader>w", ":w<CR>", opts)
-map("n", "<leader>x", ":x<CR>", opts)
-map("n", "<leader>bd", ":bd<CR>", opts)
+vim.keymap.set("n", "<leader>n", ":set relativenumber!<CR>", opts)
+vim.keymap.set("n", "<leader>q", ":q!<CR>", opts)
+vim.keymap.set("n", "<leader>w", ":w<CR>", opts)
+vim.keymap.set("n", "<leader>x", ":x<CR>", opts)
+vim.keymap.set("n", "<leader>bd", ":bd<CR>", opts)
 
-map("n", "<C-a>", "ggVG", opts) -- Select all text
-map("n", "<leader>a", "ggVG", opts) -- Select all text
-map("n", "<leader>y", '"+y', opts) -- Yank to system clipboard
-map("n", "<leader>p", '"+p', opts) -- Paste from system clipboard
+vim.keymap.set("n", "<C-a>", "ggVG", opts) -- Select all text
+vim.keymap.set("n", "<leader>a", "ggVG", opts) -- Select all text
+vim.keymap.set("n", "<leader>y", '"+y', opts) -- Yank to system clipboard
+vim.keymap.set("n", "<leader>p", '"+p', opts) -- Paste from system clipboard
 
 -- Plugin key mappings
-map("n", "<leader>t", ":NvimTreeFocus<CR>", opts)
-map("n", "<leader>u", ":UndotreeToggle<CR>", opts)
-
+vim.keymap.set("n", "<leader>t", ":NvimTreeFocus<CR>", opts)
+vim.keymap.set("n", "<leader>u", ":UndotreeToggle<CR>", opts)
 -- Format document
 vim.keymap.set("n", "<leader>fd", function()
 	require("conform").format({ async = true })
@@ -71,5 +69,25 @@ vim.api.nvim_create_autocmd("FileType", {
 			vim.cmd("update | below split | term javac % && java %:r")
 			vim.cmd("startinsert")
 		end, { buffer = true })
+	end,
+})
+-- Markdown preview
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = { "markdown" },
+	callback = function()
+		vim.keymap.set("n", "<leader>gw", ":Glow<CR>", { buffer = true }) -- Trigger Glow preview in a floating window
+		vim.keymap.set("n", "<leader>mp", "<cmd>MarkdownPreview<CR>", { buffer = true, desc = "Preview markdown" })
+		vim.keymap.set(
+			"n",
+			"<leader>ms",
+			"<cmd>MarkdownPreviewStop<CR>",
+			{ buffer = true, desc = "Stop markdown preview" }
+		)
+		vim.keymap.set(
+			"n",
+			"<leader>mt",
+			"<cmd>MarkdownPreviewToggle<CR>",
+			{ buffer = true, desc = "Toggle markdown preview" }
+		)
 	end,
 })
