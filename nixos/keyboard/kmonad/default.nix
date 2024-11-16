@@ -1,6 +1,9 @@
-{ config, lib, pkgs, ... }:
-
 {
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
   services.kmonad = {
     enable = true;
     keyboards = {
@@ -10,10 +13,7 @@
         #config = builtins.readFile ./kmonad/colemak-dh-extend-iso.kbd;
         #config = builtins.readFile ./kmonad/colemak-dh-seniply-split.kbd;
         #config = builtins.readFile ./kmonad/colemak-dh-seniply-wide.kbd;
-
-
       };
     };
   };
 }
-

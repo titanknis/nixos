@@ -16,7 +16,7 @@
                 mountpoint = "/boot";
               };
             };
-  	    luks = {
+            luks = {
               size = "100%";
               content = {
                 type = "luks";

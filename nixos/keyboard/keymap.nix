@@ -1,10 +1,12 @@
-{ config, lib, pkgs, ... }:
-
 {
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
   # console keymap
   console = {
-     #keyMap = "mod-dh-ansi-us";
-     useXkbConfig = true;
+    #keyMap = "mod-dh-ansi-us";
+    useXkbConfig = true;
   };
 }
-

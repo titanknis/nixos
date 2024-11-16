@@ -1,5 +1,8 @@
-{ config, pkgs, ... }:
 {
+  config,
+  pkgs,
+  ...
+}: {
   imports = [
     ./home
   ];
@@ -8,10 +11,10 @@
   # paths it should manage.
   home.username = "titanknis";
   home.homeDirectory = "/home/titanknis";
-  
+
   # Add stuff for your user as you see fit:
   programs.neovim.enable = true;
-  home.packages = with pkgs; [   ];
+  home.packages = with pkgs; [];
 
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";
@@ -22,4 +25,3 @@
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 }
-

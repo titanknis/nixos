@@ -1,6 +1,9 @@
- { config, lib, pkgs, ... }:
- 
- {
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
   # Other configuration...
   programs.git = {
     enable = true;
@@ -11,8 +14,7 @@
       init.defaultBranch = "main";
     };
   };
-  
+
   # Enable Neovim
   programs.neovim.enable = true;
-
 }

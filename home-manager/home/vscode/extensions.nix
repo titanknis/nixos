@@ -1,10 +1,7 @@
-{ pkgs, ... }:
-
-{
-
+{pkgs, ...}: {
   programs.vscode = {
     enable = true;
-    package = pkgs.vscode;  # VSCode package
+    package = pkgs.vscode; # VSCode package
     extensions = with pkgs.vscode-extensions; [
       ms-python.python
       ms-python.debugpy
@@ -23,5 +20,3 @@
     ];
   };
 }
-
-

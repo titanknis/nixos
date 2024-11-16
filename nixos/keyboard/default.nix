@@ -1,11 +1,7 @@
-{ pkgs, ... }:
-
-{
+{pkgs, ...}: {
   imports = [
     ./kmonad
     ./layout.nix
     ./keymap.nix
   ];
 }
-
-
