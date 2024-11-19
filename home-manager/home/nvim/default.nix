@@ -1,11 +1,16 @@
 {pkgs, ...}: {
-  home.file.".config/nvim/init.lua".source = ./nvim/init.lua;
-  home.file.".config/nvim/lua/base-settings.lua".source = ./nvim/lua/base-settings.lua;
-  home.file.".config/nvim/lua/settings.lua".source = ./nvim/lua/settings.lua;
-  home.file.".config/nvim/lua/plugins.lua".source = ./nvim/lua/plugins.lua;
-  home.file.".config/nvim/lua/mappings.lua".source = ./nvim/lua/mappings.lua;
-  home.file.".config/nvim/lua/functions.lua".source = ./nvim/lua/functions.lua;
-  home.file.".config/nvim/lua/tree-sitter.lua".source = ./nvim/lua/tree-sitter.lua;
-  home.file.".config/nvim/lua/lsp.lua".source = ./nvim/lua/lsp.lua;
-  home.file.".config/nvim/lua/ui.lua".source = ./nvim/lua/ui.lua;
+  # home.file.".config/nvim/init.lua".source = ./nvim/init.lua;
+  # # lua
+  # home.file.".config/nvim/lua/options.lua".source = ./nvim/lua/options.lua;
+  # home.file.".config/nvim/lua/keymaps.lua".source = ./nvim/lua/keymaps.lua;
+  # home.file.".config/nvim/lua/autocmds.lua".source = ./nvim/lua/autocmds.lua;
+  #
+  # # plugins
+  # home.file.".config/nvim/lua/plugins/init.lua".source = ./nvim/lua/plugins/init.lua;
+  # home.file.".config/nvim/lua/plugins/lsp.lua".source = ./nvim/lua/plugins/lsp.lua;
+  # home.file.".config/nvim/lua/plugins/treesitter.lua".source = ./nvim/lua/plugins/treesitter.lua;
+  # home.file.".config/nvim/lua/plugins/conform.lua".source = ./nvim/lua/plugins/conform.lua;
+  # home.file.".config/nvim/lua/plugins/ui.lua".source = ./nvim/lua/plugins/ui.lua;
+  # home.file.".config/nvim/lua/plugins/obsidian.lua".source = ./nvim/lua/plugins/obsidian.lua;
+  # home.file.".config/nvim/lua/plugins/pomo.lua".source = ./nvim/lua/plugins/pomo.lua;
 }

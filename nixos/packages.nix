@@ -62,6 +62,7 @@
     man-pages
     killall
     ripgrep
+    syncthing
 
     # Terminal
     kitty # Terminal emulator with advanced features

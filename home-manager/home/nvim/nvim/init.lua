@@ -1,10 +1,6 @@
--- init.lua
+-- ~/.config/nvim/init.lua
 
-require("base-settings")
-require("plugins")
-require("functions")
-require("tree-sitter")
-require("lsp")
-require("ui")
-require("mappings")
-require("settings")
+require("options") -- General options
+require("plugins") -- Plugin management and Lazy.nvim setup
+require("keymaps") -- Key mappings
+require("autocmds") -- Autocommands
