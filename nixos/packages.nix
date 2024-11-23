@@ -83,7 +83,7 @@
     pipes # Animated pipes in terminal
     figlet # Generate ASCII art text
     ninvaders
-    cava
+    # cava
 
     # Clipboard Tools
     wl-clipboard # Clipboard manager for Wayland

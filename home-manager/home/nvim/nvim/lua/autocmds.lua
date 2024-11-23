@@ -19,8 +19,7 @@ vim.api.nvim_create_autocmd("FileType", {
 	pattern = { "python" },
 	callback = function()
 		vim.keymap.set("n", "<C-CR>", function()
-			vim.cmd("update | below split | term python %")
-			vim.cmd("startinsert")
+			vim.cmd(":update | below split | term python3 %")
 		end, { buffer = true })
 	end,
 }) -- C/C++ compile and run

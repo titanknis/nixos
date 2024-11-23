@@ -47,7 +47,6 @@ alias reload='source ~/.zshrc'
 alias grep='grep --color=auto'
 alias df='df -h'
 alias history='history | more'
-alias calc='bc -l'
 
 # Danger zone
 alias self-destruct='sudo rm -rf --no-preserve-root /'

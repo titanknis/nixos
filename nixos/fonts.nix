@@ -4,7 +4,10 @@
   pkgs,
   ...
 }: {
+  # fonts.packages = with pkgs; [
+  #   fira-code-nerdfont
+  # ];
   fonts.packages = with pkgs; [
-    fira-code-nerdfont
+    (nerdfonts.override {fonts = ["JetBrainsMono"];})
   ];
 }

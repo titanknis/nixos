@@ -25,9 +25,12 @@
   # System packages
   environment.systemPackages = with pkgs; [
     # Core utilities
-    wofi # Application launcher for Wayland
-    waybar
+    rofi-wayland # Application launcher for Wayland
+    waybar # Bar
     mako # Notification daemon
+    dunst # Notification daemon
+    swww # wallpaper daemon
+    cliphist # clipboard manager
     libsForQt5.polkit-kde-agent # Authentication agent
     brightnessctl # Backlight control
     playerctl # Media player control

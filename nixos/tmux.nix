@@ -1,5 +1,8 @@
 {pkgs, ...}: {
-  environment.systemPackages = with pkgs; [
-    tmux
-  ];
+  programs.tmux = {
+    enable = true;
+    plugins = with pkgs.tmuxPlugins; [
+      #      sensible
+    ];
+  };
 }

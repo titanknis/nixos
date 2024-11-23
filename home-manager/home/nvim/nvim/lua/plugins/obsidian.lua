@@ -21,10 +21,10 @@ return {
 			daily_notes = {
 				folder = "Daily", -- Folder for daily notes
 				date_format = "%Y-%m-%d", -- Date format for daily notes
-				template = "~/Notes/Templates/Daily.md", -- Optional daily note template
+				template = "Daily.md", -- Optional daily note template
 			},
 			templates = {
-				folder = "~/Notes/Templates",
+				folder = "Templates",
 				substitutions = {
 					yesterday = function()
 						return os.date("%Y-%m-%d", os.time() - 86400)
@@ -35,7 +35,7 @@ return {
 			completion = {
 				nvim_cmp = true, -- Enable nvim-cmp completion
 			},
-			notes_subdir = "~/Notes/Inbox", -- Subdirectory for new notes
+			notes_subdir = "Inbox", -- Subdirectory for new notes
 			new_notes_location = "notes_subdir", -- Where to place new notes
 		})
 
