@@ -16,7 +16,6 @@
     ./services.nix # Services settings (e.g., networking, printing)
     ./packages.nix # System packages and their configurations
     ./firewall.nix # Firewall configuration
-    ./console.nix # Console configuration
     ./shell.nix # Shell configurations
     ./fonts.nix # fonts configurations
     ./users.nix # User account definitions
@@ -41,6 +40,7 @@
     ./hyprland.nix # Hyprland window manager configuration
     # ./plasma.nix # KDE Plasma desktop configuration
     ./display-manager.nix # Display manager configuration
+    # ./stylix.nix
 
     # --- Virtual Machine Configuration ---
     #./vm.nix                          # Virtual machine-specific settings

@@ -2,7 +2,6 @@
   home.file.".bashrc".source = ./.bashrc;
   home.file.".zshrc".source = ./.zshrc;
   home.file.".aliases".source = ./.aliases;
-  home.file.".symlinks".source = ./.symlinks;
   home.file.".tmux.conf".source = ./.tmux.conf;
 
   imports = [
@@ -15,9 +14,9 @@
     #./swww
     #./plasma
 
-    ./kitty
+    #./kitty
     #./nvim
-    ./vscode
+    #./vscode
     #./ranger
   ];
 }

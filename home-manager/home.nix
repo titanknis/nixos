@@ -5,6 +5,7 @@
 }: {
   imports = [
     ./home
+    ./theme.nix
   ];
 
   # Home Manager needs a bit of information about you and the
@@ -13,8 +14,7 @@
   home.homeDirectory = "/home/titanknis";
 
   # Add stuff for your user as you see fit:
-  programs.neovim.enable = true;
-  home.packages = with pkgs; [];
+  #  home.packages = with pkgs; [];
 
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";

@@ -11,6 +11,11 @@
 
   # Wayland-specific environment variables
   environment.sessionVariables = {
+    XCURSOR_THEME = "Bibata-Modern-Ice";
+    # Set default icon theme
+    # GTK_THEME = "Papirus-Dark";
+    # ICON_THEME = "Papirus-Dark";
+    ELECTRON_FORCE_DARK_MODE = "1";
     NIXOS_OZONE_WL = "1"; # Hint Electron apps to use Wayland
     XDG_SESSION_TYPE = "wayland";
     XDG_CURRENT_DESKTOP = "Hyprland";
@@ -32,9 +37,14 @@
     swww # wallpaper daemon
     cliphist # clipboard manager
     libsForQt5.polkit-kde-agent # Authentication agent
-    brightnessctl # Backlight control
+    brightnessctl # Backlight    bibata-cursors
+
     playerctl # Media player control
     networkmanagerapplet # Network management
+
+    # Icons and cursor and theme
+    bibata-cursors
+    papirus-icon-theme # Popular icon theme
 
     # Hyprland-specific
     hyprpaper # Wallpaper utility for Hyprland

@@ -17,13 +17,16 @@
     # Uncomment if you plan to use disko for disk management
     disko.url = "github:nix-community/disko";
     disko.inputs.nixpkgs.follows = "nixpkgs";
+
+    #stylix.url = "github:danth/stylix";
   };
 
   outputs = inputs @ {
     nixpkgs,
     home-manager,
-    kmonad,
+    # kmonad,
     disko,
+    # stylix,
     ...
   }: {
     nixosConfigurations.mysystem = nixpkgs.lib.nixosSystem {
@@ -32,6 +35,7 @@
       modules = [
         ./nixos/configuration.nix
         disko.nixosModules.disko
+        # stylix.nixosModules.stylix
         #agenix.nixosModules.age
         #kmonad.nixosModules.default
         home-manager.nixosModules.home-manager

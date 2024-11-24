@@ -1,6 +1,6 @@
 {pkgs, ...}: {
-  # home.file.".config/nvim/init.lua".source = ./nvim/init.lua;
-  # # lua
+   home.file.".config/nvim/init.lua".source = ./nvim/init.lua;
+   # lua
    home.file.".config/nvim/lua/options.lua".source = ./nvim/lua/options.lua;
    home.file.".config/nvim/lua/keymaps.lua".source = ./nvim/lua/keymaps.lua;
    home.file.".config/nvim/lua/autocmds.lua".source = ./nvim/lua/autocmds.lua;

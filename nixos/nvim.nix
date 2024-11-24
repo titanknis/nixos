@@ -12,6 +12,7 @@
     # LSP servers
     pyright
     clang-tools # for clangd and clang-format
+    nixd
 
     jdt-language-server
     # Formatters

@@ -10,6 +10,8 @@
     enableSSHSupport = true; # Enable GPG for SSH key management
   };
 
+  #  nix.nixPath = ["nixpkgs=${inputs.nixpkgs}"];
+
   # Installed System Packages
   environment.systemPackages = with pkgs; [
     # Browsers
