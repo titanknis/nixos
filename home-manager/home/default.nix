@@ -3,10 +3,15 @@
   home.file.".zshrc".source = ./.zshrc;
   home.file.".aliases".source = ./.aliases;
   home.file.".symlinks".source = ./.symlinks;
+  home.file.".tmux.conf".source = ./.tmux.conf;
 
   imports = [
     #./hyprland
-    #./dolphin
+    #./rofi
+    #./waybar
+    #./mako
+    #./swaylock
+    #./swww
     #./plasma
 
     ./kitty

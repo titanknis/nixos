@@ -1,0 +1,9 @@
+
+{
+  "layer": "top",
+  "modules-left": ["workspaces", "hyprland"],
+  "modules-center": ["window"],
+  "modules-right": ["cpu", "memory", "battery", "network", "clock"],
+  "tray-position": "right",
+  "font": "JetBrains Mono Nerd Font 12"
+}

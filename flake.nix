@@ -15,14 +15,15 @@
     };
 
     # Uncomment if you plan to use disko for disk management
-    # disko.url = "github:nix-community/disko";
-    # disko.inputs.nixpkgs.follows = "nixpkgs";
+    disko.url = "github:nix-community/disko";
+    disko.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs = inputs @ {
     nixpkgs,
     home-manager,
     kmonad,
+    disko,
     ...
   }: {
     nixosConfigurations.mysystem = nixpkgs.lib.nixosSystem {
@@ -30,7 +31,7 @@
 
       modules = [
         ./nixos/configuration.nix
-        # disko.nixosModules.disko
+        disko.nixosModules.disko
         #agenix.nixosModules.age
         #kmonad.nixosModules.default
         home-manager.nixosModules.home-manager

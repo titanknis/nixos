@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#waybar {
+  background: rgba(0, 0, 0, 0.7); /* Transparent background */
+  color: #ffffff;
+  border: none;
+}
+
+#waybar .module {
+  padding: 0 10px;
+}
+
+#waybar .module.workspaces {
+  font-weight: bold;
+}
+
+#waybar .module.clock {
+  font-size: 14px;
+}

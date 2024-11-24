@@ -7,7 +7,7 @@
   # Import custom configurations and modules
   imports = [
     # --- Disk and Boot Configuration ---
-    #./disko.nix                       # Disko partitioning setup
+    ./disko.nix # Disko partitioning setup
     ./hardware-configuration.nix # Hardware-specific configuration
     ./boot.nix # LUKS, GRUB, and kernel settings
 
@@ -39,7 +39,7 @@
 
     # --- Desktop Environment ---
     ./hyprland.nix # Hyprland window manager configuration
-    ./plasma.nix # KDE Plasma desktop configuration
+    # ./plasma.nix # KDE Plasma desktop configuration
     ./display-manager.nix # Display manager configuration
 
     # --- Virtual Machine Configuration ---

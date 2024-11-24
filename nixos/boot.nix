@@ -5,14 +5,19 @@
   ...
 }: {
   # LUKS Encryption Setup
-  boot.initrd = {
-    luks.devices = {
-      luksCrypted = {
-        device = "/dev/nvme0n1p2"; # Update with the actual device UUID
-        preLVM = true; # Unlock LUKS before LVM activation
-        allowDiscards = true; # Enable TRIM for SSDs
-      };
-    };
+  # boot.initrd = {
+  #   luks.devices = {
+  #     luksCrypted = {
+  #       device = "/dev/nvme0n1p2"; # Update with the actual device UUID
+  #       preLVM = true; # Unlock LUKS before LVM activation
+  #       allowDiscards = true; # Enable TRIM for SSDs
+  #     };
+  #   };
+  # };
+  # LUKS configuration - simplified since Disko handles device setup
+  boot.initrd.luks.devices."luksCrypted" = {
+    preLVM = true;
+    allowDiscards = true;
   };
 
   # Bootloader Configuration (GRUB)

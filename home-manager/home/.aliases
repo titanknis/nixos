@@ -9,6 +9,7 @@ alias fast='fastfetch'
 alias cmatrix='cmatrix -a -C cyan'
 alias c='clear'
 
+alias mkdir='mkdir -p'
 # Navigation
 alias ..='cd ..'
 alias ...='cd ../..'

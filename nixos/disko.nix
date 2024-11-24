@@ -21,9 +21,15 @@
               content = {
                 type = "luks";
                 name = "luksCrypted";
+                settings = {
+                  # if you want to use the key for interactive login be sure there is no trailing newline
+                  # for example use `echo -n "password" > /tmp/secret.key`
+                  # keyFile = "/tmp/secret.key";
+                  allowDiscards = true;
+                };
                 content = {
                   type = "lvm_pv";
-                  vg = "pool";
+                  vg = "vg0";
                 };
               };
             };
@@ -32,11 +38,11 @@
       };
     };
     lvm_vg = {
-      pool = {
+      vg0 = {
         type = "lvm_vg";
         lvs = {
           root = {
-            size = "50G";
+            size = "80G";
             content = {
               type = "filesystem";
               format = "ext4";
@@ -51,7 +57,7 @@
               mountpoint = "/home";
             };
           };
-          Swap = {
+          swap = {
             size = "20G";
             content = {
               type = "swap";

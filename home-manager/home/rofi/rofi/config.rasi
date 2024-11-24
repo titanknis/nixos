@@ -1,0 +1,13 @@
+configuration {
+    font: "JetBrainsMono Nerd Font 12";
+}
+
+//@theme "/nix/store/pimx7arnbc7aj55zj2zgv26wkqahv27j-rofi-1.7.5+wayland3/share/rofi/themes/arthur.rasi"
+
+//@theme "/nix/store/nkjjc70cidfc3wbpas7kqr7agasma59c-rofi-1.7.5+wayland3/share/rofi/themes/sidebar-v2.rasi"
+
+//@theme "/nix/store/nkjjc70cidfc3wbpas7kqr7agasma59c-rofi-1.7.5+wayland3/share/rofi/themes/android_notification.rasi"
+
+@theme "/nix/store/nkjjc70cidfc3wbpas7kqr7agasma59c-rofi-1.7.5+wayland3/share/rofi/themes/material.rasi"
+
+

@@ -27,7 +27,7 @@
     # Core utilities
     rofi-wayland # Application launcher for Wayland
     waybar # Bar
-    mako # Notification daemon
+    libnotify
     dunst # Notification daemon
     swww # wallpaper daemon
     cliphist # clipboard manager
