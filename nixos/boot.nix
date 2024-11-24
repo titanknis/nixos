@@ -22,9 +22,8 @@
 
   # Bootloader Configuration (systemd)
   boot.loader.systemd-boot.enable = true;
-  boot.loader.systemd-boot.canTouchEfiVariables = true;
 
-  boot.loader.efi.efiSysMountPoint = "/boot"; # Mount point for EFI partition
+  #boot.loader.efi.efiSysMountPoint = "/boot"; # Mount point for EFI partition
   boot.loader.efi.canTouchEfiVariables = true; # Allow modification of EFI variables
   # Bootloader Configuration (GRUB)
   # boot.loader.grub.enable = true;
