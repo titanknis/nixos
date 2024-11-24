@@ -10,13 +10,14 @@
     #./rofi
     #./waybar
     #./mako
+    #./dunst
     #./swaylock
     #./swww
     #./plasma
 
     ./kitty
-    ./nvim
+    #./nvim
     ./vscode
-    ./ranger
+    #./ranger
   ];
 }

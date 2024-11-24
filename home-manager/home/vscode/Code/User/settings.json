@@ -60,7 +60,7 @@
     //"workbench.colorTheme": "Gitpod Dark",
 
     // Set editor font family
-    "editor.fontFamily": "'Fira Code' ,'MesloLGS NF', 'Droid Sans Mono', 'monospace'"
+    "editor.fontFamily": "'Jetbrains Mono Nerd Font' ,'MesloLGS NF', 'Droid Sans Mono', 'monospace'"
 
 
 

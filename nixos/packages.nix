@@ -20,25 +20,22 @@
     #vscodium                        # Visual Studio Code alternative
 
     # File manipulation
-    #dolphin                         # File Manager
-    ark # Archiving tool
+    dolphin # File Manager
+    # ark # Archiving tool
 
     # Media
-    vlc # Video player
-    mpv
+    mpv # Video player
 
-    #Markdown and Office
+    # Office
     #onlyoffice-bin                 # Office suite for document editing
     #libreoffice                    # Another office suite option
-    #marktext                       # Markdown editor
-    #zettlr                         # Markdown editor with additional features
 
     # Development Tools
     python3
     python3Packages.pip
 
-    gcc # C/C++ compiler
-    gdb # GNU Debugger
+    #gcc # C/C++ compiler
+    #gdb # GNU Debugger
     clang
     clang-tools
 
@@ -52,7 +49,7 @@
     eza
     fzf # Fuzzy finder for terminal
     bat # Enhanced 'cat' with syntax highlighting
-    ranger # Terminal file manager with keyboard shortcuts
+    #ranger # Terminal file manager with keyboard shortcuts
     htop
     btop
     gtop
@@ -66,11 +63,6 @@
 
     # Terminal
     kitty # Terminal emulator with advanced features
-
-    # Wine and Winetricks
-    # Uncomment if you need to run Windows applications
-    # wine                          # Compatibility layer for running Windows applications
-    # winetricks                    # Script to help manage Wine
 
     # Fun and Miscellaneous
     fastfetch # Display system info in a visually appealing way
@@ -87,10 +79,6 @@
 
     # Clipboard Tools
     wl-clipboard # Clipboard manager for Wayland
-
-    # Prompt and Fonts
-    #starship                        # Cross-shell prompt for better CLI experience
-    #fira-code                       # Monospaced programming font for coding
 
     # Unfree Software
     spotify # Music streaming service
