@@ -10,6 +10,9 @@
 
   services.greetd.enable = true;
   programs.regreet.enable = true;
+  programs.regreet.cursorTheme.package = pkgs.bibata-cursors;
   programs.regreet.cursorTheme.name = "Bibata-Modern-Ice";
   programs.regreet.iconTheme.package = pkgs.papirus-icon-theme;
+  programs.regreet.iconTheme.name = "Papirus-Dark";
+  programs.regreet.theme.package = pkgs.tokyonight-gtk-theme;
 }

@@ -37,14 +37,14 @@
     swww # wallpaper daemon
     cliphist # clipboard manager
     libsForQt5.polkit-kde-agent # Authentication agent
-    brightnessctl # Backlight    bibata-cursors
+    brightnessctl # Backlight
 
     playerctl # Media player control
     networkmanagerapplet # Network management
 
     # Icons and cursor and theme
-    bibata-cursors
-    papirus-icon-theme # Popular icon theme
+    # bibata-cursors
+    # papirus-icon-theme # Popular icon theme
 
     # Hyprland-specific
     hyprpaper # Wallpaper utility for Hyprland

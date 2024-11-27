@@ -78,6 +78,7 @@
     figlet # Generate ASCII art text
     ninvaders
     # cava
+    cbonsai
 
     # Clipboard Tools
     wl-clipboard # Clipboard manager for Wayland

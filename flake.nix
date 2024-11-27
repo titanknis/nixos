@@ -7,52 +7,58 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    #agenix.url = "github:ryantm/agenix";
-
     kmonad = {
       url = "git+https://github.com/kmonad/kmonad?submodules=1&dir=nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    # Uncomment if you plan to use disko for disk management
-    disko.url = "github:nix-community/disko";
-    disko.inputs.nixpkgs.follows = "nixpkgs";
-
+    disko = {
+      url = "github:nix-community/disko";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    catppuccin.url = "github:catppuccin/nix";
     #stylix.url = "github:danth/stylix";
   };
 
-  outputs = inputs @ {
+  outputs = {
     nixpkgs,
     home-manager,
-    # kmonad,
+    catppuccin,
     disko,
-    # stylix,
     ...
-  }: {
-    nixosConfigurations.mysystem = nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux";
+  } @ inputs: let
+    system = "x86_64-linux";
+    host = "default";
+    username = "titanknis";
+  in {
+    nixosConfigurations = {
+      "${host}" = nixpkgs.lib.nixosSystem {
+        specialArgs = {
+          inherit system;
+          inherit inputs;
+          inherit username;
+          inherit host;
+        };
+        modules = [
+          ./hosts/${host}/configuration.nix
+          disko.nixosModules.disko
+          catppuccin.nixosModules.catppuccin
+          # inputs.stylix.nixosModules.stylix
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.extraSpecialArgs = {
+              inherit username;
+              inherit inputs;
+              inherit host;
+            };
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.backupFileExtension = "backup";
+            home-manager.users.${username} = import ./hosts/${host}/home.nix;
 
-      modules = [
-        ./nixos/configuration.nix
-        disko.nixosModules.disko
-        # stylix.nixosModules.stylix
-        #agenix.nixosModules.age
-        #kmonad.nixosModules.default
-        home-manager.nixosModules.home-manager
-        {
-          home-manager.useGlobalPkgs = true;
-          home-manager.useUserPackages = true;
-          home-manager.users.titanknis = import ./home-manager/home.nix;
-
-          # Optionally pass arguments to home.nix
-          # home-manager.extraSpecialArgs = {
-          #   # Add your special arguments here
-          # };
-
-          # Maintain compatibility with the original NixOS version
-          system.stateVersion = "24.05"; # Keep original NixOS state version
-        }
-      ];
+            system.stateVersion = "24.05"; # Keep original NixOS state version
+          }
+        ];
+      };
     };
   };
 }
