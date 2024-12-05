@@ -11,6 +11,7 @@
     # --- Disk and Boot Configuration ---
     ../../modules/nixos/disko.nix # Disko partitioning setup
     ../../modules/nixos/boot.nix # LUKS, GRUB, and kernel settings
+    # ../../modules/nixos/plymouth.nix # splash screen
 
     # --- System Configuration ---
     ../../modules/nixos/system.nix # General system settings
@@ -23,6 +24,7 @@
     ../../modules/nixos/git.nix # Git-specific configuration
     ../../modules/nixos/nvim.nix # Text editor configuration
     ../../modules/nixos/tmux.nix # Terminal multiplexer configuration
+    ../../modules/nixos/python.nix # python development envirement
 
     # --- Networking and Locale ---
     ../../modules/nixos/network.nix # Networking configuration (e.g., hostname, NetworkManager)

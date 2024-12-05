@@ -21,5 +21,8 @@
     alejandra
     stylua
     nodePackages.prettier
+
+    #debugger adapters
+    # python312Packages.debugpy # python debug adapter
   ];
 }

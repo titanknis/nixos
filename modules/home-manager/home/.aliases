@@ -2,6 +2,7 @@
 alias q='exit'
 alias :q='exit'
 alias t='tmux'
+alias y='yazi'
 alias v='nvim'
 alias vs='vscodium'
 alias cd='z'

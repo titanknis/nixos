@@ -8,10 +8,27 @@
   programs.hyprland = {
     enable = true;
   };
-
+  xdg.mime.defaultApplications = {
+    # "application/pdf" = "org.pwmt.zathura.desktop";
+  };
   # Wayland-specific environment variables
+  services.getty.autologinUser = "titanknis";
+  environment = {
+    loginShellInit = ''
+      if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" -eq 1 ]; then
+         Hyprland
+      fi
+    '';
+  };
   environment.sessionVariables = {
     XCURSOR_THEME = "Bibata-Modern-Ice";
+
+    VIDEO_PLAYER = "mpv";
+    IMAGE_VIEWER = "imv";
+    EDITOR = "nvim";
+    VISUAL = "nvim";
+    FILE_MANAGER = "yazi";
+    XDG_DEFAULT_FILE_MANAGER = "yazi";
     # Set default icon theme
     # GTK_THEME = "Papirus-Dark";
     # ICON_THEME = "Papirus-Dark";
@@ -36,32 +53,37 @@
     dunst # Notification daemon
     swww # wallpaper daemon
     cliphist # clipboard manager
+
     libsForQt5.polkit-kde-agent # Authentication agent
+
     brightnessctl # Backlight
 
     playerctl # Media player control
     networkmanagerapplet # Network management
 
-    # Icons and cursor and theme
-    # bibata-cursors
-    # papirus-icon-theme # Popular icon theme
-
     # Hyprland-specific
-    hyprpaper # Wallpaper utility for Hyprland
     hyprpicker
     xdg-desktop-portal-hyprland
 
     # Terminal and applications
     kitty # Terminal emulator
     firefox # Web browser
+    thunderbird # email client
     mpv # Video player
+    imv # image viewer
+    yazi # file manager
+    zathura # pdf viewer
 
     # Wayland-specific tools
     wl-clipboard # Wayland clipboard utilities
     grim # Screenshot utility
     slurp # Area selection tool
     wf-recorder
-    swaylock # Screen locker
-    swayidle # Idle management daemon
+    swaylock-effects # For screen locking
+    wlogout
+
+    qalculate-gtk # calculator
+    libqalculate # calculator cli
+    termdown
   ];
 }

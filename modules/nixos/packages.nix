@@ -17,12 +17,14 @@
     # Browsers
     firefox # Web browser
 
+    youtube-music
     # Editors
     neovim # Text editor
     #vscodium                        # Visual Studio Code alternative
+    codeblocksFull
 
     # File manipulation
-    dolphin # File Manager
+    yazi
     # ark # Archiving tool
 
     # Media
@@ -36,7 +38,7 @@
     python3
     python3Packages.pip
 
-    #gcc # C/C++ compiler
+    gcc # C/C++ compiler
     #gdb # GNU Debugger
     clang
     clang-tools
@@ -62,6 +64,7 @@
     killall
     ripgrep
     syncthing
+    ffmpeg
 
     # Terminal
     kitty # Terminal emulator with advanced features

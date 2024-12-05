@@ -39,5 +39,6 @@
   # '';
 
   # Kernel Configuration (Using Zen Kernel)
+
   boot.kernelPackages = pkgs.linuxPackages_zen;
 }
