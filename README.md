@@ -1,5 +1,7 @@
 # NixOS Configuration
 
+**DISCLAIMER:** this documentation is outdated as i added many things recently
+
 This repositoryry contains my personal NixOS configuration,
 built with Nix flakes. Each part is neatly organized to make managing
 and deploying system settings, packages, and services simple and flexible.
