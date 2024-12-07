@@ -21,7 +21,6 @@
     # Editors
     neovim # Text editor
     #vscodium                        # Visual Studio Code alternative
-    codeblocksFull
 
     # File manipulation
     yazi

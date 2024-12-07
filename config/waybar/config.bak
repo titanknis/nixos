@@ -1,7 +1,7 @@
 {
     "layer": "top", // Waybar at top layer
     "position": "top", // Waybar position (top|bottom|left|right)
-    // "width": 200, // Waybar width
+    // "width": 1280, // Waybar width
     // Choose the order of the modules
     "modules-left": ["wlr/workspaces"],
     "modules-center": ["custom/music"],
