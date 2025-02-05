@@ -6,10 +6,10 @@
     ".aliases".source = ./.aliases;
     ".tmux.conf".source = ./.tmux.conf;
   };
-  home.file.Wallpapers = {
-    source = ./Wallpapers;
-    recursive = true;
-  };
+  # home.file.Wallpapers = {
+  #   source = ./Wallpapers;
+  #   recursive = true;
+  # };
 
   xdg.configFile = {
     nvim = {

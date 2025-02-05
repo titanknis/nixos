@@ -7,7 +7,6 @@
     clang
     jdk
     glow
-    syncthing
     # LSP servers
     pyright
     clang-tools # for clangd and clang-format

@@ -42,53 +42,53 @@
     clang # C/C++ compiler
     clang-tools # Clang tools
     wl-clipboard # Clipboard manager
-    tree # Directory tree
-    wget # Download tool (better for resuming downloads)
-    curl # Download tool (supports more protocols)
+    # tree # Directory tree
+    # wget # Download tool (better for resuming downloads)
+    # curl # Download tool (supports more protocols)
     zoxide # Directory jumper
     eza # Enhanced ls
     fzf # Fuzzy finder
     bat # Syntax-highlighted cat
-    htop
+    # htop
     btop
-    gtop
-    parted
+    # gtop
+    # parted
     disko
     tldr
-    man
-    man-pages
+    # man
+    # man-pages
     ripgrep
-    ffmpeg
-    qalculate-gtk # calculator
+    # ffmpeg
+    # qalculate-gtk # calculator
     # libqalculate # calculator cli
 
     # Fun and Miscellaneous
-    fastfetch # Display system info in a visually appealing way
-    sl # Steam locomotive animation in terminal
-    cmatrix # Matrix effect in terminal
-    asciiquarium # Watch an aquarium in terminal
-    cowsay # ASCII cowspeak for fun messages
-    ponysay # Pony-themed version of cowsay
-    fortune # Display random quotes
-    pipes # Animated pipes in terminal
-    figlet # Generate ASCII art text
-    ninvaders
-    hollywood
-    cava
-    cbonsai
-    cool-retro-term
-    tty-clock
-    termdown
+    # fastfetch # Display system info in a visually appealing way
+    # sl # Steam locomotive animation in terminal
+    # cmatrix # Matrix effect in terminal
+    # asciiquarium # Watch an aquarium in terminal
+    # cowsay # ASCII cowspeak for fun messages
+    # ponysay # Pony-themed version of cowsay
+    # fortune # Display random quotes
+    # pipes # Animated pipes in terminal
+    # figlet # Generate ASCII art text
+    # ninvaders
+    # hollywood
+    # cava
+    # cbonsai
+    # cool-retro-term
+    # tty-clock
+    # termdown
 
     # Unfree Software
     spotify # Music streaming service
-    discord # Communication platform
+    # discord # Communication platform
   ];
 
   # Allow specific unfree packages
   nixpkgs.config.allowUnfreePredicate = pkg:
     builtins.elem (lib.getName pkg) [
-      "discord" # Allow Discord
+      # "discord" # Allow Discord
       "spotify" # Allow Spotify
     ];
 }

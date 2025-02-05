@@ -91,7 +91,7 @@ This repository contains my personal NixOS configuration, built using Nix flakes
 2. Build and activate the configuration:
 
    ```bash
-   sudo nixos-rebuild switch --flake ./#mysystem
+   sudo nixos-rebuild switch --flake ./#default
    ```
 
 ## Usage

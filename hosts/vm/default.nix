@@ -25,7 +25,7 @@
 
     # --- Desktop Environment ---
     ../../modules/hyprland.nix # Hyprland window manager configuration
-    ../../modules/stylix.nix
+    # ../../modules/stylix.nix
 
     # --- Virtual Machine Configuration ---
     ../../modules/vm-guest.nix # Virtual machine-specific settings for the Guest
