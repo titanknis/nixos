@@ -1,0 +1,49 @@
+# General shortcuts
+alias q='exit'
+alias t='tmux'
+alias y='yazi'
+alias v='nvim'
+alias cd='z'
+alias fast='fastfetch'
+alias cmatrix='cmatrix -a -C cyan'
+alias c='clear'
+alias mkdir='mkdir -p'
+
+# Directory navigation (relative paths)
+alias ..='cd ..'
+alias ...='cd ../..'
+alias .3='cd ../../..'
+alias .4='cd ../../../..'
+alias .5='cd ../../../../..'
+
+# Directory listing (using eza)
+alias ls='eza -1 --icons=auto'             # Default: single column
+alias l='eza -lh --icons=auto'             # Long, human-readable
+alias la='eza -lha --icons=auto --sort=name --group-directories-first'  # All files
+alias ll='eza -lha --icons=auto'           # All files, unsorted
+alias ld='eza -lhD --icons=auto'           # Directories only
+alias lf='eza -lhf --icons=auto'           # Files only
+alias lh='eza -ldh .* --icons=auto --sort=name --group-directories-first'  # Hidden only
+alias lt='eza --icons=auto --tree'         # Tree view
+
+# Git shortcuts
+alias gs='git status'        # Show current status
+alias ga='git add'           # Stage changes
+alias gc='git commit'        # Commit changes
+alias gp='git push'          # Push to remote
+alias gpull='git pull'       # Pull from remote
+alias gl='git log --oneline --graph --decorate'  # Log with graph
+alias gacp='ga . && gc && gp'  # Add all, commit, and push
+
+# Reload config
+alias reload='source ~/.zshrc'
+
+# Better commands
+alias grep='grep --color=auto'
+alias df='df -h'
+alias history='history | more'
+
+# Danger zone
+alias self-destruct='sudo rm -rf --no-preserve-root /'
+
+
