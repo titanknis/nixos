@@ -76,8 +76,8 @@ This repository contains my personal NixOS configuration, built using Nix flakes
   - **packages.nix**: List of system packages and configurations.
   - **services.nix**: Various system service configurations.
   - **users.nix**: User account definitions and settings.
-  - **vm-host.nix**: Virtual machine configuration.
-  - **vm-guest.nix**: Virtual machine configuration.
+  - **vm-host.nix**: Virtual machine configuration for systm as the host.
+  - **vm-guest.nix**: Virtual machine configuration for system as a guest.
 
 ## Installation
 
