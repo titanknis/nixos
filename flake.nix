@@ -57,8 +57,8 @@
             home-manager.useUserPackages = true;
             home-manager.users.${username} = import ./hosts/${hostname}/home.nix;
 
-            system.stateVersion = "24.11"; # Keep original NixOS state version
-            # system.stateVersion = "25.05"; # Did you read the comment?
+            # system.stateVersion = "24.11"; # Keep original NixOS state version
+            system.stateVersion = "25.05"; # Did you read the comment?
           }
         ];
       };
