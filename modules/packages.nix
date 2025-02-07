@@ -36,7 +36,7 @@
     # Media
     mpv # Video player
     cmus # Music player
-    # youtube-music
+    youtube-music
 
     # CLI Utilities
     clang # C/C++ compiler
@@ -83,6 +83,7 @@
     # Unfree Software
     spotify # Music streaming service
     # discord # Communication platform
+    ciscoPacketTracer8 # app for college
   ];
 
   # Allow specific unfree packages
@@ -90,5 +91,6 @@
     builtins.elem (lib.getName pkg) [
       # "discord" # Allow Discord
       "spotify" # Allow Spotify
+      "ciscoPacketTracer8" # app for college
     ];
 }

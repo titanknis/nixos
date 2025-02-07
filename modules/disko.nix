@@ -39,7 +39,7 @@
         type = "lvm_vg";
         lvs = {
           root = {
-            size = "80G";
+            size = "50G";
             content = {
               type = "filesystem";
               format = "ext4";
@@ -47,7 +47,7 @@
             };
           };
           home = {
-            size = "80G";
+            size = "50G";
             content = {
               type = "filesystem";
               format = "ext4";
@@ -62,7 +62,10 @@
               resumeDevice = true; # resume from hiberation from this device
             };
           };
-          vm = {
+          vm1 = {
+            size = "50G";
+          };
+          vm2 = {
             size = "50G";
           };
         };
