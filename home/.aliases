@@ -6,6 +6,7 @@ alias v='nvim'
 alias cd='z'
 alias fast='fastfetch'
 alias cmatrix='cmatrix -a -C cyan'
+alias clock='tty-clock -C 6 -c -D'
 alias c='clear'
 alias mkdir='mkdir -p'
 

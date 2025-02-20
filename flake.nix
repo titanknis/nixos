@@ -2,20 +2,21 @@
   description = "NixOS configuration";
 
   inputs = {
+    # Add the stable channel
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     kmonad = {
-      url = "git+https://github.com/kmonad/kmonad?submodules=1&dir=nix";
+      url = "github:kmonad/kmonad?dir=nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     disko = {
       url = "github:nix-community/disko";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    stylix.url = "github:danth/stylix";
+    # stylix.url = "github:danth/stylix";
   };
 
   outputs = {
@@ -23,11 +24,10 @@
     home-manager,
     kmonad,
     disko,
-    stylix,
+    # stylix,
     ...
   } @ inputs: let
     system = "x86_64-linux";
-
     # This helper function takes all the inputs we need for a host
     mkHost = {
       hostname,
@@ -45,7 +45,7 @@
           # Other modules
           disko.nixosModules.disko
           kmonad.nixosModules.default
-          stylix.nixosModules.stylix
+          # stylix.nixosModules.stylix
 
           # Home-manager configuration
           home-manager.nixosModules.home-manager
@@ -58,6 +58,8 @@
             home-manager.users.${username} = import ./hosts/${hostname}/home.nix;
 
             # system.stateVersion = "24.11"; # Keep original NixOS state version
+
+            nixpkgs.config.allowUnfree = true;
             system.stateVersion = "25.05"; # Did you read the comment?
           }
         ];

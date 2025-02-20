@@ -21,16 +21,17 @@
     ../../modules/users.nix # User account definitions
     ../../modules/git.nix # Git-specific configuration
     ../../modules/nvim.nix # Text editor configuration
-    ../../modules/python.nix # python development envirement
+    ../../modules/development.nix # development envirement
 
     # --- Desktop Environment ---
     ../../modules/hyprland.nix # Hyprland window manager configuration
-    ../../modules/stylix.nix
+    # ../../modules/stylix.nix
 
     # --- Keyboard Configuration ---
     ../../modules/kmonad.nix
 
     # --- Virtual Machine Configuration ---
     ../../modules/vm-host.nix # Virtual machine-specific settings for the Host
+    ../../modules/docker.nix # Docker Containers
   ];
 }

@@ -27,12 +27,12 @@ local plugins = {
 	require("plugins.bufferline"),
 	require("plugins.lualine"),
 	require("plugins.tokyonight"),
-	-- require("plugins.catppuccin"),
 	require("plugins.telescope"),
 	require("plugins.markdown-preview"),
 	require("plugins.gitsigns"),
 	require("plugins.fugitive"),
 	require("plugins.toggleterm"),
+	require("plugins.vim-surround"),
 
 	{
 		"windwp/nvim-autopairs",

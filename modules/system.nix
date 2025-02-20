@@ -12,15 +12,15 @@
   i18n.defaultLocale = "en_US.UTF-8"; # Set system locale
 
   # XKB keyboard layout
-  services.xserver.xkb = {
-    layout = "us,us"; # Set the keyboard layout to US
-    #variant = "colemak_dh";
-    options = "grp:win_space_toggle,shift:both_capslock_cancel,compose:102";
-  };
+  # services.xserver.xkb = {
+  #   layout = "us,us"; # Set the keyboard layout to US
+  #   #variant = "colemak_dh";
+  #   options = "grp:win_space_toggle,shift:both_capslock,compose:102";
+  # };
 
   # console keymap
-  console = {
-    #keyMap = "mod-dh-ansi-us";
-    useXkbConfig = true;
-  };
+  # console = {
+  #   #keyMap = "mod-dh-ansi-us";
+  #   useXkbConfig = true;
+  # };
 }

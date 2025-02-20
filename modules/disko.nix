@@ -39,7 +39,7 @@
         type = "lvm_vg";
         lvs = {
           root = {
-            size = "50G";
+            size = "80G";
             content = {
               type = "filesystem";
               format = "ext4";
@@ -47,7 +47,7 @@
             };
           };
           home = {
-            size = "50G";
+            size = "70G";
             content = {
               type = "filesystem";
               format = "ext4";
@@ -63,10 +63,7 @@
             };
           };
           vm1 = {
-            size = "50G";
-          };
-          vm2 = {
-            size = "50G";
+            size = "64G";
           };
         };
       };
