@@ -13,7 +13,10 @@ return {
 		config = function()
 			local cmp = require("cmp")
 			local luasnip = require("luasnip")
+
+			-- Load Snippets
 			require("luasnip.loaders.from_vscode").lazy_load()
+			require("luasnip.loaders.from_lua").load({ paths = "~/.config/nvim/snippets/" })
 
 			cmp.setup({
 				snippet = {
@@ -24,14 +27,35 @@ return {
 				mapping = {
 					["<C-Space>"] = cmp.mapping.complete(),
 					["<CR>"] = cmp.mapping.confirm({ select = true }),
+
 					["<Tab>"] = cmp.mapping(function(fallback)
+						-- if luasnip.expand_or_jumpable() then
+						-- 	luasnip.expand_or_jump()
 						if cmp.visible() then
 							cmp.select_next_item()
 						else
 							fallback()
 						end
 					end, { "i", "s" }),
+
 					["<S-Tab>"] = cmp.mapping(function(fallback)
+						-- if luasnip.jumpable(-1) then
+						-- 	luasnip.jump(-1)
+						if cmp.visible() then
+							cmp.select_prev_item()
+						else
+							fallback()
+						end
+					end, { "i", "s" }),
+
+					["<Down>"] = cmp.mapping(function(fallback)
+						if cmp.visible() then
+							cmp.select_next_item()
+						else
+							fallback()
+						end
+					end, { "i", "s" }),
+					["<Up>"] = cmp.mapping(function(fallback)
 						if cmp.visible() then
 							cmp.select_prev_item()
 						else

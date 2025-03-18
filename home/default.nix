@@ -5,6 +5,7 @@
     ".zshrc".source = ./.zshrc;
     ".aliases".source = ./.aliases;
     ".tmux.conf".source = ./.tmux.conf;
+    ".clang-format".source = ./.clang-format;
   };
   # home.file.Wallpapers = {
   #   source = ./Wallpapers;
@@ -12,15 +13,15 @@
   # };
 
   xdg.configFile = {
-    nvim = {
-      source = ./config/nvim;
-      recursive = true;
-    };
-
-    hypr = {
-      source = ./config/hypr;
-      recursive = true;
-    };
+    #   nvim = {
+    #     source = ./config/nvim;
+    #     recursive = true;
+    #   };
+    #
+    # hypr = {
+    #   source = ./config/hypr;
+    #   recursive = true;
+    # };
 
     rofi = {
       source = ./config/rofi;

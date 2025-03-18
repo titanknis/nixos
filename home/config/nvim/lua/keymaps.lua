@@ -48,7 +48,6 @@ end, { desc = "Telescope find hidden files" })
 vim.keymap.set("n", "<leader>fn", ":ObsidianQuickSwitch<CR>")
 
 vim.keymap.set("n", "<leader>on", ":ObsidianNew<CR>")
-vim.keymap.set("n", "<leader>oo", ":ObsidianOpen<CR>")
 vim.keymap.set("n", "<leader>of", ":ObsidianQuickSwitch<CR>")
 vim.keymap.set("n", "<leader>ot", ":ObsidianToday<CR>")
 vim.keymap.set("n", "<leader>od", ":ObsidianDailies<CR>")
@@ -65,8 +64,28 @@ vim.keymap.set("n", "<leader>tp", ":TimerSession pomodoro<CR>")
 vim.keymap.set("n", "<leader>tP", ":TimerPause<CR>")
 vim.keymap.set("n", "<leader>tR", ":TimerResume<CR>")
 vim.keymap.set("n", "<leader>ts", ":TimerStop<CR>")
-vim.keymap.set("n", "<leader>th", ":TimerHide<CR>")
-vim.keymap.set("n", "<leader>tw", ":TimerShow<CR>")
+
+-- Debugging keymaps
+vim.keymap.set("n", "<leader>dt", require("dap").toggle_breakpoint, {})
+vim.keymap.set("n", "<leader>dc", require("dap").continue, {})
+
+-- Competitest keymaps
+vim.api.nvim_set_keymap("n", "<leader>cc", ":CompetiTest receive contest<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>cp", ":CompetiTest receive problem<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>ct", ":CompetiTest receive testcases<CR>", { noremap = true, silent = true })
+
+vim.api.nvim_set_keymap("n", "<leader>ca", ":CompetiTest add_testcase<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>ce", ":CompetiTest edit_testcase<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>cd", ":CompetiTest delete_testcase<CR>", { noremap = true, silent = true })
+
+vim.api.nvim_set_keymap("n", "<leader>cr", ":CompetiTest run<CR>", { noremap = true, silent = true })
+-- Run testcases without compiling (useful for compiled languages where no changes were made)
+vim.api.nvim_set_keymap("n", "<leader>cR", ":CompetiTest run_no_compile<CR>", { noremap = true, silent = true })
+
+-- Reopen the CompetiTest UI if you closed it
+vim.api.nvim_set_keymap("n", "<leader>cs", ":CompetiTest show_ui<CR>", { noremap = true, silent = true })
+-- Convert testcases storage method automatically (auto converts between single file and multiple files)
+vim.api.nvim_set_keymap("n", "<leader>cv", ":CompetiTest convert auto<CR>", { noremap = true, silent = true })
 
 -- Custom functions
 

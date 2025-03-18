@@ -7,6 +7,7 @@
     clang # C/C++ compiler
     jdk # Java Development Kit
     glow # Terminal markdown renderer
+    # python312Packages.online-judge-tools
 
     # LSP servers
     pyright # Python LSP
@@ -20,5 +21,8 @@
     alejandra # Nix formatter
     stylua # Lua formatter
     nodePackages.prettier # JS/TS formatter
+
+    # Debuggers
+    python312Packages.debugpy
   ];
 }

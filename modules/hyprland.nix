@@ -11,6 +11,8 @@
 
   xdg.mime.defaultApplications = {
     # "application/pdf" = "org.pwmt.zathura.desktop";
+    "application/pdf" = "firefox.desktop";
+    "image/gif" = "mpv.desktop";
   };
 
   # Wayland-specific environment variables
@@ -47,13 +49,16 @@
     cmus # Music player
     mpv # Video player
     imv # image viewer
-    yazi # file manager
     # zathura # pdf viewer
+    yazi # file manager
+    # xfce.thunar
 
     # Wayland-specific tools
     wl-clipboard # Wayland clipboard utilities
     grim # Screenshot utility
     slurp # Area selection tool
+    tesseract
+    ocrfeeder
 
     batsignal # notify on low battery
   ];

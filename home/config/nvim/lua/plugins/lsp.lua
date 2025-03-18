@@ -19,7 +19,7 @@ return {
 				--vim.keymap.set('n', '<leader>ws', require('telescope.builtin').lsp_workspace_symbols, opts)
 				vim.keymap.set("n", "K", vim.lsp.buf.hover, bufopts) -- Hover Info
 				vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, bufopts) -- Rename Symbol
-				vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, bufopts) -- Code Action
+				vim.keymap.set("n", "<leader>cA", vim.lsp.buf.code_action, bufopts) -- Code Action
 			end
 
 			-- Example: Set up Python LSP

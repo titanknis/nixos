@@ -44,11 +44,23 @@
 
     komikku # managa reader
 
+    # archieve managers
+    file-roller
+    # ark
+    # peazip
+
     # Office Suite
     # libreoffice
-    # onlyoffice-bin
+    onlyoffice-bin
+
+    # Editing
+    krita
+    nomacs
+
+    xfce.thunar # gui file manager for drag and drop feature
 
     # CLI Utilities
+    img2pdf
     wl-clipboard # Clipboard manager
     # tree # Directory tree
 
@@ -67,6 +79,7 @@
     bat # Syntax-highlighted cat
     fzf # Fuzzy finder
     ripgrep
+    # unzip # .zip file extractor
 
     # parted
     disko
@@ -94,24 +107,26 @@
     cava
     cbonsai
     cool-retro-term
-    tty-clock
-    termdown
+
+    # Clock and Timers
+    clock-rs
+    tomato-c
+    # tty-clock
+    # termdown
+    # pomodoro-gtk
 
     # Unfree Software
-    spotify # Music streaming service
     # discord # Communication platform
-    # ciscoPacketTracer8 # app for college
-    # ciscoPacketTracer7
-    # rar
+    # spotify # Music streaming service
+    # vscode
+    # rar # proprietary .rar files extractor :(
   ];
-
-  # Allow specific unfree packages
   nixpkgs.config.allowUnfreePredicate = pkg:
     builtins.elem (lib.getName pkg) [
+      # Add additional package names here
       # "discord" # Allow Discord
-      "spotify" # Allow Spotify
-      # "ciscoPacketTracer8" # app for college
-      # "ciscoPacketTracer7" # app for college
+      # "spotify" # Allow Spotify
+      # "vscode"
       # "rar"
     ];
 }

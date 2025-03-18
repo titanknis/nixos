@@ -33,6 +33,9 @@ local plugins = {
 	require("plugins.fugitive"),
 	require("plugins.toggleterm"),
 	require("plugins.vim-surround"),
+	require("plugins.nvim-dap"),
+	require("plugins.leetcode"),
+	require("plugins.competitest"),
 
 	{
 		"windwp/nvim-autopairs",

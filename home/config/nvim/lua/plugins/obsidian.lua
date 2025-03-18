@@ -15,7 +15,7 @@ return {
 			workspaces = {
 				{
 					name = "notes",
-					path = "~/Notes", -- Your Obsidian vault path
+					path = "~/notes", -- Your Obsidian vault path
 				},
 			},
 			daily_notes = {

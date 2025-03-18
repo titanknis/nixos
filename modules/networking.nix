@@ -16,6 +16,7 @@
     22 # SSH
     80 # HTTP
     443 # HTTPS
+    10045 # Competive companion firefox extention
     # Add any other necessary TCP ports here
     # Example for local development:
     # 3000  # Node.js development server

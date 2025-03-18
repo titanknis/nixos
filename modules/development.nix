@@ -11,17 +11,15 @@
     python3Packages.pip
     pyright # LSP servers
     black # Formatter
+    python312Packages.debugpy # Debugger
     # libraries
     yt-dlp
     spotdl
 
-    # Java
-    # eclipses.eclipse-jee
-    # temurin-bin
-    # mysql-workbench
-
     # CLI Utilities
     clang # C/C++ compiler
     clang-tools # Clang tools
+    gcc # C/C++ compiler
+    gnumake
   ];
 }

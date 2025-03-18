@@ -6,7 +6,7 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 		vim.highlight.on_yank()
 	end,
 })
-
+-- Format file on Save
 vim.api.nvim_create_autocmd("BufWritePre", {
 	pattern = "*",
 	callback = function(args)
@@ -14,34 +14,6 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 	end,
 })
 
--- -- Python run
--- vim.api.nvim_create_autocmd("FileType", {
--- 	pattern = { "python" },
--- 	callback = function()
--- 		vim.keymap.set("n", "<C-CR>", function()
--- 			vim.cmd(":update | below split | term python3 %")
--- 		end, { buffer = true })
--- 	end,
--- }) -- C/C++ compile and run
--- vim.api.nvim_create_autocmd("FileType", {
--- 	pattern = { "c", "cpp" },
--- 	callback = function()
--- 		vim.keymap.set("n", "<C-CR>", function()
--- 			vim.cmd("update | below split | term clang -g % -o %:r && ./%:r")
--- 			vim.cmd("startinsert")
--- 		end, { buffer = true })
--- 	end,
--- })
--- -- Java compile and run
--- vim.api.nvim_create_autocmd("FileType", {
--- 	pattern = { "java" },
--- 	callback = function()
--- 		vim.keymap.set("n", "<C-CR>", function()
--- 			vim.cmd("update | below split | term javac % && java %:r")
--- 			vim.cmd("startinsert")
--- 		end, { buffer = true })
--- 	end,
--- })
 -- Markdown preview
 vim.api.nvim_create_autocmd("FileType", {
 	pattern = { "markdown" },

@@ -21,7 +21,7 @@
   # Enable UEFI support for VMs (recommended for modern OSes like Windows 11)
   virtualisation.libvirtd.qemu.ovmf.enable = true; # Uses OVMF firmware for UEFI boot
   # Enable software tpm for VMs (recommended for modern OSes like Windows 11)
-  virtualisation.libvirtd.qemu.swtpm.enable = true; # Uses OVMF firmware for UEFI boot
+  # virtualisation.libvirtd.qemu.swtpm.enable = true; # Uses OVMF firmware for UEFI boot
 
   # Set default libvirt URI for all users (system-wide)
   environment.sessionVariables = {
@@ -33,7 +33,7 @@
     virt-viewer # Graphical console client for connecting to VMs
     spice-gtk # SPICE client for enhanced display, clipboard, and USB redirection
 
-    win-virtio
-    win-spice
+    # win-virtio
+    # win-spice
   ];
 }
