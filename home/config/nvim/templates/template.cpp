@@ -15,8 +15,8 @@ using namespace std;
 #define F first
 #define S second
 
-typedef long long ll;
-typedef vector<int> vi;
+typedef long long      ll;
+typedef vector<int>    vi;
 typedef pair<int, int> pii;
 
 // Constants
@@ -29,19 +29,17 @@ const int MOD = 1000000007;
 // cerr << endl;
 
 void solve() {
-  ;
-  ;
 }
 
 int main() {
-  // Fast I/O
-  ios::sync_with_stdio(false);
-  cin.tie(nullptr);
+    // Fast I/O
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
 
-  int t;
-  cin >> t;
-  while (t--)
-    solve();
+    int t;
+    cin >> t;
+    while (t--)
+        solve();
 
-  return 0;
+    return 0;
 }
