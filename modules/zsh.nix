@@ -1,9 +1,4 @@
-{
-  config,
-  lib,
-  pkgs,
-  ...
-}: {
+{ config, lib, pkgs, ... }: {
   # Shell Configuration (Zsh)
   programs.zsh.enable = true; # Enable Zsh
   programs.zsh.syntaxHighlighting.enable = true; # Enable syntax highlighting

@@ -1,5 +1,5 @@
-{pkgs, ...}: {
-  imports = [./theme.nix];
+{ pkgs, ... }: {
+  imports = [ ./theme.nix ];
   home.file = {
     ".bashrc".source = ./.bashrc;
     ".zshrc".source = ./.zshrc;
@@ -13,10 +13,10 @@
   # };
 
   xdg.configFile = {
-    #   nvim = {
-    #     source = ./config/nvim;
-    #     recursive = true;
-    #   };
+    # nvim = {
+    #   source = ./config/nvim;
+    #   recursive = true;
+    # };
     #
     # hypr = {
     #   source = ./config/hypr;

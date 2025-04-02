@@ -1,9 +1,4 @@
-{
-  config,
-  lib,
-  pkgs,
-  ...
-}: {
+{ config, lib, pkgs, ... }: {
   # Import custom configurations and modules
 
   imports = [
@@ -25,7 +20,6 @@
 
     # --- Desktop Environment ---
     ../../modules/hyprland.nix # Hyprland window manager configuration
-    # ../../modules/stylix.nix
 
     # --- Keyboard Configuration ---
     ../../modules/kmonad.nix

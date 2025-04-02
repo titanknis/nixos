@@ -1,18 +1,11 @@
-{
-  config,
-  lib,
-  pkgs,
-  ...
-}: {
+{ config, lib, pkgs, ... }: {
   # GPG Configuration
   programs.gnupg.agent = {
     enable = true; # Enable the GPG agent
     enableSSHSupport = true; # Enable GPG for SSH key management
   };
 
-  fonts.packages = with pkgs; [
-    nerd-fonts.jetbrains-mono
-  ];
+  fonts.packages = with pkgs; [ nerd-fonts.jetbrains-mono ];
 
   programs.tmux = {
     enable = true;

@@ -1,10 +1,5 @@
+{ config, lib, pkgs, username, ... }:
 {
-  config,
-  lib,
-  pkgs,
-  username,
-  ...
-}: {
   # virtualisation.docker = {
   #   enable = true;
   #   # Enable Docker's "daemon" service

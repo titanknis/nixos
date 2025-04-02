@@ -1,13 +1,10 @@
-{
-  config,
-  lib,
-  pkgs,
-  ...
-}: {
+{ config, lib, pkgs, ... }: {
   # Hyprland
   programs.hyprland.enable = true;
   # Screen lock
   programs.hyprlock.enable = true;
+
+  fonts.packages = with pkgs; [ nerd-fonts.jetbrains-mono ];
 
   xdg.mime.defaultApplications = {
     # "application/pdf" = "org.pwmt.zathura.desktop";
@@ -22,7 +19,6 @@
     EDITOR = "nvim";
     FILE_MANAGER = "yazi";
   };
-
   # System packages
   environment.systemPackages = with pkgs; [
     # Core utilities

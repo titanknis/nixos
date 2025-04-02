@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{ pkgs, ... }: {
   xdg.configFile."kitty/kitty.conf".text = ''
     font_family      JetBrainsMono Nerd Font
     font_size        13.0

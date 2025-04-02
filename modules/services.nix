@@ -1,21 +1,18 @@
-{
-  config,
-  lib,
-  pkgs,
-  ...
-}: {
+{ config, lib, pkgs, ... }: {
   # Disable the OpenSSH daemon
   services.openssh.enable = false;
 
   # Input Device Configuration
-  services.libinput.enable = true; # Enable touchpad support (default in most desktop managers)
+  services.libinput.enable =
+    true; # Enable touchpad support (default in most desktop managers)
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
   # Audio System Configuration
   services.pipewire.enable = true; # Enable PipeWire (audio system)
-  services.pipewire.pulse.enable = true; # Enable PulseAudio support within PipeWire
+  services.pipewire.pulse.enable =
+    true; # Enable PulseAudio support within PipeWire
 
   # Enable bluetooth.
   hardware.bluetooth.enable = true; # Enable Bluetooth

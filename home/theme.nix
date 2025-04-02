@@ -1,9 +1,6 @@
-{pkgs, ...}: {
+{ pkgs, ... }: {
   # Packages for icons and cursor themes
-  home.packages = with pkgs; [
-    papirus-icon-theme
-    bibata-cursors
-  ];
+  home.packages = with pkgs; [ papirus-icon-theme bibata-cursors ];
 
   # GTK Configuration
   gtk = {
@@ -28,16 +25,12 @@
     name = "Bibata-Modern-Ice"; # replace with your cursor name
     size = 24;
   };
-  gtk.gtk3.extraConfig = {"gtk-application-prefer-dark-theme" = true;};
-  gtk.gtk4.extraConfig = {"gtk-application-prefer-dark-theme" = true;};
+  gtk.gtk3.extraConfig = { "gtk-application-prefer-dark-theme" = true; };
+  gtk.gtk4.extraConfig = { "gtk-application-prefer-dark-theme" = true; };
 
   # Qt Theming
   qt = {
     enable = true;
     platformTheme.name = "adwaita"; # Enables qt5ct/qt6ct theming
-    # style = {
-    #   name = "adwaita"; # Using Adwaita style for Qt
-    #   package = pkgs.adwaita-qt;
-    # };
   };
 }
