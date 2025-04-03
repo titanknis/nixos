@@ -7,10 +7,15 @@ function RunCode()
 	local dir = vim.fn.expand("%:p:h") -- Directory of current file
 
 	local commands = {
-		python = string.format('cd "%s" && python "%s"', dir, file),
 		c = string.format('cd "%s" && clang "%s" -o "%s" && "./%s"', dir, file, outfile, outfile),
 		cpp = string.format('cd "%s" && clang++ "%s" -o "%s" && "./%s"', dir, file, outfile, outfile),
+		rust = string.format('cd "%s" && rustc "%s" -o "%s" && "./%s"', dir, file, outfile, outfile),
+
+		go = string.format('cd "%s" && go run "%s"', dir, file),
 		java = string.format('cd "%s" && javac "%s" && java "%s"', dir, file, outfile),
+
+		python = string.format('cd "%s" && python "%s"', dir, file),
+		sh = string.format('cd "%s" && bash "%s"', dir, file),
 	}
 
 	local cmd = commands[filetype]

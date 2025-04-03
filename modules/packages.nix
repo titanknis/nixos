@@ -1,4 +1,10 @@
-{ config, lib, pkgs, ... }: {
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
+{
   # GPG Configuration
   programs.gnupg.agent = {
     enable = true; # Enable the GPG agent
@@ -114,7 +120,8 @@
     # vscode
     # rar # proprietary .rar files extractor :(
   ];
-  nixpkgs.config.allowUnfreePredicate = pkg:
+  nixpkgs.config.allowUnfreePredicate =
+    pkg:
     builtins.elem (lib.getName pkg) [
       # Add additional package names here
       # "discord" # Allow Discord

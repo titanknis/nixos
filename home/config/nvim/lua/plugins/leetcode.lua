@@ -11,8 +11,15 @@ return {
 	config = function()
 		require("leetcode").setup({
 			lang = "cpp",
-			storage = { home = "~/leetcode/" },
+			storage = { home = "~/Dev/Problem_Solving/leetcode/" },
 			browser = "firefox", -- Browser for opening problems
+
+			injector = { ---@type table<lc.lang, lc.inject>
+				["cpp"] = {
+					before = { "#include <bits/stdc++.h>", "using namespace std;" },
+					-- after = "int main() {}",
+				},
+			},
 			-- other options here
 		})
 	end,

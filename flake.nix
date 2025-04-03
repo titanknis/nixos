@@ -18,14 +18,29 @@
     };
   };
 
-  outputs = { nixpkgs, home-manager, kmonad, disko, ... }@inputs:
+  outputs =
+    {
+      nixpkgs,
+      home-manager,
+      kmonad,
+      disko,
+      ...
+    }@inputs:
     let
       system = "x86_64-linux";
       # This helper function takes all the inputs we need for a host
-      mkHost = { hostname, username, }:
+      mkHost =
+        { hostname, username }:
         nixpkgs.lib.nixosSystem {
           inherit system;
-          specialArgs = { inherit inputs system username hostname; };
+          specialArgs = {
+            inherit
+              inputs
+              system
+              username
+              hostname
+              ;
+          };
           modules = [
             # Your machine's configuration.nix
             ./hosts/${hostname}/default.nix
@@ -42,15 +57,15 @@
               };
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
-              home-manager.users.${username} =
-                import ./hosts/${hostname}/home.nix;
+              home-manager.users.${username} = import ./hosts/${hostname}/home.nix;
 
               # nixpkgs.config.allowUnfree = true;
               system.stateVersion = "25.05"; # Did you read the comment?
             }
           ];
         };
-    in {
+    in
+    {
       nixosConfigurations = {
         default = mkHost {
           hostname = "default";

@@ -28,7 +28,6 @@ local plugins = {
 	require("plugins.lualine"),
 	require("plugins.tokyonight"),
 	require("plugins.telescope"),
-	require("plugins.markdown-preview"),
 	require("plugins.gitsigns"),
 	require("plugins.fugitive"),
 	require("plugins.toggleterm"),
@@ -59,8 +58,6 @@ local plugins = {
 		dependencies = { "nvim-lua/plenary.nvim" },
 		opts = {},
 	},
-
-	{ "ellisonleao/glow.nvim", config = true, cmd = "Glow" },
 }
 
 -- Set up lazy.nvim with your plugin specifications

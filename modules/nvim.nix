@@ -1,4 +1,5 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
   environment.systemPackages = with pkgs; [
     # General Tools
     neovim # Neovim editor
@@ -38,8 +39,9 @@
 
     # Nix Development
     nixd # Nix LSP
-    alejandra # Nix formatter
-    nixfmt # Nix formatter
+    # alejandra # Nix formatter
+    # nixfmt # Nix formatter
+    nixfmt-rfc-style
 
     # Web Development (JavaScript/TypeScript)
     # nodejs # Node.js for JS/TS (optional)

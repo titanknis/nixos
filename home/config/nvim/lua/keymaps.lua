@@ -81,11 +81,19 @@ vim.api.nvim_set_keymap("n", "<leader>cd", ":CompetiTest delete_testcase<CR>", {
 vim.api.nvim_set_keymap("n", "<leader>cr", ":CompetiTest run<CR>", { noremap = true, silent = true })
 -- Run testcases without compiling (useful for compiled languages where no changes were made)
 vim.api.nvim_set_keymap("n", "<leader>cR", ":CompetiTest run_no_compile<CR>", { noremap = true, silent = true })
-
 -- Reopen the CompetiTest UI if you closed it
 vim.api.nvim_set_keymap("n", "<leader>cs", ":CompetiTest show_ui<CR>", { noremap = true, silent = true })
--- Convert testcases storage method automatically (auto converts between single file and multiple files)
-vim.api.nvim_set_keymap("n", "<leader>cv", ":CompetiTest convert auto<CR>", { noremap = true, silent = true })
+
+-- Leetcode keymaps
+vim.api.nvim_set_keymap("n", "<leader>ll", ":Leet list<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>ld", ":Leet desc<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>lr", ":Leet run<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>ls", ":Leet submit<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>lt", ":Leet tabs<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>ly", ":Leet yank<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>lo", ":Leet open<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>li", ":Leet inject<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>lc", ":Leet console<CR>", { noremap = true, silent = true })
 
 -- Custom functions
 

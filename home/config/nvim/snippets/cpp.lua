@@ -7,9 +7,27 @@ ls.add_snippets("cpp", {
 	s("snips", {
 		t("/*"),
 		t({ "", "fio" }),
+		t({ "", "allinc" }),
+		t({ "", "limits" }),
 		t({ "", "main" }),
 		t({ "", "notes" }),
 		t({ "", "/*", "" }),
+	}),
+	s("allinc", {
+		t({
+			"#include <bits/stdc++.h>",
+			"using namespace std;",
+		}),
+	}),
+
+	s("limits", {
+		t({
+			"// int:       ~10⁹ (32-bit)",
+			"// long long: ~10¹⁸ (64-bit)",
+			"// unsigned int: 0 to ~4.29 × 10⁹ (32-bit)",
+			"// unsigned long long: 0 to ~1.84 × 10³⁹ (64-bit)",
+			"// double:    Precision: ~15-16 digits, Range: ±1.7 × 10³⁰⁸",
+		}),
 	}),
 
 	-- Fast I/O snippet

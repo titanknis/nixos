@@ -1,6 +1,15 @@
-{ config, username, pkgs, ... }: {
-  imports =
-    [ ../../home ../../home/programs/dunst.nix ../../home/programs/kitty.nix ];
+{
+  config,
+  username,
+  pkgs,
+  ...
+}:
+{
+  imports = [
+    ../../home
+    ../../home/programs/dunst.nix
+    ../../home/programs/kitty.nix
+  ];
 
   # Home Manager needs a bit of information about you and the
   # paths it should manage.

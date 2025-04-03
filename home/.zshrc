@@ -23,3 +23,6 @@ source ~/.aliases
 
 # Initialize zoxide for directory jumping
 eval "$(zoxide init zsh)"
+
+# temporarly added to test local package mgit
+export PATH="$HOME/.local/bin:$PATH" 

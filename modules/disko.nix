@@ -21,7 +21,9 @@
               content = {
                 type = "luks";
                 name = "luksCrypted";
-                settings = { allowDiscards = true; };
+                settings = {
+                  allowDiscards = true;
+                };
                 content = {
                   type = "lvm_pv";
                   vg = "vg0";
@@ -60,7 +62,9 @@
               resumeDevice = true; # resume from hiberation from this device
             };
           };
-          vm1 = { size = "64G"; };
+          vm1 = {
+            size = "64G";
+          };
         };
       };
     };

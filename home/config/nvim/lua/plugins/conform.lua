@@ -4,12 +4,19 @@ return {
 	config = function()
 		require("conform").setup({
 			formatters_by_ft = {
-				python = { "black" },
-				java = { "google-java-format" },
-				cpp = { "clang-format" },
 				c = { "clang-format" },
-				nix = { "alejandra" },
+				cpp = { "clang-format" },
+				rust = { "rustfmt" },
+
+				go = { "gofmt" },
+				java = { "google-java-format" },
+
+				python = { "black" },
+				sh = { "shfmt" },
+
 				lua = { "stylua" },
+				nix = { "nixfmt" },
+
 				markdown = { "prettier" },
 			},
 		})

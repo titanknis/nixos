@@ -14,8 +14,8 @@ return {
 				py = "~/.config/nvim/templates/template.py",
 			},
 
-			received_problems_path = "$(HOME)/Competitive Programming/$(JUDGE)/problems/$(PROBLEM).$(FEXT)",
-			received_contests_directory = "$(HOME)/Competitive_Programming/contests/$(JUDGE)/$(CONTEST)",
+			received_problems_path = "$(HOME)/Dev/Problem_Solving/$(JUDGE)/problems/$(PROBLEM).$(FEXT)",
+			received_contests_directory = "$(HOME)/Dev/Problem_Solving/$(JUDGE)/contests/$(CONTEST)",
 		})
 	end,
 }

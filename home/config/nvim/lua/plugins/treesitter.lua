@@ -4,7 +4,18 @@ return {
 	build = ":TSUpdate",
 	config = function()
 		require("nvim-treesitter.configs").setup({
-			ensure_installed = { "c", "cpp", "java", "python", "nix", "lua", "markdown", "markdown_inline", "vim" }, -- Install parsers
+			ensure_installed = {
+				"c",
+				"cpp",
+				"java",
+				"python",
+				"nix",
+				"lua",
+				"html",
+				"markdown",
+				"markdown_inline",
+				"vim",
+			}, -- Install parsers
 			auto_install = true, -- Automatically install missing parsers when entering buffer
 
 			highlight = { enable = true, additional_vim_regex_highlighting = false }, -- Enable syntax highlighting -- Disable regex-based additional_vim_regex_highlighting

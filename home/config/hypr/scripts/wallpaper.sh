@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-WALLPAPER_DIR=~/wallpapers
+WALLPAPER_DIR=~/Media/Pictures/Wallpapers
 INTERVAL=300
 
 # none │ simple │ fade │ left │ right │ top │ bottom │ wipe │ wave │ grow │ center │ any │ outer │ random

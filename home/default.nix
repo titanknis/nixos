@@ -1,4 +1,5 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
   imports = [ ./theme.nix ];
   home.file = {
     ".bashrc".source = ./.bashrc;

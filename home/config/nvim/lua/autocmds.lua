@@ -13,24 +13,3 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 		require("conform").format({ bufnr = args.buf })
 	end,
 })
-
--- Markdown preview
-vim.api.nvim_create_autocmd("FileType", {
-	pattern = { "markdown" },
-	callback = function()
-		vim.keymap.set("n", "<leader>gw", ":Glow<CR>", { buffer = true }) -- Trigger Glow preview in a floating window
-		vim.keymap.set("n", "<leader>mp", "<cmd>MarkdownPreview<CR>", { buffer = true, desc = "Preview markdown" })
-		vim.keymap.set(
-			"n",
-			"<leader>ms",
-			"<cmd>MarkdownPreviewStop<CR>",
-			{ buffer = true, desc = "Stop markdown preview" }
-		)
-		vim.keymap.set(
-			"n",
-			"<leader>mt",
-			"<cmd>MarkdownPreviewToggle<CR>",
-			{ buffer = true, desc = "Toggle markdown preview" }
-		)
-	end,
-})

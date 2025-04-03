@@ -25,8 +25,11 @@ const int MOD = 1000000007;
 
 // Debug Macro (uncomment for local debugging)
 #define debug(x) cerr << __LINE__ << ": " << #x << " = " << (x) << endl;
-// #define debugv(v) cerr << #v << " = "; for (auto e : v) cerr << e << " ";
-// cerr << endl;
+#define debugv(v)                                                                                  \
+    cerr << #v << " = ";                                                                           \
+    for (auto e : v)                                                                               \
+        cerr << e << " ";                                                                          \
+    cerr << endl;
 
 void solve() {
 }
