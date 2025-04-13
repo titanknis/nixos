@@ -53,14 +53,16 @@
     onlyoffice-bin
 
     # Editing
-    krita
-    nomacs
+    # krita
+    # nomacs
 
-    xfce.thunar # gui file manager for drag and drop feature
+    # xfce.thunar # gui file manager for drag and drop feature
 
     # CLI Utilities
     img2pdf
     wl-clipboard # Clipboard manager
+    yt-dlp
+    spotdl
     # tree # Directory tree
 
     # Networking & Monitoring
@@ -118,7 +120,6 @@
     # discord # Communication platform
     # spotify # Music streaming service
     # vscode
-    # rar # proprietary .rar files extractor :(
   ];
   nixpkgs.config.allowUnfreePredicate =
     pkg:
@@ -126,7 +127,8 @@
       # Add additional package names here
       # "discord" # Allow Discord
       # "spotify" # Allow Spotify
-      # "vscode"
-      # "rar"
+      "vscode-extension-ms-vscode-cpptools"
+      "vscode-with-extensions"
+      "vscode"
     ];
 }

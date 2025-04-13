@@ -36,6 +36,7 @@ alias gc='git commit'        # Commit changes
 alias gp='git push'          # Push to remote
 alias gpull='git pull'       # Pull from remote
 alias gl='git log --oneline --graph --decorate'  # Log with graph
+alias gla='git log --oneline --graph --decorate --all'  # Log with graph all branches
 alias gacp='ga . && gc && gp'  # Add all, commit, and push
 
 # Reload config

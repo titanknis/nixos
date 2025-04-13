@@ -4,7 +4,7 @@ WALLPAPER_DIR=~/Media/Pictures/Wallpapers
 INTERVAL=300
 
 # none │ simple │ fade │ left │ right │ top │ bottom │ wipe │ wave │ grow │ center │ any │ outer │ random
-TRANSITIONS=( fade left right wipe center any outer ) 
+TRANSITIONS=(fade left right wipe center any outer)
 # removed top bottom (the bezier curve looks better with left and right, also the wipe transition is better)
 # removed simple( fade is better )
 # removed fade(because i just like clear transitions)
@@ -18,7 +18,7 @@ export SWWW_TRANSITION_STEP=90
 export SWWW_TRANSITION_WAVE=30,10
 
 # Start swww-daemon if not already running
-if ! pgrep -x swww-daemon > /dev/null; then
+if ! pgrep -x swww-daemon >/dev/null; then
     swww-daemon &
 fi
 
@@ -38,16 +38,15 @@ while true; do
     fi
 
     # Only change if it's a different wallpaper
-    if [[ "$PREVIOUS_WALLPAPER" != "$WALLPAPER" ]];then
+    if [[ "$PREVIOUS_WALLPAPER" != "$WALLPAPER" ]]; then
         echo "Changing wallpaper to:$(basename "$WALLPAPER")"
         echo "Using the transition:$TRANSITION"
         swww img \
             "$WALLPAPER" \
-            --transition-type  $TRANSITION \
-            --transition-angle $ANGLE \
+            --transition-type $TRANSITION \
+            --transition-angle $ANGLE
 
         PREVIOUS_WALLPAPER="$WALLPAPER"
         sleep "$INTERVAL"
     fi
 done
-

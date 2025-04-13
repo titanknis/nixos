@@ -21,7 +21,11 @@ return {
 			end
 
 			local servers = {
-				clangd = {}, -- C, C++
+				clangd = {
+					init_options = {
+						fallbackFlags = { "-DLOCAL" }, -- Define LOCAL for LSP to highlight code inside #ifdef LOCAL
+					},
+				}, -- C, C++
 				rust_analyzer = {}, -- Rust
 
 				gopls = {}, -- Go

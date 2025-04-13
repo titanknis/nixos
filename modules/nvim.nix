@@ -6,6 +6,8 @@
     ripgrep # Fast search tool
 
     # C/C++ Development
+    gcc # C/C++ compiler
+    gdb # C/C++ debugger
     clang # Clang tools (C/C++ compiler and tools)
     clang-tools # clangd (C/C++), clang-format
 
@@ -39,13 +41,13 @@
 
     # Nix Development
     nixd # Nix LSP
-    # alejandra # Nix formatter
-    # nixfmt # Nix formatter
     nixfmt-rfc-style
+    # nixfmt # Nix formatter
+    # alejandra # Nix formatter
 
     # Web Development (JavaScript/TypeScript)
-    # nodejs # Node.js for JS/TS (optional)
-    # nodePackages.typescript-language-server # TypeScript/JS LSP
+    nodejs # Node.js for JS/TS (optional)
     nodePackages.prettier # Prettier (JS/HTML/CSS/Markdown)
+    # nodePackages.typescript-language-server # TypeScript/JS LSP
   ];
 }

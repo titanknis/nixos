@@ -35,7 +35,7 @@
     swww # wallpaper daemon
     cliphist # clipboard manager
 
-    # hyprpolkitagent # Authentication agent
+    hyprpolkitagent # Authentication agent
 
     brightnessctl # Backlight
     playerctl # Media player control

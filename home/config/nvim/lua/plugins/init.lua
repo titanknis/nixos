@@ -16,48 +16,49 @@ vim.opt.rtp:prepend(lazypath)
 
 -- Define your plugin specifications
 local plugins = {
-	require("plugins.alpha"),
-	require("plugins.treesitter"),
-	require("plugins.nvim-tree"),
-	require("plugins.pomo"),
-	require("plugins.obsidian"),
-	require("plugins.conform"),
-	require("plugins.lsp"),
-	require("plugins.cmp"),
-	require("plugins.bufferline"),
-	require("plugins.lualine"),
-	require("plugins.tokyonight"),
-	require("plugins.telescope"),
-	require("plugins.gitsigns"),
-	require("plugins.fugitive"),
-	require("plugins.toggleterm"),
-	require("plugins.vim-surround"),
-	require("plugins.nvim-dap"),
-	require("plugins.leetcode"),
-	require("plugins.competitest"),
 
-	{
-		"windwp/nvim-autopairs",
-		event = "InsertEnter",
-		config = true,
-	},
-	{
-		"lukas-reineke/indent-blankline.nvim",
-		main = "ibl",
-		opts = {},
-	},
-	{ "mbbill/undotree" },
-	{
-		"numToStr/Comment.nvim",
-		config = function()
-			require("Comment").setup()
-		end,
-	},
-	{
-		"folke/todo-comments.nvim",
-		dependencies = { "nvim-lua/plenary.nvim" },
-		opts = {},
-	},
+	-- Core
+	require("plugins.core.cmp"),
+	require("plugins.core.luasnip"),
+	require("plugins.core.conform"),
+	require("plugins.core.lsp"),
+	require("plugins.core.nvim-dap"),
+	require("plugins.core.treesitter"),
+
+	-- UI
+	require("plugins.ui.alpha"),
+	require("plugins.ui.bufferline"),
+	require("plugins.ui.lualine"),
+
+	-- Colors
+	require("plugins.colors.nightfox"),
+	require("plugins.colors.rosepine"),
+	require("plugins.colors.catppuccin"),
+	require("plugins.colors.gruvebox"),
+	require("plugins.colors.tokyonight"), --active: -- after testing both i liked tokyonight more than rosepine
+
+	-- Tools
+	require("plugins.tools.nvim-tree"),
+	require("plugins.tools.obsidian"),
+	require("plugins.tools.pomo"),
+	require("plugins.tools.telescope"),
+	require("plugins.tools.toggleterm"),
+	require("plugins.tools.vim-surround"),
+
+	-- Git
+	require("plugins.git.fugitive"),
+	require("plugins.git.gitsigns"),
+
+	-- Competitive Programming
+	require("plugins.cp.competitest"),
+	require("plugins.cp.leetcode"),
+
+	-- Misc
+	require("plugins.misc.autopair"),
+	require("plugins.misc.comments"),
+	require("plugins.misc.indent"),
+	require("plugins.misc.todo"),
+	require("plugins.misc.undotree"),
 }
 
 -- Set up lazy.nvim with your plugin specifications

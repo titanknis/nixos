@@ -22,7 +22,7 @@
     ../../modules/users.nix # User account definitions
     ../../modules/git.nix # Git-specific configuration
     ../../modules/nvim.nix # Text editor configuration
-    ../../modules/development.nix # development envirement
+    ../../modules/code.nix # Vscode configuration for Competitive Programming when other people need to use my pc (not free)
 
     # --- Desktop Environment ---
     ../../modules/hyprland.nix # Hyprland window manager configuration

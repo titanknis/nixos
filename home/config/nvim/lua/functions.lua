@@ -29,26 +29,43 @@ function RunCode()
 	end
 end
 
+-- available colorschemes
+local colorschemes = {
+	-- focus and eye
+	"gruvbox",
+	"carbonfox",
+	"tokyonight-night",
+
+	"tokyonight-day",
+	"rose-pine",
+
+	-- "tokyonight-moon",
+	-- "catppuccin-mocha",
+}
+
+local current_index = 1
+
+-- toggle between specified colorschemes
 function toggleColorScheme()
-	-- Get current colorscheme
 	local current = vim.g.colors_name
 
-	-- Check if required colorschemes are available
-	local has_tokyonight = pcall(require, "tokyonight")
-
-	if not has_tokyonight then
-		vim.notify("Missing required colorschemes. Please install tokyonight.", vim.log.levels.ERROR)
-		return
+	-- Update current_index if current colorscheme is in our list
+	for i, scheme in ipairs(colorschemes) do
+		if scheme == current then
+			current_index = i
+			break
+		end
 	end
 
-	-- Toggle between schemes
-	if current == "tokyonight-moon" then
-		-- Switch to Catppuccin
-		vim.cmd("colorscheme tokyonight-night")
-		vim.notify("Switched to tokyonight-night theme")
+	-- Cycle to next scheme
+	current_index = (current_index % #colorschemes) + 1
+	local next_scheme = colorschemes[current_index]
+
+	-- Apply the colorscheme with error handling
+	local ok, err = pcall(vim.cmd, "colorscheme " .. next_scheme)
+	if ok then
+		vim.notify("Switched to " .. next_scheme .. " theme")
 	else
-		-- Switch to Tokyo Night
-		vim.cmd("colorscheme tokyonight")
-		vim.notify("Switched to Tokyo Night theme")
+		vim.notify("Failed to load colorscheme: " .. next_scheme, vim.log.levels.ERROR)
 	end
 end

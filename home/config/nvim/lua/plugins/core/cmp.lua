@@ -63,11 +63,13 @@ return {
 						end
 					end, { "i", "s" }),
 				},
+
+				-- Completion sources
 				sources = {
-					{ name = "nvim_lsp" },
-					{ name = "luasnip" },
-					{ name = "buffer" },
-					{ name = "path" },
+					{ name = "luasnip", priority = 1000 }, -- Prioritize personal snippets (LuaSnip)
+					{ name = "nvim_lsp" }, -- LSP completions
+					{ name = "buffer" }, -- Buffer completions
+					{ name = "path" }, -- Path completions
 				},
 			})
 		end,

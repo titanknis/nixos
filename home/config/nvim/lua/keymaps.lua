@@ -12,6 +12,7 @@ vim.keymap.set("n", "<leader>q", ":q!<CR>", opts)
 vim.keymap.set("n", "<leader>w", ":w<CR>", opts)
 vim.keymap.set("n", "<leader>x", ":x<CR>", opts)
 
+vim.keymap.set("n", "<Esc>", ":nohlsearch<CR>", { silent = true }) -- Clear search highlights
 vim.keymap.set("n", "<C-a>", "ggVG", opts) -- Select all text
 vim.keymap.set("n", "<leader>a", "ggVG", opts) -- Select all text
 vim.keymap.set("n", "<leader>y", '"+y', opts) -- Yank to system clipboard
@@ -73,6 +74,7 @@ vim.keymap.set("n", "<leader>dc", require("dap").continue, {})
 vim.api.nvim_set_keymap("n", "<leader>cc", ":CompetiTest receive contest<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<leader>cp", ":CompetiTest receive problem<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<leader>ct", ":CompetiTest receive testcases<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>cS", ":CompetiTest receive stop<CR>", { noremap = true, silent = true })
 
 vim.api.nvim_set_keymap("n", "<leader>ca", ":CompetiTest add_testcase<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<leader>ce", ":CompetiTest edit_testcase<CR>", { noremap = true, silent = true })
@@ -96,7 +98,6 @@ vim.api.nvim_set_keymap("n", "<leader>li", ":Leet inject<CR>", { noremap = true,
 vim.api.nvim_set_keymap("n", "<leader>lc", ":Leet console<CR>", { noremap = true, silent = true })
 
 -- Custom functions
-
 -- Map Ctrl+enter to run code
 vim.keymap.set("n", "<C-CR>", "<cmd>lua RunCode()<CR>", opts)
 -- toggle Color Scheme
