@@ -1,0 +1,18 @@
+#--format=bestvideo+bestaudio/best
+--format=bestvideo[height<=1080]+bestaudio/best
+--merge-output-format=mkv
+
+--embed-thumbnail
+--embed-chapters
+--embed-metadata
+
+# Subtitles
+--write-subs
+--write-auto-subs
+#--sub-lang=en.*
+--sub-lang=en-US,en-GB,en-AU,en-CA,en,en.*,
+--convert-subs=srt
+--embed-subs
+--compat-options=no-keep-subs
+
+--audio-quality 0

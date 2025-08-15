@@ -1,0 +1,25 @@
+###############
+### ALIASES ###
+###############
+
+# General shortcuts
+alias q='exit'
+alias c='clear'
+alias y='yazi'
+alias v='nvim'
+alias cd='z'
+alias cat='bat'
+
+# Directory listing
+alias ls='eza --icons=auto'
+alias lt='eza --icons=auto --tree'
+# alias ls='eza -1 --icons=auto'
+# alias ll='eza -lh --icons=auto'
+# alias la='eza -lha --icons=auto --group-directories-first'
+
+# Git shortcuts
+# alias gs='git status'
+# alias ga='git add'
+# alias gc='git commit'
+# alias gp='git push'
+# alias gl='git log --oneline --graph --decorate'
