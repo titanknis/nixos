@@ -1,0 +1,140 @@
+* {
+  font:   "JetBrains Mono Nerd Font 11";
+
+  black   : #000000;
+
+  bg00     : #1a1b2699; // add 0.8 transparency
+  bg0     : #1a1b26;
+  bg1     : #1f2335;
+  bg2     : #24283b;
+  bg3     : #414868;
+  fg0     : #c0caf5;
+  fg1     : #a9b1d6;
+  fg2     : #737aa2;
+  red     : #f7768e;
+  green   : #9ece6a;
+  yellow  : #e0af68;
+  blue    : #7aa2f7;
+  magenta : #9a7ecc;
+  cyan    : #4abaaf;
+
+  accent: @blue;
+  urgent: @red;
+
+  background-color : transparent;
+  text-color       : @fg0;
+
+  margin  : 0;
+  padding : 0;
+  spacing : 0;
+}
+
+// NOTE: the previous is already done;
+// TODO: to do the following;
+
+window {
+  background-color: @bg00;
+  border: 1px;
+  border-color: @bg3;
+  border-radius: 0px;
+  children: [ mainbox ];
+}
+
+mainbox {
+    children: [ inputbar, message, listview ]; // specify children to show and their order
+}
+
+inputbar {
+  spacing  : 8px;
+
+    children: [prompt, entry];      // order of children
+
+    border: 0 0 1px 0;              // border bottom
+    border-color: @bg3;
+    margin: 0 10px;                 // Creates gap from sides for the border
+    padding: 12px 12px;
+}
+
+prompt {
+    text-color: @fg2;
+}
+
+entry {
+    cursor:            text;
+}
+
+message {
+  spacing  : 8px;
+
+    border: 0 0 1px 0;              // border bottom
+    border-color: @bg3;
+    margin: 0 10px;                 // Creates gap from sides for the border
+    padding: 12px 12px;
+}
+
+textbox {
+    text-color: @fg2;
+}
+
+listview {
+  lines        : 12;
+  columns      : 1;
+  // fixed-height : false;
+    padding: 8px;
+    spacing: 4px; // is this actually better ?
+ 
+}
+
+element {
+    // padding: 2px 4px;
+    cursor:     pointer;
+  padding : 4px 8px;
+  spacing : 4px;
+}
+
+element normal urgent {
+  text-color: @urgent;
+}
+
+element normal active {
+  // text-color: @accent;
+  border: 1px;
+  border-color: @bg3;
+  border-radius: 4px;
+}
+
+element alternate active {
+  text-color: @accent;
+}
+
+element selected {
+
+  // background-color : @accent;
+  border-color: @bg3;
+  // border-color : @accent;
+  border: 1px 0;
+    // border-radius: 4px;
+}
+
+
+element-text selected{
+    text-color: @accent;
+    // text-color: #f8f8f2;
+    // text-color: @black;
+}
+
+element-icon selected{
+}
+
+element selected urgent {
+  background-color: @urgent;
+}
+
+element-icon {
+    cursor:     inherit;
+}
+
+element-text {
+    cursor:     inherit;
+  text-color: inherit;
+}

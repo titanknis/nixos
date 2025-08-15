@@ -1,0 +1,140 @@
+@define-color bg0      #1a1b26;
+@define-color bg00      rgba(26, 27, 38, 0.6);
+@define-color bg1      #1f2335;
+@define-color bg2      #24283b;
+@define-color bg3      #414868;
+@define-color fg0      #c0caf5;
+@define-color fg1      #a9b1d6;
+@define-color fg2      #737aa2;
+@define-color red      #f7768e;
+@define-color green    #9ece6a;
+@define-color yellow   #e0af68;
+@define-color blue     #7aa2f7;
+@define-color magenta  #9a7ecc;
+@define-color cyan     #4abaaf;
+
+@define-color accent   @blue;
+@define-color urgent   @red;
+
+* {
+  min-height: 0;
+  font-family: "JetBrains Mono Nerd Font";
+  font-weight: 500;
+  font-size: 13px;
+  padding: 0;
+  margin: 0;
+}
+
+window#waybar {
+  /* tokyonight-night #1a1b26 */
+  background-color: rgba(26, 27, 38, 0.6);
+
+  border-bottom: 1px solid #414868;
+  border-radius: 0px;
+  padding: 40px;
+}
+
+tooltip {
+  background-color: rgba(26, 27, 38, 0.8);
+  border: 1px solid #414868;
+  border-radius: 0px;
+}
+
+tooltip label {
+  margin: 8px;
+  color: #c0caf5;
+}
+
+#battery,
+#cpu,
+#memory,
+#temperature,
+#wireplumber,
+#network,
+#language,
+#tray,
+#privacy,
+#clock,
+#cava,
+#workspaces {
+  margin: 6px 0px;
+  padding: 2px 6px;
+}
+
+#battery,
+#cpu,
+#memory,
+#temperature,
+#wireplumber,
+#network,
+#language,
+#tray,
+#privacy,
+#clock {
+  /* background-color: rgba(26, 27, 38, 0.6); */
+  border-left: 1px solid #414868;
+  color: #c0caf5;
+}
+
+#clock,
+#cava,
+#workspaces {
+  /* background-color: rgba(26, 27, 38, 0.6); */
+  border-right: 1px solid #414868;
+  color: #c0caf5;
+}
+
+#battery,
+#cpu,
+#memory,
+#temperature,
+#wireplumber,
+#network,
+#clock {
+  min-width: 60px;
+}
+
+#battery.warning {
+  color: #ff9e64;
+}
+
+#battery.critical,
+#battery.urgent,
+#cpu.critical,
+#memory.critical,
+#temperature.critical {
+  color: #f7768e;
+}
+
+#battery.charging {
+  color: #c0caf5;
+}
+
+#privacy {
+  color: #7aa2f7;
+  /*   border: 1px solid #7aa2f7; */
+}
+
+#workspaces button {
+  min-width: 0;
+  padding: 0px 4px;
+  color: #c0caf5;
+  border-radius: 0px;
+}
+
+#workspaces button:hover {
+  background: rgba(26, 27, 38, 0.6); /* background color on hover */
+  color: #f8f8f2; /* text color on hover */
+  border: 1px solid #414868;
+}
+
+#workspaces button.active {
+  color: #f8f8f2; /*visually this is better*/
+  color: #7aa2f7; /*visually this is better*/
+  /* background-color: rgba(26, 27, 38, 0.2); */
+  border-bottom: 1px solid #414868;
+}
+
+#workspaces button.urgent {
+  color: #f7768e;
+}

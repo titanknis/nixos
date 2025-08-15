@@ -1,0 +1,29 @@
+
+/*
+ * Gruvbox colorscheme (big icons) for rofi wallpaper menu
+ */
+
+@theme "~/.config/rofi/themes/gruvbox.rasi"
+
+// defines different aspects of the window
+window {
+    width: 99%;
+}
+listview {
+    lines: 1;
+    columns: 6;
+}
+
+element {
+    orientation: vertical;   // this is necessary for horizontal layout (show text under icon)
+    children : [ element-icon, element-text ];
+}
+
+element-text {
+    // enabled: false;            // uncomment this line to remove wallpaper name under wallpaper
+    horizontal-align: 0.5;     // Add this line to center text
+}
+
+element-icon {
+    size: 30%;        // Change to size relative to columns number and screen resolution
+}

@@ -1,0 +1,135 @@
+{
+  "layer": "top",
+  "spacing": 0,
+  "height": 0,
+
+  "margin-top": 2,
+  "margin-right": 2,
+  "margin-bottom": 0,
+  "margin-left": 2,
+
+  "modules-left": [
+    //
+    "hyprland/workspaces",
+    "cava",
+  ],
+
+  "modules-center": ["clock", "custom/timer"],
+
+  "modules-right": [
+    "privacy",
+    "hyprland/language",
+    "wireplumber",
+    "network",
+    "tray",
+    // "temperature",
+    // "cpu",
+    // "memory",
+    "battery",
+  ],
+
+  // Hardware monitoring group - performance metrics
+  "group/hardware-monitor": {
+    // "orientation": "horizontal",
+    "modules": ["temperature", "cpu", "memory", "battery"],
+  },
+
+  "hyprland/workspaces": {
+    "all-outputs": true,
+  },
+
+  "tray": {
+    "spacing": 6,
+  },
+
+  "clock": {
+    "format": "{:%H:%M:%S}",
+    "format-alt": "{:%Y-%m-%d | %H:%M:%S}",
+    "interval": 1,
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+  },
+
+  "temperature": {
+    "thermal-zone": 7,
+    "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+    "critical-threshold": 80,
+    "format": " {temperatureC}°C",
+  },
+
+  "cpu": {
+    "format": " {usage}%",
+  },
+
+  "memory": {
+    "format": " {}%",
+  },
+
+  "battery": {
+    "states": {
+      "warning": 30,
+      "critical": 15,
+    },
+    "interval": 1,
+    "format": "{icon} {capacity}%",
+    // "format-charging": "󰂄 {capacity}%",
+    "format-charging": "󱐋 {capacity}%",
+    "format-full": "󱐋 {capacity}%",
+    "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+  },
+
+  "network": {
+    "format": "{icon} {essid}",
+    "format-wifi": "{icon} {essid}",
+    "format-ethernet": "󰈀 ethernet",
+    "format-disconnected": "󰤭 ",
+
+    "tooltip-format": "󰤨 {bandwidthDownBytes}",
+    "tooltip-format-ethernet": "󰈀 {bandwidthDownBytes}",
+    "tooltip-format-disconnected": "Disconnected",
+
+    "format-icons": ["󰤯", "󰤟", "󰤥", "󰤨"],
+    "interval": 5,
+    // "max-length": 20,
+  },
+
+  "wireplumber": {
+    "format": "{icon} {volume}%",
+    // "format-bluetooth": "{volume}% {icon} ", // this feature is missing in waybar/wireplumber
+    "format-muted": " ",
+    "format-icons": ["", "", ""],
+    "on-click": "pavucontrol",
+    "scroll-step": 1.0,
+  },
+
+  "hyprland/language": {
+    "format-en-colemak_dh": "dh",
+    "format-en": "us",
+    "format-fr": "fr",
+    "on-click": "hyprctl switchxkblayout current next",
+  },
+
+  "cava": {
+    "bars": 14,
+    "method": "pipewire",
+    "bar_delimiter": 0,
+    "input_delay": 0, // if th module crash remove this or set it to the default value 2
+    "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
+    "on-click": "playerctl play-pause",
+  },
+  "privacy": {
+    "icon-spacing": 4,
+    "icon-size": 16,
+    "transition-duration": 250,
+    "modules": [
+      {
+        "type": "screenshare",
+      },
+      {
+        "type": "audio-out",
+      },
+      {
+        "type": "audio-in",
+      },
+    ],
+  },
+}

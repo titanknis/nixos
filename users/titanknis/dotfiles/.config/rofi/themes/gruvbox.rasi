@@ -1,0 +1,147 @@
+* {
+  font:   "JetBrains Mono Nerd Font 11";
+  bg0            : #282828;
+  bg1            : #3c3836;
+  bg2            : #504945;
+  bg3            : #665c54;
+  bg4            : #7c6f64;
+
+  fg0            : #fbf1c7;
+  fg1            : #ebdbb2;
+  fg2            : #d5c4a1;
+  fg3            : #bdae93;
+  fg4            : #a89984;
+
+  bright-red     : #fb4934;
+  bright-green   : #b8bb26;
+  bright-yellow  : #fabd2f;
+  bright-blue    : #83a598;
+  bright-purple  : #d3869b;
+  bright-aqua    : #8ec07c;
+  bright-orange  : #fe8019;
+
+  neutral-red    : #cc241d;
+  neutral-green  : #98971a;
+  neutral-yellow : #d79921;
+  neutral-blue   : #458588;
+  neutral-purple : #b16286;
+  neutral-aqua   : #689d6a;
+  neutral-orange : #d65d0e;
+
+  dark-red       : #722529;
+  dark-green     : #62693e;
+  dark-aqua      : #49503b;
+
+  gray           : #928374;
+
+  red            : @bright-red;    // or @neutral-red
+  green          : @bright-green;  // or @neutral-green  
+  yellow         : @bright-yellow; // or @neutral-yellow
+  blue           : @bright-blue;   // or @neutral-blue
+  magenta        : @bright-purple; // or @neutral-purple
+  aqua           : @bright-aqua;   // or @neutral-aqua
+  orange         : @bright-orange; // or @neutral-orange
+
+  accent         : @bright-green;
+  urgent         : @red;
+  text-color     : @fg0;
+  background-color : transparent;
+  margin  : 0;
+  padding : 0;
+  spacing : 0;
+}
+
+window {
+  background-color: @bg0;
+  border: 1px;
+  border-color: @bg4;
+  border-radius: 4px;
+  children: [ mainbox ];
+}
+
+mainbox {
+    children: [ inputbar, message, listview ];
+}
+
+inputbar {
+  spacing  : 8px;
+    children: [prompt, entry];
+    border: 0 0 1px 0;
+    border-color: @bg3;
+    margin: 0 10px;
+    padding: 12px 12px;
+}
+
+prompt {
+    text-color: @fg2;
+}
+
+entry {
+    cursor: text;
+}
+
+message {
+  spacing  : 8px;
+    border: 0 0 1px 0;
+    border-color: @bg3;
+    margin: 0 10px;
+    padding: 12px 12px;
+}
+
+textbox {
+    text-color: @fg2;
+}
+
+listview {
+  lines        : 12;
+  columns      : 1;
+    padding: 8px;
+    spacing: 4px;
+}
+
+element {
+    cursor: pointer;
+  padding : 4px 8px;
+  spacing : 4px;
+}
+
+element normal urgent {
+  text-color: @urgent;
+}
+
+element normal active {
+  border: 1px;
+  border-color: @bg3;
+  border-radius: 4px;
+}
+
+element alternate active {
+  text-color: @accent;
+}
+
+element selected {
+  background-color: @bg1;
+  border: 1px;
+  border-color: @bg4; // or bg3
+  border-radius: 4px;
+}
+
+element-text selected{
+    text-color: @accent;
+}
+
+element-icon selected{
+}
+
+element selected urgent {
+  background-color: @urgent;
+}
+
+element-icon {
+    cursor: inherit;
+}
+
+element-text {
+    cursor: inherit;
+  text-color: inherit;
+}

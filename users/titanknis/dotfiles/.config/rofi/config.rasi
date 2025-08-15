@@ -1,0 +1,16 @@
+configuration{
+    show-icons: true;
+    icon-theme: "Papirus-Dark";
+    drun-display-format: "{icon} {name}";
+    modi: ["drun", "window", "run", "calc"];
+
+    terminal: "kitty";
+
+    display-run: "";
+    display-drun: "";
+    display-window: "";
+    display-filebrowser: "";
+    display-calc: "󰃬";
+}
+// @theme "~/.config/rofi/themes/tokyonight.rasi"
+@theme "~/.config/rofi/themes/gruvbox.rasi"

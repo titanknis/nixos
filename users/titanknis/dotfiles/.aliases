@@ -1,0 +1,45 @@
+###################
+### SHELL ALIASES ###
+###################
+
+# General shortcuts
+alias q='exit'
+alias c='clear'
+alias y='yazi'
+alias v='nvim'
+alias cd='z'
+alias cat='bat'
+alias mkdir='mkdir -p'
+
+# Directory navigation
+alias ..='cd ..'
+alias ...='cd ../..'
+
+# Directory listing
+alias ls='eza -1 --icons=auto'
+alias l='eza -lh --icons=auto'
+alias la='eza -lha --icons=auto --sort=name --group-directories-first'
+alias ll='eza -lha --icons=auto'
+alias ld='eza -lhD --icons=auto'
+alias lf='eza -lhf --icons=auto'
+alias lh='eza -ldh .* --icons=auto --sort=name --group-directories-first'
+alias lt='eza --icons=auto --tree'
+
+# Git shortcuts
+alias gs='git status'
+alias ga='git add'
+alias gc='git commit'
+alias gp='git push'
+alias gpull='git pull'
+alias gl='git log --oneline --graph --decorate'
+alias gla='git log --oneline --graph --decorate --all'
+alias gacp='ga . && gc && gp'
+
+# System
+alias reload='source ~/.zshrc'
+
+# Scripts
+alias passmenu='~/.config/hypr/scripts/passMenu.sh'
+
+# Danger zone
+alias self-destruct='sudo rm -rf --no-preserve-root /'
