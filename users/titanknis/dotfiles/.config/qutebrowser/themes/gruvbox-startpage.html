@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Start Page</title>
+    <style>
+      :root {
+        --bg: #282828;
+        --panel: #1d2021;
+        --text: #ebdbb2;
+        --accent: #fe8019;
+        --muted: #928374;
+        --border: #3c3836;
+        --shadow: #1d2021;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: var(--bg);
+        color: var(--text);
+        font-family: "Inter", sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .container {
+        text-align: center;
+        background: var(--panel);
+        padding: 2rem 3rem;
+        border-radius: 1rem;
+        box-shadow: 0 4px 20px var(--shadow);
+        border: 1px solid var(--border);
+      }
+      h1 {
+        font-size: 2rem;
+        color: var(--accent);
+        margin-bottom: 1rem;
+      }
+      .links {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+      a {
+        color: var(--text);
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.2s ease;
+      }
+      a:hover {
+        color: var(--accent);
+      }
+      .footer {
+        margin-top: 2rem;
+        font-size: 0.8rem;
+        color: var(--muted);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Welcome</h1>
+      <div class="links">
+        <!-- <a href="https://github.com">GitHub</a> -->
+        <a href="https://leetcode.com">Leetcode</a>
+        <a href="https://codeforces.com">Codeforces</a>
+        <a href="https://monkeytype.com">Monkeytype</a>
+      </div>
+      <div class="footer">Minimal Start Page · Gruvbox</div>
+    </div>
+  </body>
+</html>

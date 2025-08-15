@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Start Page</title>
+    <style>
+      :root {
+        --bg: #1a1b26;
+        --panel: #24283b;
+        --text: #c0caf5;
+        --accent: #7aa2f7;
+        --muted: #565f89;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: var(--bg);
+        color: var(--text);
+        font-family: "Inter", sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .container {
+        text-align: center;
+        background: var(--panel);
+        padding: 2rem 3rem;
+        border-radius: 1rem;
+        box-shadow: 0 0 10px #00000033;
+      }
+
+      h1 {
+        font-size: 2rem;
+        color: var(--accent);
+        margin-bottom: 1rem;
+      }
+
+      .links {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+
+      a {
+        color: var(--text);
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.2s ease;
+      }
+
+      a:hover {
+        color: var(--accent);
+      }
+
+      .footer {
+        margin-top: 2rem;
+        font-size: 0.8rem;
+        color: var(--muted);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Welcome</h1>
+      <div class="links">
+        <!-- <a href="https://github.com">GitHub</a> -->
+        <a href="https://leetcode.com">Leetcode</a>
+        <a href="https://codeforces.com">Codeforces</a>
+        <a href="https://monkeytype.com">Monkeytype</a>
+      </div>
+      <div class="footer">Minimal Start Page · Tokyo Night</div>
+    </div>
+  </body>
+</html>
