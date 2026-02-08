@@ -1595,7 +1595,6 @@ exit
 🇮🇨 flag canary islands canary islands flag nation country banner canary islands
 🇮🇩 flag indonesia flag nation country banner indonesia
 🇮🇪 flag ireland ie flag nation country banner ireland
-🇮🇱 flag israel il flag nation country banner israel
 🇮🇲 flag isle of man isle man flag nation country banner isle of man
 🇮🇳 flag india in flag nation country banner india
 🇮🇴 flag british indian ocean territory british indian ocean territory flag nation country banner british indian ocean territory

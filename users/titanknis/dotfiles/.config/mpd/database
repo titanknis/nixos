@@ -1,0 +1,153 @@
+info_begin
+format: 2
+mpd_version: 0.24.5
+fs_charset: UTF-8
+tag: Artist
+tag: ArtistSort
+tag: Album
+tag: AlbumSort
+tag: AlbumArtist
+tag: AlbumArtistSort
+tag: Title
+tag: TitleSort
+tag: Track
+tag: Name
+tag: Genre
+tag: Mood
+tag: Date
+tag: OriginalDate
+tag: Composer
+tag: ComposerSort
+tag: Performer
+tag: Conductor
+tag: Work
+tag: Movement
+tag: MovementNumber
+tag: ShowMovement
+tag: Ensemble
+tag: Location
+tag: Grouping
+tag: Disc
+tag: Label
+tag: MUSICBRAINZ_ARTISTID
+tag: MUSICBRAINZ_ALBUMID
+tag: MUSICBRAINZ_ALBUMARTISTID
+tag: MUSICBRAINZ_TRACKID
+tag: MUSICBRAINZ_RELEASETRACKID
+tag: MUSICBRAINZ_WORKID
+tag: MUSICBRAINZ_RELEASEGROUPID
+info_end
+song_begin: MADAX - All Girls Are the Same (Sped Up) - I Admit It Another Hoe Got Me Finished.mp3
+Time: 120.134
+Artist: MADAX
+AlbumArtist: MADAX
+Title: All Girls Are the Same (Sped Up) - I Admit It Another Hoe Got Me Finished
+Album: All Girls Are the Same (Sped Up) - I Admit It Another Hoe Got Me Finished
+Track: 1
+Date: 2023-02-17
+Date: 2023
+Disc: 1
+Format: 48000:16:2
+mtime: 1756053263
+added: 1758574244
+song_end
+song_begin: Arkane Skye, MEJKO - Downward Spiral.mp3
+Time: 208.067
+Artist: Arkane Skye/MEJKO
+AlbumArtist: Arkane Skye
+Title: Downward Spiral
+Album: Downward Spiral
+Track: 1
+Date: 2020-11-16
+Date: 2020
+Disc: 1
+Format: 48000:16:2
+mtime: 1756053264
+added: 1758574244
+song_end
+song_begin: Satellite Empire - Eternal Vespers.mp3
+Time: 336
+Artist: Satellite Empire
+AlbumArtist: Satellite Empire
+Title: Eternal Vespers
+Album: Eternal Vespers
+Track: 1
+Date: 2021-09-30
+Date: 2021
+Genre: Chillstep
+Disc: 1
+Format: 48000:16:2
+mtime: 1756053264
+added: 1758574244
+song_end
+song_begin: The Chalkeaters, Black Gryph0n, PiNKII - Furrýmon- Gotta Smash ’Em All!.mp3
+Time: 211.098
+Artist: The Chalkeaters/Black Gryph0n/PiNKII
+AlbumArtist: The Chalkeaters
+Title: Furrýmon: Gotta Smash ’Em All!
+Album: Furrýmon: Gotta Smash ’Em All!
+Track: 1
+Date: 2022-11-25
+Date: 2022
+Genre: Nerdcore
+Disc: 1
+Format: 48000:16:2
+mtime: 1756053263
+added: 1758574244
+song_end
+song_begin: Ariadne - Karma.mp3
+Time: 173.013
+Artist: Ariadne
+AlbumArtist: Ariadne
+Title: Karma
+Album: Karma
+Track: 1
+Date: 2024-03-08
+Date: 2024
+Disc: 1
+Format: 48000:16:2
+mtime: 1756053263
+added: 1758574244
+song_end
+song_begin: Sara Skinner, Spektrum - Keep You.mp3
+Time: 289.5
+Artist: Sara Skinner/Spektrum
+AlbumArtist: Sara Skinner
+Title: Keep You
+Album: Keep You
+Track: 1
+Date: 2019-02-08
+Date: 2019
+Disc: 1
+Format: 48000:16:2
+mtime: 1756053263
+added: 1758574244
+song_end
+song_begin: dxncing dxvil - killing me.mp3
+Time: 209.454
+Artist: dxncing dxvil
+AlbumArtist: dxncing dxvil
+Title: killing me
+Album: killing me
+Track: 1
+Date: 2024-01-24
+Date: 2024
+Disc: 1
+Format: 48000:16:2
+mtime: 1756053263
+added: 1758574244
+song_end
+song_begin: Ely Eira - Out of the Shadows.mp3
+Time: 201.20000000000002
+Artist: Ely Eira
+AlbumArtist: Ely Eira
+Title: Out of the Shadows
+Album: The Legend of Ely: Prologue
+Track: 4
+Date: 2022-04-29
+Date: 2022
+Disc: 1
+Format: 48000:16:2
+mtime: 1756053264
+added: 1758574244
+song_end

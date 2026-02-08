@@ -1,5 +1,5 @@
-#--format=bestvideo+bestaudio/best
---format=bestvideo[height<=1080]+bestaudio/best
+--format=bestvideo+bestaudio/best
+# --format=bestvideo[height<=1080]+bestaudio/best
 --merge-output-format=mkv
 
 --embed-thumbnail

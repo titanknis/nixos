@@ -35,7 +35,10 @@ local plugins = {
 	require("plugins.colors.gruvebox"), --active
 
 	-- Tools
-	require("plugins.tools.markview"), --NOTE: i like this UI more than render-markdown
+	require("plugins.tools.sqls"),
+	require("plugins.tools.diagram"),
+	-- require("plugins.tools.vimtex"),
+	-- require("plugins.tools.markview"), --NOTE: i like this UI more than render-markdown
 	-- require("plugins.tools.render-markdown"),
 	require("plugins.tools.nvim-tree"),
 	require("plugins.tools.pomo"),

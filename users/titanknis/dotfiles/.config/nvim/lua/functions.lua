@@ -2,9 +2,31 @@
 function RunCode()
 	-- Get file info
 	local filetype = vim.bo.filetype
+	local extension = vim.fn.expand("%:e")
 	local file = vim.fn.expand("%:t") -- Just the filename
 	local outfile = vim.fn.expand("%:t:r") -- Filename without extension
 	local dir = vim.fn.expand("%:p:h") -- Directory of current file
+	local filepath = vim.fn.expand("%:p")
+
+	-- Check if file has a package declaration
+	local has_package = false
+	local f = io.open(filepath, "r")
+	if f then
+		for line in f:lines() do
+			if line:match("^package%s+") then
+				has_package = true
+				break
+			end
+		end
+		f:close()
+	end
+
+	if filetype == "" then
+		-- Try to determine by extension
+		if extension == "uml" or extension == "puml" or extension == "plantuml" then
+			filetype = "plantuml"
+		end
+	end
 
 	local commands = {
 		c = string.format('cd "%s" && clang -pthread "%s" -o "%s" && "./%s"', dir, file, outfile, outfile),
@@ -16,7 +38,23 @@ function RunCode()
 
 		python = string.format('cd "%s" && python "%s"', dir, file),
 		sh = string.format('cd "%s" && bash "%s"', dir, file),
+
+		markdown = string.format('cd "%s" && plantuml "%s" && imv "./%s.png"', dir, file, outfile, outfile),
+		plantuml = string.format('cd "%s" && plantuml "%s" && imv "./%s.png"', dir, file, outfile, outfile),
+		html = string.format('cd "%s" && python3 -m http.server 8000 & xdg-open http://localhost:8000 & exit', dir),
 	}
+
+	if has_package then
+		-- Has package, so assume standard directory structure
+		commands["java"] = string.format(
+			'cd "%s/.." && javac "%s/%s" && java "%s/%s"',
+			dir,
+			vim.fn.expand("%:p:h:t"),
+			file,
+			vim.fn.expand("%:p:h:t"),
+			outfile
+		)
+	end
 
 	local cmd = commands[filetype]
 	if cmd then

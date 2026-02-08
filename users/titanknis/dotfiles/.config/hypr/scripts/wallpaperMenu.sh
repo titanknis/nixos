@@ -5,7 +5,7 @@
 # -----------------------------------------------------------------------------
 
 # ─── CONFIGURATION ────────────────────────────────────────────────────────────
-WALLPAPER_DIR="$HOME/Media/Pictures/Wallpapers"      # Search directory for wallpapers
+WALLPAPER_DIR="$HOME/Pictures/Wallpapers"            # Search directory for wallpapers
 CURRENT_WALLPAPER="$WALLPAPER_DIR/current_wallpaper" # Tracks current selection
 ROFI_THEME="$HOME/.config/rofi/imagepicker.rasi"     # Rofi configuration with thumbnail support
 

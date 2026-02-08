@@ -15,6 +15,13 @@
     };
   };
 
+  services.postgresql = {
+    enable = true;
+    package = pkgs.postgresql;
+  };
+
+  # services.odoo.enable = true; # add this line to my nixos configuration file then rebuild my nixos system
+
   # Input Device Configuration
   services.libinput.enable = true; # Enable touchpad support (default in most desktop managers)
 
@@ -25,8 +32,8 @@
   services.pipewire.enable = true; # Enable PipeWire (audio system)
 
   # Enable bluetooth.
-  hardware.bluetooth.enable = true; # Enable Bluetooth
-  services.blueman.enable = true;
+  # hardware.bluetooth.enable = true; # Enable Bluetooth
+  # services.blueman.enable = true;
 
   # Display Manager
   services.getty = {
@@ -36,7 +43,7 @@
   environment = {
     loginShellInit = ''
       if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" -eq 1 ]; then
-         hyprland
+         start-hyprland
       fi
     '';
   };

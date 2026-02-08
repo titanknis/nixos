@@ -16,19 +16,19 @@
     clang-tools # clangd (C/C++), clang-format
 
     # Rust Development
-    # rustc # Rust compiler
-    # cargo # Rust package manager
-    # rust-analyzer # Rust LSP
-    # rustfmt # Rust formatter
+    rustc # Rust compiler
+    cargo # Rust package manager
+    rust-analyzer # Rust LSP
+    rustfmt # Rust formatter
 
     # Go Development
-    # go # Go compiler
-    # gopls # Go LSP
+    go # Go compiler
+    gopls # Go LSP
 
     # Java Development
-    # jdk # Java Development Kit (optional)
-    # jdt-language-server # Java LSP
-    # google-java-format # Java formatter
+    jdk # Java Development Kit (optional)
+    jdt-language-server # Java LSP
+    google-java-format # Java formatter
 
     # Python Development
     python3 # Python interpreter
@@ -45,15 +45,24 @@
 
     # Nix Development
     nixd # Nix LSP
-    nixfmt-rfc-style
+    nixfmt
 
     # Web Development (JavaScript/TypeScript)
-    # nodejs # Node.js for JS/TS (optional)
+    nodejs # Node.js for JS/TS (optional)
     nodePackages.prettier # Prettier (JS/HTML/CSS/Markdown)
     nodePackages.typescript-language-server # TypeScript/JS LSP
     nodePackages.vscode-langservers-extracted # HTML/CSS/JSON/ESLint
 
+    # SQL
+    sqls
+
     # hyprland config
     hyprls
+
+    # UML
+    imagemagick
+    plantuml
+    mermaid-cli
+    kitty
   ];
 }

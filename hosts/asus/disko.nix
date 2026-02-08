@@ -51,7 +51,7 @@
             };
           };
           home = {
-            size = "100G";
+            size = "200G";
             content = {
               type = "filesystem";
               format = "ext4";

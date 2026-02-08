@@ -45,6 +45,7 @@
         ".config/kitty"
         ".config/mako"
         ".config/mpv"
+        ".config/mpd"
         ".config/nvim"
         ".config/qutebrowser"
         ".config/rofi"
@@ -52,6 +53,7 @@
         ".config/waybar"
         ".config/yt-dlp"
         ".config/zathura"
+        ".config/YouTube Music/config.json"
 
         ".aliases"
         ".bashrc"

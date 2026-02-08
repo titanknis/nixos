@@ -4,7 +4,7 @@
 # Features: Avoids consecutive duplicates, random transitions, configurable timing
 
 # --- USER CONFIGURATION ---
-WALLPAPER_DIR="$HOME/Media/Pictures/Wallpapers"      # Directory containing wallpapers
+WALLPAPER_DIR="$HOME/Pictures/Wallpapers"            # Directory containing wallpapers
 CURRENT_WALLPAPER="$WALLPAPER_DIR/current_wallpaper" # Symlink to current wallpaper
 INTERVAL=300                                         # Seconds between wallpaper changes
 

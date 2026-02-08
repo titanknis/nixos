@@ -15,10 +15,14 @@
 
   fonts.packages = with pkgs; [ nerd-fonts.jetbrains-mono ];
 
+  xdg.mime.defaultApplications = {
+    "application/pdf" = [ "org.pwmt.zathura.desktop" ];
+  };
+
   # System packages
   environment.systemPackages = with pkgs; [
     # Core utilities
-    (rofi-wayland.override { plugins = [ rofi-calc ]; }) # Application launcher for Wayland with plugins
+    (rofi.override { plugins = [ rofi-calc ]; }) # Application launcher for Wayland with plugins
     mako # Notification daemon
     swww # wallpaper daemon
     cliphist # clipboard manager

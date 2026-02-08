@@ -23,13 +23,12 @@
     # --- Packages ---
     ../../modules/packages.nix # System packages and their configurations
     ../../modules/nvim.nix # Text editor
-    ../../modules/neomutt.nix # Email client
     ../../modules/git.nix
     ../../modules/zsh.nix
     ../../modules/hyprland.nix
 
     # --- Virtual Machine Configuration ---
-    # ../../modules/virtualisation.nix
-    # ../../modules/vm.nix # Virtual machine-specific settings for the Host
+    ../../modules/virtualisation.nix
+    ../../modules/vm.nix # Virtual machine-specific settings for the Host
   ];
 }

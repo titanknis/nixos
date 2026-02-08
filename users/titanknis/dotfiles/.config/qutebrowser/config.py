@@ -56,30 +56,30 @@ c.content.blocking.adblock.lists = [
 # ─── Privacy / Security ────────────────────────────────────────────────────────
 
 # Disable JavaScript by default
-c.content.javascript.enabled = True
+# c.content.javascript.enabled = True
 
 # Block all cookies by default
-c.content.cookies.accept = "no-3rdparty"
+# c.content.cookies.accept = "no-3rdparty"
 
 # Autoplay/media: off
-c.content.autoplay = False
+# c.content.autoplay = False
 
 # Disable WebRTC (prevents IP leaks)
-c.content.webrtc_ip_handling_policy = "disable-non-proxied-udp"
+# c.content.webrtc_ip_handling_policy = "disable-non-proxied-udp"
 
 # Disable canvas reading (anti-fingerprinting)
-c.content.canvas_reading = True
+# c.content.canvas_reading = True
 
 # Disable geolocation
-c.content.geolocation = False
+# c.content.geolocation = False
 # Disable notifications
-c.content.notifications.enabled = False
+# c.content.notifications.enabled = False
 
 # Disable clipboard access
-c.content.javascript.clipboard = "ask"
+# c.content.javascript.clipboard = "ask"
 
 # Disable PDF viewer (open PDFs externally)
-c.content.pdfjs = False
+# c.content.pdfjs = False
 
 # ─── Scrolling ─────────────────────────────────────────────────────────────────
 
@@ -105,7 +105,6 @@ c.url.searchengines = {
     # note - if you use duckduckgo, you can make use of its built in bangs, of which there are many! https://duckduckgo.com/bangs
     "DEFAULT": "https://duckduckgo.com/?q={}",
     "!chat": "https://chatgpt.com/?model=auto&q={}",
-    "!duck": "https://duckduckgo.com/?q={}&ia=chat&bang=true",
     "!google": "https://www.google.com/search?q={}",
     "!yt": "https://www.youtube.com/results?search_query={}",
     "!nixpkgs": "https://search.nixos.org/packages?channel=unstable&query={}",
@@ -155,3 +154,7 @@ config.bind(
 #     "xx",
 #     "config-cycle statusbar.show always never;; config-cycle tabs.show always never",
 # )
+
+# Example: Canva uses Ctrl+Alt+p
+config.bind("<F5>", "fake-key <Ctrl-Alt-p>")
+config.bind(".", "spawn --userscript toggle-screen.sh")

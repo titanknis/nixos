@@ -12,6 +12,7 @@ return {
 				"nix",
 				"lua",
 				"html",
+				"latex",
 				"markdown",
 				"markdown_inline",
 				"vim",

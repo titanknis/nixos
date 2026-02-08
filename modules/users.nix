@@ -11,8 +11,6 @@
     extraGroups = [
       "wheel"
       "networkmanager"
-      "libvirtd"
-      "kvm"
     ];
 
     openssh.authorizedKeys.keys = [

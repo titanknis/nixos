@@ -1,0 +1,82 @@
+{
+	"window-size": {
+		"width": 960,
+		"height": 1044
+	},
+	"window-maximized": true,
+	"window-position": {
+		"x": 0,
+		"y": 0
+	},
+	"url": "https://music.youtube.com/watch?v=ygsO_anJt5M",
+	"options": {
+		"tray": false,
+		"appVisible": true,
+		"autoUpdates": true,
+		"alwaysOnTop": false,
+		"hideMenu": false,
+		"hideMenuWarned": false,
+		"startAtLogin": false,
+		"disableHardwareAcceleration": false,
+		"removeUpgradeButton": false,
+		"restartOnConfigChanges": false,
+		"trayClickPlayPause": false,
+		"autoResetAppCache": false,
+		"resumeOnStart": true,
+		"likeButtons": "",
+		"proxy": "",
+		"startingPage": "",
+		"overrideUserAgent": false,
+		"usePodcastParticipantAsArtist": false,
+		"themes": []
+	},
+	"plugins": {
+		"precise-volume": {
+			"globalShortcuts": {}
+		},
+		"in-app-menu": {
+			"enabled": true,
+			"hideDOMWindowControls": true
+		},
+		"shortcuts": {
+			"enabled": false,
+			"overrideMediaKeys": false,
+			"global": {
+				"previous": "Shift+,",
+				"playPause": "Space",
+				"next": "Shift+'.'"
+			},
+			"local": {
+				"previous": "",
+				"playPause": "",
+				"next": ""
+			}
+		},
+		"navigation": {
+			"enabled": true
+		},
+		"downloader": {
+			"enabled": true
+		},
+		"no-google-login": {
+			"enabled": true
+		},
+		"synced-lyrics": {
+			"enabled": true
+		},
+		"unobtrusive-player": {
+			"enabled": true
+		},
+		"compact-sidebar": {
+			"enabled": false
+		},
+		"blur-nav-bar": {
+			"enabled": true
+		}
+	},
+	"__internal__": {
+		"migrations": {
+			"version": "3.11.0"
+		}
+	}
+}
