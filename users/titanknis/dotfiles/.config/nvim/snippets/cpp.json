@@ -1,0 +1,265 @@
+{
+  "yes": {
+    "prefix": "yes",
+    "body": "cout <<\"YES\"<<endl;",
+    "description": "Output 'YES' with cout"
+  },
+
+  "yesif": {
+    "prefix": "yesif",
+    "body": "if(${1:condition})cout<<\"YES\"<<endl;",
+    "description": "Conditional YES output"
+  },
+
+  "no": {
+    "prefix": "no",
+    "body": "cout<<\"NO\"<<endl;",
+    "description": "Output 'NO' with cout"
+  },
+
+  "yesno": {
+    "prefix": "yesno",
+    "body": "cout<<((${1:condition})?\"YES\":\"NO\")<<endl;",
+    "description": "Conditional 'YES' or 'NO' output"
+  },
+
+  "sum": {
+    "prefix": "sum",
+    "body": "accumulate(${1:v}.begin(), ${1:v}.end(), 0)",
+    "description": "accumulate(v.begin(), v.end(), 0)"
+  },
+
+  "count": {
+    "prefix": "count",
+    "body": "count(${1:v}.begin(), ${1:v}.end(), ${2:x})",
+    "description": "count(v.begin(), v.end(), x)"
+  },
+
+  "sort": {
+    "prefix": "sort",
+    "body": "sort(${1:v}.begin(), ${1:v}.end())",
+    "description": "sort(v.begin(), v.end())"
+  },
+
+  "cusort": {
+    "prefix": "cusort",
+    "body": "sort(${1:v}.begin(), ${1:v}.end(), [](auto a, auto b){return ${2:Condition};})",
+    "description": "sort with custom lambda comparator"
+  },
+
+  "all": {
+    "prefix": "all",
+    "body": "${1:v}.begin(), ${1:v}.end()",
+    "description": "v.begin(), v.end()"
+  },
+
+  "ll": {
+    "prefix": "ll",
+    "body": "long long",
+    "description": "Shorthand for 'long long'"
+  },
+
+  "ull": {
+    "prefix": "ull",
+    "body": "unsigned long long",
+    "description": "Shorthand for 'unsigned long long'"
+  },
+
+  "vi": {
+    "prefix": "vi",
+    "body": "vector<int>",
+    "description": "Shortcut for vector<int>"
+  },
+
+  "vll": {
+    "prefix": "vll",
+    "body": "vector<long long>",
+    "description": "Shortcut for vector<long long>"
+  },
+
+  "pii": {
+    "prefix": "pii",
+    "body": "pair<int, int>",
+    "description": "Pair of integers"
+  },
+
+  "comb": {
+    "prefix": "comb",
+    "body": [
+      "long long comb(int n, int k) {",
+      "    if (k > n) return 0; ",
+      "    if (k > n - k)",
+      "        k = n - k;",
+      "    long long res = 1;",
+      "    for (int i = 1; i <= k; ++i)",
+      "        res = res * (n - k + i) / i;",
+      "    return res;",
+      "}"
+    ],
+    "description": "Combinations function O(k) with symmetry"
+  },
+
+  "perm": {
+    "prefix": "perm",
+    "body": [
+      "long long perm(int n, int k) {",
+      "    if (k > n) return 0; ",
+      "    long long res = 1;",
+      "    for (int i = 0; i < k; ++i)",
+      "        res *= (n - i);",
+      "    return res;",
+      "}"
+    ],
+    "description": "Permutations function O(k)"
+  },
+
+  "dbg": {
+    "prefix": "dbg",
+    "body": [
+      "#ifdef LOCAL",
+      "#include \"../../algo/debug.h\"",
+      "#else",
+      "#define debug(...)",
+      "#define debugln(...)",
+      "#endif"
+    ],
+    "description": "Macros for debug printing"
+  },
+
+  "allinc": {
+    "prefix": "allinc",
+    "body": ["#include <bits/stdc++.h>", "using namespace std;"],
+    "description": "Include all standard headers and 'using namespace std;'"
+  },
+
+  "fio": {
+    "prefix": "fio",
+    "body": ["ios::sync_with_stdio(false);", "cin.tie(nullptr);"],
+    "description": "Fast cin/cout I/O setup"
+  },
+
+  "iof": {
+    "prefix": "iof",
+    "body": [
+      "freopen(\"${1:problemname}.in\", \"r\", stdin);",
+      "freopen(\"${1:problemname}.out\", \"w\", stdout);"
+    ],
+    "description": "File I/O template (e.g., for USACO)"
+  },
+
+  "main": {
+    "prefix": "main",
+    "body": [
+      "#include <bits/stdc++.h>",
+      "#include <iostream>",
+      "using namespace std;",
+      "",
+      "int main() {",
+      "    ios::sync_with_stdio(false);",
+      "    cin.tie(nullptr);",
+      "",
+      "    int t; cin >> t;",
+      "    while (t--) {",
+      "        $0",
+      "    }",
+      "",
+      "    return 0;",
+      "}"
+    ],
+    "description": "Main function boilerplate"
+  },
+
+  "limits": {
+    "prefix": "limits",
+    "body": [
+      "// int:                ~±2×10⁹ (32-bit), Range: -2³¹ to 2³¹ - 1",
+      "// long long:          ~±9×10¹⁸ (64-bit), Range: -2⁶³ to 2⁶³ - 1",
+      "// unsigned int:       ~0 to 4.29×10⁹ (32-bit), Range: 0 to 2³² - 1",
+      "// unsigned long long: ~0 to 1.84×10¹⁹ (64-bit), Range: 0 to 2⁶⁴ - 1",
+      "// double:             Precision: ~15-16 digits, Range: ±1.7×10³⁰⁸",
+      "// bool:               True/False (1 byte), Range: 0 or 1",
+      "// char:               8-bit (1 byte), Range: -2⁷ to 2⁷ - 1"
+    ],
+    "description": "Print min/max values of standard types"
+  },
+
+  "snips": {
+    "prefix": "snips",
+    "body": [
+      "/*",
+      "yesno  - Conditional 'YES' or 'NO' output",
+      "yes    - Output 'YES' with cout",
+      "no     - Output 'NO' with cout",
+      "",
+      "sum    - Sum all elements in a container using accumulate",
+      "count  - Count occurrences of an element in a container",
+      "sort   - Sort a container in ascending order",
+      "cusort - Sort a container with a custom comparator (lambda)",
+      "all    - Shorthand for v.begin(), v.end()",
+      "",
+      "vi     - Shortcut for vector<int>",
+      "vll    - Shortcut for vector<long long>",
+      "ll     - Shorthand for 'long long'",
+      "ull    - Shorthand for 'unsigned long long'",
+      "pii    - Pair of integers (pair<int, int>)",
+      "",
+      "comb   - Combinations function snippet",
+      "perm   - Permutations function snippet",
+      "",
+      "templ  - Base template for competitive programming",
+      "dbg    - Macros for debug printing",
+      "allinc - Include all standard headers and 'using namespace std;'",
+      "fio    - Fast cin/cout I/O setup",
+      "iof    - File I/O template (e.g., for USACO)",
+      "main   - Main function boilerplate",
+      "limits - Print min/max values of standard types",
+      "*/"
+    ],
+    "description": "List all available snippets"
+  },
+
+  "templ": {
+    "prefix": "templ",
+    "body": [
+      "/*━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━",
+      "Problem: \\$(PROBLEM)",
+      "Contest: \\$(CONTEST)",
+      "Judge: \\$(JUDGE)",
+      "URL: \\$(URL)",
+      "Memory Limit: \\$(MEMLIM)",
+      "Time Limit: \\$(TIMELIM)",
+      "Author: knis",
+      "Created: \\$(DATE)",
+      " ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━*/",
+      "#include <bits/stdc++.h>",
+      "using namespace std;",
+      "#ifdef LOCAL",
+      "#include \"../../algo/debug.h\"",
+      "#else",
+      "#define debug(...)",
+      "#define debugln(...)",
+      "#endif",
+      "// Macros",
+      "#define all(x) (x).begin(), (x).end()",
+      "#define endl '\\n'",
+      "#define int long long",
+      "// Constants",
+      "const int INF = 1e9;",
+      "const int MOD = 1e9 + 7;",
+      "void solve() {",
+      "    $0",
+      "}",
+      "int32_t main() {",
+      "    // Fast I/O",
+      "    ios::sync_with_stdio(false);",
+      "    cin.tie(nullptr);",
+      "    int t;",
+      "    cin >> t;",
+      "    while (t--)",
+      "        solve();",
+      "    return 0;",
+      "}"
+    ],
+    "description": "Base template for competitive programming"
+  }
+}

@@ -35,6 +35,7 @@
 
             # Host configuration.nix
             ./hosts/${hostname}/configuration.nix
+
             {
               home-manager = {
                 extraSpecialArgs = { inherit inputs hostname username; };

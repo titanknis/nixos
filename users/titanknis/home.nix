@@ -24,13 +24,18 @@
       package = pkgs.papirus-icon-theme;
     };
 
-    gtk3.extraConfig."gtk-application-prefer-dark-theme" = true;
-    gtk4.extraConfig."gtk-application-prefer-dark-theme" = true;
+    colorScheme = "dark";
+    gtk4.theme = null;
   };
 
   home.pointerCursor = {
     name = "Bibata-Modern-Ice";
+    # name = "Bibata-Modern-Amber";
+    # name = "Bibata-Modern-Classic";
     package = pkgs.bibata-cursors;
+    # size = 32;
+    # package = pkgs.catppuccin-cursors.mochaLight;
+    hyprcursor.enable = true;
   };
 
   ################
@@ -42,6 +47,7 @@
       [
         ".config/fastfetch"
         ".config/hypr"
+        ".config/niri"
         ".config/kitty"
         ".config/mako"
         ".config/mpv"

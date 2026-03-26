@@ -1,9 +1,5 @@
 -- settings.lua
 
--- disable netrw at the very start of your init.lua
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
-
 -- General settings
 vim.o.belloff = "all" -- Disable bell
 vim.o.clipboard = "unnamedplus" -- Use system clipboard
@@ -26,8 +22,8 @@ vim.g.have_nerd_font = true
 
 -- Neovim folding settings
 vim.o.foldmethod = "expr"
-vim.o.foldexpr = "nvim_treesitter#foldexpr()"
+vim.o.foldexpr = "v:lua.vim.treesitter.foldexpr()"
 vim.o.foldlevel = 99 -- Open all folds by default
 
-vim.o.scrolloff = 5
-vim.o.sidescrolloff = 5
+vim.o.scrolloff = 5 --
+vim.o.sidescrolloff = 5 --

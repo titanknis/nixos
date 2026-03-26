@@ -4,7 +4,7 @@
 
 # Define the state file and your touchpad device name.
 STATE_FILE="${XDG_RUNTIME_DIR:-/run/user/$(id -u)}/touchpad.state"
-TOUCHPAD="elan0709:00-04f3:30a0-touchpad"
+TOUCHPAD=$(hyprctl devices -j | jq -r '.mice[] | select(.name | test("touchpad";"i")) | .name' | head -1)
 
 # Read the current state (default to enabled if file not present).
 if [ -f "$STATE_FILE" ]; then

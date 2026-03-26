@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# Simple random wallpaper switcher for swww with smooth transitions
+# Simple random wallpaper switcher for awww with smooth transitions
 # Features: Avoids consecutive duplicates, random transitions, configurable timing
 
 # --- USER CONFIGURATION ---
@@ -10,13 +10,13 @@ INTERVAL=300                                         # Seconds between wallpaper
 
 # Transition settings (randomly selected each time)
 TRANSITIONS=(fade left right wipe center any outer) # Available transition types
-export SWWW_TRANSITION_FPS=60                       # Animation smoothness
-export SWWW_TRANSITION_STEP=90                      # Animation speed
-# export SWWW_TRANSITION_STEP=255 # Animation speed
+export awww_TRANSITION_FPS=60                       # Animation smoothness
+export awww_TRANSITION_STEP=90                      # Animation speed
+# export awww_TRANSITION_STEP=255 # Animation speed
 
 # --- SCRIPT INITIALIZATION ---
-# Start swww daemon if not running
-pgrep -x swww-daemon >/dev/null || swww-daemon &
+# Start awww daemon if not running
+pgrep -x awww-daemon >/dev/null || awww-daemon &
 
 # --- MAIN LOOP ---
 while true; do
@@ -46,7 +46,7 @@ while true; do
     ln -sf "$wallpaper" "$CURRENT_WALLPAPER"
 
     # Apply with random transition effect and angle
-    swww img "$wallpaper" \
+    awww img "$wallpaper" \
         --transition-type "${TRANSITIONS[$((RANDOM % ${#TRANSITIONS[@]}))]}" \
         --transition-angle $((RANDOM % 360))
 

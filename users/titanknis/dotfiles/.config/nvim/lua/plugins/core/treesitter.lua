@@ -1,27 +1,36 @@
--- treesitter.lua
 return {
-	"nvim-treesitter/nvim-treesitter",
-	build = ":TSUpdate",
-	config = function()
-		require("nvim-treesitter.configs").setup({
-			ensure_installed = {
+	{
+		"nvim-treesitter/nvim-treesitter",
+		branch = "main",
+		build = ":TSUpdate",
+		lazy = false,
+		config = function()
+			-- Install specific parsers
+			require("nvim-treesitter").install({
 				"c",
 				"cpp",
 				"java",
 				"python",
 				"nix",
+				"sql",
 				"lua",
 				"html",
+				"javascript",
+				"css",
 				"latex",
 				"markdown",
 				"markdown_inline",
 				"vim",
 				"hyprlang",
-			}, -- Install parsers
-			auto_install = true, -- Automatically install missing parsers when entering buffer
-
-			highlight = { enable = true, additional_vim_regex_highlighting = false }, -- Enable syntax highlighting -- Disable regex-based additional_vim_regex_highlighting
-			--indent = { enable = true, },
+				"dart",
+			})
+		end,
+	},
+	{
+		"MeanderingProgrammer/treesitter-modules.nvim",
+		dependencies = { "nvim-treesitter/nvim-treesitter" },
+		opts = {
+			highlight = { enable = true },
 
 			incremental_selection = {
 				enable = true,
@@ -32,6 +41,6 @@ return {
 					node_decremental = "<C-m>",
 				},
 			},
-		})
-	end,
-} -- Syntax highlighting
+		},
+	},
+}

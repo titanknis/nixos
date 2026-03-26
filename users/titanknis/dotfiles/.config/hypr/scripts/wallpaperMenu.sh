@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# Interactive Wallpaper Selector using Rofi and swww
+# Interactive Wallpaper Selector using Rofi and awww
 # Features: Thumbnail previews, random transitions, persistent current selection
 # -----------------------------------------------------------------------------
 
@@ -11,11 +11,11 @@ ROFI_THEME="$HOME/.config/rofi/imagepicker.rasi"     # Rofi configuration with t
 
 # Transition effects (randomly selected on apply)
 TRANSITIONS=(fade left right wipe center any outer) # Visual effect options
-export SWWW_TRANSITION_FPS=60                       # Animation fluidity (frames per second)
-export SWWW_TRANSITION_STEP=90                      # Animation speed (pixel steps)
+export AWWW_TRANSITION_FPS=60                       # Animation fluidity (frames per second)
+export AWWW_TRANSITION_STEP=90                      # Animation speed (pixel steps)
 
-# ─── ENSURE SWWW IS RUNNING ───────────────────────────────────────────────────
-pgrep -x swww-daemon >/dev/null || swww-daemon & # Launch swww if inactive
+# ─── ENSURE awww IS RUNNING ───────────────────────────────────────────────────
+pgrep -x awww-daemon >/dev/null || awww-daemon & # Launch awww if inactive
 
 # ─── DISCOVER WALLPAPERS ──────────────────────────────────────────────────────
 # Find supported image formats (case-insensitive match)
@@ -50,6 +50,6 @@ wallpaper="${wallpapers[$((index - 1))]}"
 ln -sf "$wallpaper" "$CURRENT_WALLPAPER"
 
 # Apply with random visual effect
-swww img "$wallpaper" \
+awww img "$wallpaper" \
     --transition-type "${TRANSITIONS[$((RANDOM % ${#TRANSITIONS[@]}))]}" \
     --transition-angle $((RANDOM % 360))

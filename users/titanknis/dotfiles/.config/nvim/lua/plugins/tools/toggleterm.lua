@@ -2,14 +2,16 @@
 return {
 	"akinsho/toggleterm.nvim",
 	version = "*",
-	opts = {--[[ things you want to change go here]]
+	event = "VeryLazy",
+	opts = {
+		open_mapping = [[<C-;>]], -- global toggle for terminal #1
+		terminal_mappings = true, -- open_mapping works inside terminal too
 	},
-	config = function()
-		require("toggleterm").setup({
-			-- Use <leader>; to toggle the terminal in normal mode
-			-- vim.keymap.set("n", "<SPACE>;", "<cmd>ToggleTerm<CR>", { desc = "Toggle terminal" }),
-			open_mapping = [[<C-;>]], -- Toggle terminal with Ctrl+\ (can be customized)
-			-- direction = "float", -- Floating terminal for easy visibility
-		})
-	end,
+	keys = {
+		{ "<leader><Esc>", [[<C-\><C-n>]], mode = "t", desc = "Exit terminal mode" },
+
+		{ "<leader>t1", "<cmd>1ToggleTerm<cr>", mode = { "n", "t" }, desc = "Terminal 1" },
+		{ "<leader>t2", "<cmd>2ToggleTerm<cr>", mode = { "n", "t" }, desc = "Terminal 2" },
+		{ "<leader>t3", "<cmd>3ToggleTerm<cr>", mode = { "n", "t" }, desc = "Terminal 3" },
+	},
 }
