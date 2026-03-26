@@ -5,9 +5,16 @@
     defaultEditor = true;
   };
 
+  programs.java.enable = true;
+
   environment.systemPackages = with pkgs; [
     # General Tools
     ripgrep # Fast search tool
+    # texliveMedium
+    texliveFull # latex compiler for vimtex plugin
+    texlab
+    zathura
+    tree-sitter
 
     # C/C++ Development
     gcc # C/C++ compiler
@@ -27,11 +34,19 @@
 
     # Java Development
     jdk # Java Development Kit (optional)
+    maven
+    gradle
     jdt-language-server # Java LSP
     google-java-format # Java formatter
 
+    # Flutter/Dart Development
+    # flutter
+
     # Python Development
-    python3 # Python interpreter
+    (python3.withPackages (ps: [
+      ps.debugpy # Python Debugger
+      ps.pytest # Python Tester
+    ])) # Python interpreter
     pyright # Python LSP
     black # Python formatter
 
@@ -54,7 +69,7 @@
     nodePackages.vscode-langservers-extracted # HTML/CSS/JSON/ESLint
 
     # SQL
-    sqls
+    sql-formatter
 
     # hyprland config
     hyprls

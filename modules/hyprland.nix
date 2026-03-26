@@ -8,6 +8,8 @@
 {
   # Hyprland
   programs.hyprland.enable = true;
+  # programs.niri.enable = true;
+
   # Screen lock
   programs.hyprlock.enable = true;
   # Bar
@@ -50,4 +52,24 @@
     tesseract # for image/screenshot text extraction
     wl-clipboard # Wayland clipboard utilities
   ];
+
+  # Display Manager
+  services.getty = {
+    autologinUser = "titanknis";
+    autologinOnce = true;
+  };
+  environment = {
+    loginShellInit = ''
+      if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" -eq 1 ]; then
+        start-hyprland
+      fi
+    '';
+  };
+  # environment = {
+  #   loginShellInit = ''
+  #     if [ -z "$WAYLAND_DISPLAY" ] && [ "$XDG_VTNR" -eq 1 ]; then
+  #       # niri-session
+  #     fi
+  #   '';
+  # };
 }

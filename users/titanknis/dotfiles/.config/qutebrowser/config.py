@@ -157,4 +157,4 @@ config.bind(
 
 # Example: Canva uses Ctrl+Alt+p
 config.bind("<F5>", "fake-key <Ctrl-Alt-p>")
-config.bind(".", "spawn --userscript toggle-screen.sh")
+# config.bind(".", "spawn --userscript toggle-screen.sh")

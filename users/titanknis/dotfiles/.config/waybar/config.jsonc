@@ -11,6 +11,7 @@
   "modules-left": [
     //
     "hyprland/workspaces",
+    "niri/workspaces",
     "cava",
   ],
 
@@ -19,6 +20,7 @@
   "modules-right": [
     "privacy",
     "hyprland/language",
+    "niri/language",
     "wireplumber",
     "network",
     "tray",
@@ -35,6 +37,10 @@
   },
 
   "hyprland/workspaces": {
+    "all-outputs": true,
+  },
+
+  "niri/workspaces": {
     "all-outputs": true,
   },
 
@@ -107,6 +113,15 @@
     "format-en-colemak_dh": "dh",
     "format-en": "us",
     "format-fr": "fr",
+    "format-ar": "ar",
+    "on-click": "hyprctl switchxkblayout current next",
+  },
+
+  "niri/language": {
+    "format-en-colemak_dh": "dh",
+    "format-en": "us",
+    "format-fr": "fr",
+    "format-ar": "ar",
     "on-click": "hyprctl switchxkblayout current next",
   },
 

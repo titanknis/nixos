@@ -1,4 +1,51 @@
--- functions.lua
+-- -- functions.lua
+--
+-- local term_buf = nil
+-- local term_win = nil
+--
+-- function TermToggle()
+-- 	-- Window is open → hide it
+-- 	if term_win and vim.api.nvim_win_is_valid(term_win) then
+-- 		vim.api.nvim_win_hide(term_win)
+-- 		term_win = nil
+-- 		return
+-- 	end
+--
+-- 	-- Buffer exists but window is closed → re-open it
+-- 	if term_buf and vim.api.nvim_buf_is_valid(term_buf) then
+-- 		vim.cmd("botright split")
+-- 		term_win = vim.api.nvim_get_current_win()
+-- 		vim.api.nvim_win_set_buf(term_win, term_buf)
+-- 		vim.cmd("resize 15")
+-- 		vim.cmd("startinsert")
+-- 		return
+-- 	end
+--
+-- 	-- First time → create terminal
+-- 	vim.cmd("botright split")
+-- 	vim.cmd("term")
+-- 	vim.cmd("resize 15")
+-- 	term_buf = vim.api.nvim_get_current_buf()
+-- 	term_win = vim.api.nvim_get_current_win()
+-- 	vim.cmd("startinsert")
+-- end
+--
+-- function TermCmd(cmd)
+-- 	-- Window is open → Run cmd
+-- 	if term_win and vim.api.nvim_win_is_valid(term_win) then
+-- 		local chan = vim.bo[term_buf].channel
+-- 		vim.api.nvim_chan_send(chan, cmd .. "\n")
+-- 		vim.cmd("wincmd j")
+-- 		vim.cmd("startinsert")
+-- 		return
+-- 	end
+--
+-- 	-- First time → create terminal
+-- 	TermToggle()
+-- 	local chan = vim.bo[term_buf].channel
+-- 	vim.api.nvim_chan_send(chan, cmd .. "\n")
+-- end
+
 function RunCode()
 	-- Get file info
 	local filetype = vim.bo.filetype
@@ -35,13 +82,17 @@ function RunCode()
 
 		go = string.format('cd "%s" && go run "%s"', dir, file),
 		java = string.format('cd "%s" && javac "%s" && java "%s"', dir, file, outfile),
+		dart = string.format('cd "%s" && flutter run', dir),
 
+		javascript = string.format('cd "%s" && node "%s"', dir, file),
+		typescript = string.format('cd "%s" && node "%s"', dir, file),
 		python = string.format('cd "%s" && python "%s"', dir, file),
 		sh = string.format('cd "%s" && bash "%s"', dir, file),
 
-		markdown = string.format('cd "%s" && plantuml "%s" && imv "./%s.png"', dir, file, outfile, outfile),
-		plantuml = string.format('cd "%s" && plantuml "%s" && imv "./%s.png"', dir, file, outfile, outfile),
+		markdown = string.format('cd "%s" && plantuml "%s" --svg && zathura "./%s.svg"', dir, file, outfile),
+		plantuml = string.format('cd "%s" && plantuml "%s" --svg && zathura "./%s.svg"', dir, file, outfile),
 		html = string.format('cd "%s" && python3 -m http.server 8000 & xdg-open http://localhost:8000 & exit', dir),
+		lex = string.format('cd "%s" && flex %s && gcc lex.yy.c -o %s && ./%s < *.txt', dir, file, outfile, outfile),
 	}
 
 	if has_package then
@@ -58,54 +109,11 @@ function RunCode()
 
 	local cmd = commands[filetype]
 	if cmd then
-		vim.cmd("update") -- Save the file before running
+		vim.cmd("update")
+		-- TermCmd(cmd)
+		-- Replace TermCmd(cmd) calls with this:
 		require("toggleterm").exec(cmd)
-		vim.cmd("wincmd j") -- Move to terminal window
 	else
-		-- print("Filetype not supported")
 		vim.notify("Filetype not supported for running", vim.log.levels.WARN)
-	end
-end
-
--- available colorschemes
-local colorschemes = {
-	-- focus and eye
-	"tokyonight",
-	-- "tokyonight-moon",
-	-- "tokyonight-storm",
-	-- "tokyonight-night",
-	"gruvbox",
-	-- "carbonfox",
-	--
-	-- "rose-pine",
-	-- "tokyonight-day",
-
-	-- "catppuccin-mocha",
-}
-
-local current_index = 1
-
--- toggle between specified colorschemes
-function toggleColorScheme()
-	local current = vim.g.colors_name
-
-	-- Update current_index if current colorscheme is in our list
-	for i, scheme in ipairs(colorschemes) do
-		if scheme == current then
-			current_index = i
-			break
-		end
-	end
-
-	-- Cycle to next scheme
-	current_index = (current_index % #colorschemes) + 1
-	local next_scheme = colorschemes[current_index]
-
-	-- Apply the colorscheme with error handling
-	local ok, err = pcall(vim.cmd, "colorscheme " .. next_scheme)
-	if ok then
-		vim.notify("Switched to " .. next_scheme .. " theme")
-	else
-		vim.notify("Failed to load colorscheme: " .. next_scheme, vim.log.levels.ERROR)
 	end
 end

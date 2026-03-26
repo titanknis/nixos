@@ -26,17 +26,20 @@
     fzf
     tldr
     wtype
-    taskwarrior3
+    # taskwarrior3
     jq # rofi-timer script dependency
     curl
     wget
 
-    tailwindcss_4
+    # tailwindcss_4
+    hugo
+    # supabase-cli
+    lazygit
+    gh
 
-    # AI Tools
-    # kilocode-cli
-    claude-code
-    cursor-cli
+    # DB
+    sqlite
+    postgresql
 
     flex
     bison
@@ -52,12 +55,10 @@
     # Apps
     libreoffice
     qutebrowser
-    firefox
+    # firefox
     signal-desktop
 
     # github-desktop
-
-    # python313Packages.argostranslate
 
     # audacity
 
@@ -95,23 +96,22 @@
     # Unfree
     # ciscoPacketTracer8 # unfree :(
     oracle-instantclient
-    discord
+    # discord
 
   ];
 
+  nixpkgs.config.android_sdk.accept_license = true;
   nixpkgs.config.allowUnfreePredicate =
     pkg:
     builtins.elem (lib.getName pkg) [
       # "ciscoPacketTracer8"
       "oracle-instantclient"
-      "discord"
-      "claude-code"
-      "cursor-cli"
+      # "discord"
     ];
 
-  nixpkgs.config.permittedInsecurePackages = [
-    "ciscoPacketTracer8-8.2.2"
-  ];
+  # nixpkgs.config.permittedInsecurePackages = [
+  #   "ciscoPacketTracer8-8.2.2"
+  # ];
 
   # Commented packages for reference
   /*

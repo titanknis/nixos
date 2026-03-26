@@ -4,7 +4,6 @@
 
 # General shortcuts
 alias q='exit'
-alias c='clear'
 alias y='yazi'
 alias v='nvim'
 alias cd='z'

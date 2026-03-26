@@ -18,49 +18,43 @@ vim.opt.rtp:prepend(lazypath)
 local plugins = {
 
 	-- Core
-	require("plugins.core.cmp"),
-	require("plugins.core.luasnip"),
+	require("plugins.core.blink"),
 	require("plugins.core.conform"),
-	require("plugins.core.lsp"),
-	require("plugins.core.nvim-dap"),
 	require("plugins.core.treesitter"),
+	require("plugins.core.lsp"),
+	require("plugins.core.neotest"),
+	require("plugins.toTweak.dap"),
+	-- require("plugins.toTweak.mason"),
+
+	require("plugins.toTweak.jdtls"),
 
 	-- UI
-	require("plugins.ui.alpha"),
-	require("plugins.ui.bufferline"),
 	require("plugins.ui.lualine"),
-
-	-- Colors
-	require("plugins.colors.tokyonight"),
-	require("plugins.colors.gruvebox"), --active
+	require("plugins.ui.gruvebox"), -- active colortheme
 
 	-- Tools
-	require("plugins.tools.sqls"),
-	require("plugins.tools.diagram"),
-	-- require("plugins.tools.vimtex"),
-	-- require("plugins.tools.markview"), --NOTE: i like this UI more than render-markdown
-	-- require("plugins.tools.render-markdown"),
-	require("plugins.tools.nvim-tree"),
-	require("plugins.tools.pomo"),
+	require("plugins.tools.oil"),
 	require("plugins.tools.telescope"),
+	require("plugins.tools.which-key"),
+	require("plugins.tools.dadbod"),
 	require("plugins.tools.toggleterm"),
-	require("plugins.tools.vim-surround"),
+	require("plugins.tools.flutter"),
+	-- require("plugins.toTweak.iron"),
 
 	-- Git
-	require("plugins.git.fugitive"),
 	require("plugins.git.gitsigns"),
+	require("plugins.git.fugitive"),
+
+	-- Extra
+	require("plugins.extra.mini"),
+	require("plugins.extra.todo"),
+	require("plugins.extra.colorizer"),
+	require("plugins.extra.diagram"),
+	-- require("plugins.extra.vimtex"),
 
 	-- Competitive Programming
-	require("plugins.cp.competitest"),
-	require("plugins.cp.leetcode"),
-
-	-- Misc
-	require("plugins.misc.autopair"),
-	require("plugins.misc.comments"),
-	require("plugins.misc.indent"),
-	require("plugins.misc.todo"),
-	require("plugins.misc.undotree"),
-	require("plugins.misc.colorizer"),
+	-- require("plugins.cp.competitest"),
+	-- require("plugins.cp.leetcode"),
 }
 
 -- Set up lazy.nvim with your plugin specifications

@@ -3,8 +3,8 @@ return {
 	{
 		"neovim/nvim-lspconfig",
 		dependencies = {
-			"williamboman/mason.nvim",
-			"williamboman/mason-lspconfig.nvim",
+			-- "mason-org/mason.nvim",
+			-- "mason-org/mason-lspconfig.nvim",
 		},
 		config = function()
 			vim.api.nvim_create_autocmd("LspAttach", {
@@ -21,30 +21,10 @@ return {
 				end,
 			})
 
-			vim.lsp.config("clangd", {
-				init_options = {
-					fallbackFlags = { "-DLOCAL" }, -- Define LOCAL for LSP to highlight code inside #ifdef LOCAL
-				},
-			})
-			vim.lsp.config("lua_ls", {
-				settings = {
-					-- Nvim Lua
-					Lua = {
-						runtime = { version = "LuaJIT" },
-						diagnostics = { globals = { "vim" } },
-						workspace = {
-							library = vim.api.nvim_get_runtime_file("", true),
-							checkThirdParty = false,
-						},
-						telemetry = { enable = false },
-					},
-				},
-			})
-
 			vim.lsp.enable({
 				"clangd", -- C, C++
 				"rust_analyzer", -- Rust
-				"gopls", --Go
+				"gopls", -- Go
 				"jdtls", -- Java
 				"pyright", -- Python
 				"bashls", -- Bash
@@ -55,6 +35,29 @@ return {
 				"jsonls", -- JSON
 				"ts_ls", -- JS and TS
 				"hyprls", -- hyprland configs
+				"texlab", -- Latex
+				-- "dartls", -- Dart for flutter (will be set up by flutter-tools plugin)
+			})
+
+			vim.lsp.config("clangd", {
+				init_options = {
+					fallbackFlags = { "-DLOCAL" }, -- Define LOCAL for LSP to highlight code inside #ifdef LOCAL
+				},
+			})
+
+			---@type vim.lsp.Config
+			---@type lspconfig.settings.lua_ls
+			vim.lsp.config("lua_ls", {
+				settings = {
+					Lua = {
+						runtime = { version = "LuaJIT" },
+						workspace = {
+							preloadFileSize = 10000,
+							library = { vim.env.VIMRUNTIME },
+						},
+						-- telemetry = { enable = false },
+					},
+				},
 			})
 		end,
 	},

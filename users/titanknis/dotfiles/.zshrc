@@ -12,6 +12,9 @@ bindkey -v
 # Aliases
 source ~/.aliases
 
+# Secrets
+source ~/.secrets
+
 # FZF History Search
 fzf_history(){
     print -z $(history 0 | fzf --tac --no-sort --exact --height=40% | cut -c7-) 
