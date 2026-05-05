@@ -8,6 +8,10 @@ return {
 	---@type conform.setupOpts
 	opts = {
 		format_on_save = { timeout_ms = 500 },
+		-- format_on_save = { timeout_ms = 3000 },
+		formatters = {
+			php_cs_fixer = { args = { "fix", "--rules=@PSR12", "--using-cache=no", "$FILENAME" } },
+		},
 		formatters_by_ft = {
 			c = { "clang-format" },
 			cpp = { "clang-format" },
@@ -26,6 +30,7 @@ return {
 			jsonc = { "prettier" },
 
 			dart = { "dart_format" },
+			php = { "php_cs_fixer" },
 		},
 	},
 	keys = {

@@ -2,6 +2,7 @@
 return {
 	{
 		"neovim/nvim-lspconfig",
+		lazy = false, -- force load before any buffer opens
 		dependencies = {
 			-- "mason-org/mason.nvim",
 			-- "mason-org/mason-lspconfig.nvim",
@@ -21,6 +22,12 @@ return {
 				end,
 			})
 
+			vim.lsp.config("clangd", {
+				init_options = {
+					fallbackFlags = { "-DLOCAL" }, -- Define LOCAL for LSP to highlight code inside #ifdef LOCAL
+				},
+			})
+
 			vim.lsp.enable({
 				"clangd", -- C, C++
 				"rust_analyzer", -- Rust
@@ -36,13 +43,8 @@ return {
 				"ts_ls", -- JS and TS
 				"hyprls", -- hyprland configs
 				"texlab", -- Latex
+				"phpactor", -- PHP
 				-- "dartls", -- Dart for flutter (will be set up by flutter-tools plugin)
-			})
-
-			vim.lsp.config("clangd", {
-				init_options = {
-					fallbackFlags = { "-DLOCAL" }, -- Define LOCAL for LSP to highlight code inside #ifdef LOCAL
-				},
 			})
 
 			---@type vim.lsp.Config

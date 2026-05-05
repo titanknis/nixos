@@ -60,8 +60,8 @@
     tesseract # for image/screenshot text extraction
     wl-clipboard # Wayland clipboard utilities
 
-    st # Simtle Terminal
-    dmenu
+    # st # Simtle Terminal
+    # dmenu
   ];
 
   # Display Manager (choose getty or greetd)

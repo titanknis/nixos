@@ -15,9 +15,21 @@
     };
   };
 
-  services.postgresql = {
+  # services.postgresql = {
+  #   enable = true;
+  #   package = pkgs.postgresql;
+  # };
+  #
+
+  environment.systemPackages = with pkgs; [
+    php
+    mariadb
+    mariadb.client
+  ];
+
+  services.mysql = {
     enable = true;
-    package = pkgs.postgresql;
+    package = pkgs.mariadb;
   };
 
   # Input Device Configuration

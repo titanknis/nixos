@@ -42,16 +42,13 @@
     wget
 
     # tailwindcss_4
-    hugo
+    # hugo
     # supabase-cli
-    git-lfs
-    lazygit
     gh
     glab
     repomix
-    aichat
-    jan
-    glow
+
+    opencode
 
     # DB
     sqlite
@@ -110,8 +107,6 @@
     # lolcat
 
     # Unfree
-    # ciscoPacketTracer8 # unfree :(
-    oracle-instantclient
     # discord
 
   ];
@@ -120,8 +115,6 @@
   nixpkgs.config.allowUnfreePredicate =
     pkg:
     builtins.elem (lib.getName pkg) [
-      # "ciscoPacketTracer8"
-      "oracle-instantclient"
       # "discord"
     ];
 
